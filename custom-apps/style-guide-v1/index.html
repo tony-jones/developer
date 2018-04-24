@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>
+    
+      
+        Custom Apps Style Guide
+      
+      | Help Scout Developers
+    
+  </title>
+  
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="/css/main.css?v=ea5867fac17b3f4987c91eb4ee321d26">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+  <script src="/js/developer.js?v=a54341c3d77422d5da2660668d9f0b8d" async defer></script>
+  <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async defer></script>
+</head>
+
+  <body class="tx-smooth">
+    <div class="s-docs-layout">
+      <aside class="s-docs-layout__sidebar t-bg-grey-200">
+        <div class="c-nav-sidebar">
+  <div class="o-scrolly">
+    <div class="o-scrolly__item">
+      <div class="c-nav-sidebar__header u-centralize t-bg-blue-500 t-tx-white">
+        <button class="c-button c-button--link c-nav-sidebar__toggle t-tx-white" id="js-nav-sidebar-toggle">
+          <i class="icon icon-menu c-icon c-icon--32"></i>
+        </button>
+        <div class="c-nav-sidebar__header-content">
+          <div class="c-logo u-pad-v-2">
+  <a href="/" class="u-d-block" title="Help Scout Developers">
+    <img
+      src="/images/hs-developer-logo-wh.svg"
+      width="174"
+      height="32"
+      title="Help Scout Developers"
+      alt="Help Scout Developers"
+      class="c-logo__image"
+    />
+    <span class="u-sr-only">
+      <h1>Help Scout Developers</h1>
+    </span>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="o-scrolly__block">
+      <div class="js-SidebarNav c-nav-sidebar__menu u-mrg-b-10@md u-pad-b-5@md" id="js-nav-sidebar-menu"> <div class="c-nav-header"> <div class="o-flexy o-flexy--just-left o-flexy--gap-md"> <div class="o-flexy__item"> <a href="/" class="c-nav-header__back" title="Back"> <i class="icon icon-caret-left c-icon c-icon--12 u-d-block"></i> </a> </div> <div class="o-flexy__block tx-center u-mrg-l-0"> <strong class="t-tx-charcoal-500"> Custom Apps </strong> </div> </div> </div> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--level-1 " role="navigation" aria-label="Sidebar nav level 1"> <li class=" c-nav__item "> <a href="/custom-apps/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/custom-apps/dynamic/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Dynamic App </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/custom-apps/static/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Static App </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/custom-apps/style-guide/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Style Guide </div> </div> </a> </li> </ul> </div>
+    </div>
+  </div>
+</div>
+
+      </aside>
+      <main class="s-docs-layout__main">
+        <div class="o-container o-container--site u-mrg-t-8 u-pad-h-5@sm u-pad-h-10@lg">
+          <div class="o-row">
+            <div class="o-col-12">
+              <section class="s-main-content" id="content">
+                
+
+<div class="o-row">
+  <div class="o-col-9@xl s-docs">
+    
+      
+<header class="">
+  <!-- 
+
+
+<a href="/custom-apps/" class="tx-700 t-tx-grey-800 c-link c-link--plain">Custom Apps</a>
+
+ -->
+  
+    <div class="o-flexy o-flexy--gap-md">
+    </div>
+  
+
+  <h1 class="">
+    Style Guide v1
+  </h1>
+
+  
+
+  
+
+</header>
+
+
+    
+    
+
+
+<div id="s-docs" class="s-docs s-hs-docs s-hs-docs--style-guide-v1 s-hs-docs--custom-apps">
+  <div class="s-docs__top" id="hs-content-top"></div>
+  
+
+<p>There are several great ways to format the HTML of your App so that it visually complements the rest of the web app. Inline CSS and JavaScript will be stripped out, but it’s still possible to add a bit of style to your HTML.</p>
+
+<h2 id="basics">Basics</h2>
+
+<p>Let’s start with the example App:</p>
+
+<p><img src="/img/developers/app-ex-old.png" alt="Example App" /></p>
+
+<p>The HTML for this App would be as follows:</p>
+
+<div class="language-html highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nt">&lt;h4&gt;&lt;a</span> <span class="na">href=</span><span class="s">"[URL here]"</span><span class="nt">&gt;</span>Jan's Famous Cupcakes<span class="nt">&lt;/a&gt;&lt;/h4&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"muted"</span><span class="nt">&gt;</span>Customer since 05/07/2012 10:55 AM<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"[URL here]"</span><span class="nt">&gt;</span>Administrator<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Business Plan<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>$1,245.00 lifetime value<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre>
+</div></div></div>
+
+<p>The following classes can be used to format text:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>noMargin</td>
+      <td>margin:0;</td>
+    </tr>
+    <tr>
+      <td>ul.unstyled, ol.unstyled</td>
+      <td>list-style:none; margin-left:0;</td>
+    </tr>
+    <tr>
+      <td>.divider</td>
+      <td>block-level 1px border with spacing on top/bottom</td>
+    </tr>
+    <tr>
+      <td>.muted</td>
+      <td>gray text color</td>
+    </tr>
+    <tr>
+      <td>.blue</td>
+      <td>blue text color</td>
+    </tr>
+    <tr>
+      <td>.green</td>
+      <td>green text color</td>
+    </tr>
+    <tr>
+      <td>.red</td>
+      <td>red text color</td>
+    </tr>
+    <tr>
+      <td>.orange</td>
+      <td>orange text color</td>
+    </tr>
+    <tr>
+      <td>.purple</td>
+      <td>purple text color</td>
+    </tr>
+    <tr>
+      <td>.strike</td>
+      <td>strike through text</td>
+    </tr>
+    <tr>
+      <td>span.badge</td>
+      <td>gray badge</td>
+    </tr>
+    <tr>
+      <td>span.badge.blue</td>
+      <td>blue badge</td>
+    </tr>
+    <tr>
+      <td>span.badge.green</td>
+      <td>green badge</td>
+    </tr>
+    <tr>
+      <td>span.badge.red</td>
+      <td>red badge</td>
+    </tr>
+    <tr>
+      <td>span.badge.orange</td>
+      <td>orange badge</td>
+    </tr>
+    <tr>
+      <td>span.badge.purple</td>
+      <td>purple badge</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img class="t-bdr" src="/img/content/customapps-text-old.png" alt="Custom Apps text" /></p>
+
+<hr />
+
+<h2 id="collapsible-content">Collapsible Content</h2>
+
+<p>You can store some content in a collapsible area to save space, then expand/collapse it as needed. The example below shows two collapsible content areas. When you click the link, the content expands or collapses:</p>
+
+<p><img src="/img/developers/app-ex-toggle-old.png" alt="Example App" /></p>
+
+<p>By adding the <strong>“open”</strong> class to the top toggleGroup, the default state will be open (expanded) and you can collapse the content on click. Remove the open class and the toggleGroup will be closed by default, like the Order History section above. Here’s the HTML:</p>
+
+<div class="language-html highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggleGroup open"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"toggleBtn"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon-arrow"</span><span class="nt">&gt;&lt;/i&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggle indent"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"unstyled"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Jan's Famous Cupcakes<span class="nt">&lt;/strong&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>$1,245 lifetime value<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Customer since 05/07/12<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>10 orders<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggleGroup"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"toggleBtn"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon-cart"</span><span class="nt">&gt;&lt;/i&gt;</span>Order History<span class="nt">&lt;/a&gt;&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggle indent"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"unstyled"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"muted"</span><span class="nt">&gt;</span>12/14/12<span class="nt">&lt;/span&gt;</span> - $195 (<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>#12345<span class="nt">&lt;/a&gt;</span>)<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"muted"</span><span class="nt">&gt;</span>08/10/12<span class="nt">&lt;/span&gt;</span> - $74 (<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>#12112<span class="nt">&lt;/a&gt;</span>)<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"muted"</span><span class="nt">&gt;</span>05/07/12<span class="nt">&lt;/span&gt;</span> - $112 (<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>#11342<span class="nt">&lt;/a&gt;</span>)<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div></div></div>
+<p>We suggest using the arrow icon for collapsible content, as it will rotate based on the state. The arrow faces down when the content is expanded and faces to the right when collapsed.</p>
+
+<p>If you’d like to nest toggleGroups, simply add the <strong>.nested</strong> class so the arrow icon will rotate accordingly.</p>
+
+<hr />
+
+<h2 id="icons">Icons</h2>
+
+<p>Simply add the <strong>.muted</strong> class to any of these icons to lighten them up a bit.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Icon</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><i class="icon-flag"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-flag"&gt;&lt;/i&gt;</code></td>
+    </tr>
+    <tr>
+      <td><i class="icon-star"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-star"&gt;&lt;/i&gt;</code></td>
+    </tr>
+    <tr>
+      <td><i class="icon-cart"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-cart"&gt;&lt;/i&gt;</code></td>
+    </tr>
+    <tr>
+      <td><i class="icon-person"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-person"&gt;&lt;/i&gt;</code></td>
+    </tr>
+    <tr>
+      <td><i class="icon-tag"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-tag"&gt;&lt;/i&gt;</code></td>
+    </tr>
+    <tr>
+      <td><i class="icon-gear"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-gear"&gt;&lt;/i&gt;</code></td>
+    </tr>
+    <tr>
+      <td><i class="icon-cash"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-cash"&gt;&lt;/i&gt;</code></td>
+    </tr>
+    <tr>
+      <td><i class="icon-case"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-case"&gt;&lt;/i&gt;</code></td>
+    </tr>
+    <tr>
+      <td><i class="icon-arrow"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-arrow"&gt;&lt;/i&gt;</code></td>
+    </tr>
+    <tr>
+      <td><i class="icon-check"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-check"&gt;&lt;/i&gt;</code></td>
+    </tr>
+    <tr>
+      <td><i class="icon-pointer"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-pointer"&gt;&lt;/i&gt;</code></td>
+    </tr>
+    <tr>
+      <td><i class="icon-cloud"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-cloud"&gt;&lt;/i&gt;</code></td>
+    </tr>
+    <tr>
+      <td><i class="icon-folder"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-folder"&gt;&lt;/i&gt;</code></td>
+    </tr>
+    <tr>
+      <td><i class="icon-doc"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-doc"&gt;&lt;/i&gt;</code></td>
+    </tr>
+    <tr>
+      <td><i class="icon-search"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-search"&gt;&lt;/i&gt;</code></td>
+    </tr>
+    <tr>
+      <td><i class="icon-globe"></i></td>
+      <td><code class="highlighter-rouge">&lt;i class="icon-globe"&gt;&lt;/i&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+
+  </div>
+  <div class="o-col-3@xl js-spy-sidebar ">
+    
+
+    
+<div id="table-of-contents" class="o-sticky u-mrg-b-10 u-pad-l-7@lg c-floating-sidebar-nav-container" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+  
+
+  <p id="toc-header" class="tx-xs tx-uppercase tx-600 t-tx-grey-800 u-mrg-v-1 is-hidden">
+    Contents
+  </p>
+  <ul id="toc" class="nav c-floating-sidebar-nav rx-sidebar-nav-width"></ul>
+</div>
+
+  </div>
+</div>
+
+              </section>
+              <div class="u-pad-t-10 u-mrg-t-10 u-mrg-b-0">
+  <span class="u-mrg-r-2 t-tx-charcoal-200">↑</span><a href="#" class="t-tx-charcoal-200 tx-sm">Back to top</a>
+</div>
+
+              <hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    
+
+<script type="text/javascript">
+var SEEDDATA = {  packs: [      ]};
+</script>
+
+    <!-- beacon embed -->
+<script type="text/javascript">!function(e,n){window.Beacon=n=function(e,n,d){window.Beacon.readyQueue.push({method:e,options:n,data:d})},n.readyQueue=[];var t=e.getElementsByTagName("script")[0],o=e.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://beacon-v2.helpscout.net",t.parentNode.insertBefore(o,t)}(document,window.Beacon||function(){})</script>
+<script>window.Beacon('init', 'aa90d610-923a-4528-95cc-934136cc7712')</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5226593-6', 'helpscout.net');
+ga('send', 'pageview');
+</script>
+
+
+
+
+  </body>
+</html>

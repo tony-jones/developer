@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smallchat Test - Help Scout Developers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link href="/css/launch.css" rel="stylesheet">
+    <link href="/css/syntax.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="alternate" type="application/rss+xml" title="Help Scout Blog" href="feed.xml">
+
+    <script src="/js/developer.js?v=a54341c3d77422d5da2660668d9f0b8d" async defer></script>
+    <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+
+</head>
+<body>
+  <header id="mainNav" class="navbar" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/"><img src="/img/hs-developer-logo-wh.svg" alt="Help Scout" width="174" height="32"></a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+        </button>
+      </div><!--/navbar-header-->
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/custom-apps/" tabindex="-1">Custom Apps</a></li>
+          <li><a href="/beacons/" tabindex="-1">Beacon</a></li>
+          <li><a href="/beacon-2/" tabindex="-1">Beacon 2.0</span></a></li>
+          <li><a href="/help-desk-api/" tabindex="-1">Mailbox API</a></li>
+          <li><a href="/docs-api/" tabindex="-1">Docs API</a></li>
+          <li><a href="/open-source/" tabindex="-1">Open Source</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/container-->
+  </header>
+
+	<section id="wrapper">
+		<section id="content" class="container">
+			<div class="paper single-col">
+				<script src="https://embed.small.chat/T024NP9V7G56CLKJTT.js" async></script>
+			</div><!--/paper-->
+		</section>
+<hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+

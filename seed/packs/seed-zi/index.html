@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>
+    
+      
+        Z-Index
+      
+      | Help Scout Developers
+    
+  </title>
+  
+  <meta name="description" content="Utility classes that provide a range of z-index values.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="/css/main.css?v=ad4117d9b973a3531f5eaa00ddef19de">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+  <script src="/js/developer.js?v=dadbbd344be4ed6b4e97f05a921e71fa" async defer></script>
+  <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async defer></script>
+</head>
+
+  <body class="tx-smooth">
+    <div class="s-docs-layout">
+      <aside class="s-docs-layout__sidebar t-bg-grey-200">
+        <div class="c-nav-sidebar">
+  <div class="o-scrolly">
+    <div class="o-scrolly__item">
+      <div class="c-nav-sidebar__header u-centralize t-bg-blue-500 t-tx-white">
+        <button class="c-button c-button--link c-nav-sidebar__toggle t-tx-white" id="js-nav-sidebar-toggle">
+          <i class="icon icon-menu c-icon c-icon--32"></i>
+        </button>
+        <div class="c-nav-sidebar__header-content">
+          <div class="c-logo u-pad-v-2">
+  <a href="/" class="u-d-block" title="Help Scout Developers">
+    <img
+      src="/images/hs-developer-logo-wh.svg"
+      width="174"
+      height="32"
+      title="Help Scout Developers"
+      alt="Help Scout Developers"
+      class="c-logo__image"
+    />
+    <span class="u-sr-only">
+      <h1>Help Scout Developers</h1>
+    </span>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="o-scrolly__block">
+      <div class="js-SidebarNav c-nav-sidebar__menu u-mrg-b-10@md u-pad-b-5@md" id="js-nav-sidebar-menu"> <div class="c-nav-header"> <div class="o-flexy o-flexy--just-left o-flexy--gap-md"> <div class="o-flexy__item"> <a href="/" class="c-nav-header__back" title="Back"> <i class="icon icon-caret-left c-icon c-icon--12 u-d-block"></i> </a> </div> <div class="o-flexy__block tx-center u-mrg-l-0"> <strong class="t-tx-charcoal-500"> Seed </strong> </div> </div> </div> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--level-1 " role="navigation" aria-label="Sidebar nav level 1"> <li class=" c-nav__item "> <a href="/seed/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/packs/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Seed Packs </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/examples/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Examples </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/css-unit-testing/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Unit Testing </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/glossary/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Glossary </div> </div> </a> </li> </ul> </div>
+    </div>
+  </div>
+</div>
+
+      </aside>
+      <main class="s-docs-layout__main">
+        <div class="o-container o-container--site u-mrg-t-8 u-pad-h-5@sm u-pad-h-10@lg">
+          <div class="o-row">
+            <div class="o-col-12">
+              <section class="s-main-content" id="content">
+                
+
+<div class="o-row">
+  <div class="o-col-9@xl s-docs">
+    
+      
+<header class="">
+  <!-- 
+
+
+ -->
+  
+    <div class="o-flexy o-flexy--gap-md">
+    </div>
+  
+
+  <h1 class="">
+    Z-Index
+  </h1>
+
+  
+    <div class="tx-700">
+      <p class="u-mrg-t-0 u-mrg-b-2"><a href="https://github.com/helpscout/seed-zi" target="_blank" class="c-link--view-source tx-sm">View Source</a></p>
+    </div>
+  
+
+  
+      <div class="o-flexy__item u-d-none u-d-block@sm">
+        <a href="https://travis-ci.org/helpscout/seed-zi" target="_blank" class="tx-no-underline">
+          <img src="https://travis-ci.org/helpscout/seed-zi.svg?branch=master">
+        </a>
+        <a href="https://www.npmjs.com/package/seed-zi" target="_blank" class="tx-no-underline">
+          <img src="https://badge.fury.io/js/seed-zi.svg">
+        </a>
+      </div>
+  
+
+</header>
+
+
+    
+    
+
+
+<div id="s-docs" class="s-docs s-hs-docs s-hs-docs--z-index s-hs-docs--utility">
+  <div class="s-docs__top" id="hs-content-top"></div>
+  
+
+<p>A series of utility classes that adjust the z-index property of a selector.</p>
+
+<h2 id="install">Install</h2>
+
+<div class="highlighter-rouge "><div class="highlight highlight--none"><pre><code>npm install seed-zi --save
+</code></pre></div></div>
+
+<h3 id="dependencies">Dependencies</h3>
+
+<p><a href="/seed/packs/seed-publish">seed-publish</a></p>
+
+<hr />
+
+<h2 id="usage">Usage</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Z-index</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">.u-zi-inherit</code></td>
+      <td>inherit</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.u-zi-initial</code></td>
+      <td>initial</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.u-zi-unset</code></td>
+      <td>unset</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.u-zi-hidden</code></td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.u-zi-0</code></td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.u-zi-1</code></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.u-zi-2</code></td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.u-zi-3</code></td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.u-zi-5</code></td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.u-zi-10</code></td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.u-zi-100</code></td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.u-zi-200</code></td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.u-zi-1000</code></td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.u-zi-max</code></td>
+      <td>9999999</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="example">Example</h3>
+
+<div class="c-card hs-code u-mrg-t-4 u-mrg-b-7" data-js="html"><div class="u-pad-5 hs-code__example" data-example-id="">
+<div class="u-pos-relative u-zi-1">
+  I have a z-index of 1
+</div>
+<div class="u-pos-relative u-zi-10">
+  I have a z-index of 10!
+</div>
+</div><div class="c-clipboard-copy-container js-code-snippet t-bdr-top"><div class="u-pad-5 hs-code__highlight highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-pos-relative u-zi-1"</span><span class="nt">&gt;</span>
+  I have a z-index of 1
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-pos-relative u-zi-10"</span><span class="nt">&gt;</span>
+  I have a z-index of 10!
+<span class="nt">&lt;/div&gt;</span></code></pre></div></div></div>
+
+<hr />
+
+<h2 id="configurations">Configurations</h2>
+
+<p>Below are the default Sass configuration variables for seed-zi. The variables can be found in the pack’s <code class="highlighter-rouge">_config.scss</code> file.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>seed-zi/_config.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nv">$seed-zi-namespace</span><span class="p">:</span> <span class="s2">"u-zi"</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+<span class="c1">// Default zi z-index
+</span><span class="nv">$seed-zi-index</span><span class="p">:</span> <span class="p">(</span>
+  <span class="nb">inherit</span><span class="o">:</span> <span class="nb">inherit</span><span class="o">,</span>
+  <span class="n">initial</span><span class="o">:</span> <span class="n">initial</span><span class="o">,</span>
+  <span class="n">unset</span><span class="o">:</span> <span class="n">unset</span><span class="o">,</span>
+  <span class="nb">hidden</span><span class="o">:</span> <span class="m">-1</span><span class="o">,</span>
+  <span class="m">0</span><span class="o">:</span> <span class="m">0</span><span class="o">,</span>
+  <span class="m">1</span><span class="o">:</span> <span class="m">1</span><span class="o">,</span>
+  <span class="m">2</span><span class="o">:</span> <span class="m">2</span><span class="o">,</span>
+  <span class="m">3</span><span class="o">:</span> <span class="m">3</span><span class="o">,</span>
+  <span class="m">5</span><span class="o">:</span> <span class="m">5</span><span class="o">,</span>
+  <span class="m">10</span><span class="o">:</span> <span class="m">10</span><span class="o">,</span>
+  <span class="m">100</span><span class="o">:</span> <span class="m">100</span><span class="o">,</span>
+  <span class="m">200</span><span class="o">:</span> <span class="m">200</span><span class="o">,</span>
+  <span class="m">1000</span><span class="o">:</span> <span class="m">1000</span><span class="o">,</span>
+  <span class="n">max</span><span class="o">:</span> <span class="m">9999999</span>
+<span class="p">)</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+</code></pre>
+</div></div></div>
+
+<hr />
+
+<h2 id="related">Related</h2>
+
+<ul>
+  <li><a href="/seed/packs/seed-position">seed-position</a></li>
+</ul>
+
+
+</div>
+
+  </div>
+  <div class="o-col-3@xl js-spy-sidebar ">
+    
+
+    
+<div id="table-of-contents" class="o-sticky u-mrg-b-10 u-pad-l-7@lg c-floating-sidebar-nav-container" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+  
+
+  <p id="toc-header" class="tx-xs tx-uppercase tx-600 t-tx-grey-800 u-mrg-v-1 is-hidden">
+    Contents
+  </p>
+  <ul id="toc" class="nav c-floating-sidebar-nav rx-sidebar-nav-width"></ul>
+</div>
+
+  </div>
+</div>
+
+              </section>
+              <div class="u-pad-t-10 u-mrg-t-10 u-mrg-b-0">
+  <span class="u-mrg-r-2 t-tx-charcoal-200">↑</span><a href="#" class="t-tx-charcoal-200 tx-sm">Back to top</a>
+</div>
+
+              <hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    
+
+<script type="text/javascript">
+var SEEDDATA = {  packs: [      ]};
+</script>
+
+    <!-- beacon embed -->
+<script type="text/javascript">!function(e,n){window.Beacon=n=function(e,n,d){window.Beacon.readyQueue.push({method:e,options:n,data:d})},n.readyQueue=[];var t=e.getElementsByTagName("script")[0],o=e.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://beacon-v2.helpscout.net",t.parentNode.insertBefore(o,t)}(document,window.Beacon||function(){})</script>
+<script>window.Beacon('init', 'aa90d610-923a-4528-95cc-934136cc7712')</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5226593-6', 'helpscout.net');
+ga('send', 'pageview');
+</script>
+
+
+
+
+  </body>
+</html>

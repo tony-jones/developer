@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>
+    
+      
+        Time Range Statistics (Happiness)
+      
+      | Help Scout Developers
+    
+  </title>
+  
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="/css/main.css?v=ea5867fac17b3f4987c91eb4ee321d26">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+  <script src="/js/developer.js?v=a54341c3d77422d5da2660668d9f0b8d" async defer></script>
+  <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async defer></script>
+</head>
+
+  <body class="tx-smooth">
+    <div class="s-docs-layout">
+      <aside class="s-docs-layout__sidebar t-bg-grey-200">
+        <div class="c-nav-sidebar">
+  <div class="o-scrolly">
+    <div class="o-scrolly__item">
+      <div class="c-nav-sidebar__header u-centralize t-bg-blue-500 t-tx-white">
+        <button class="c-button c-button--link c-nav-sidebar__toggle t-tx-white" id="js-nav-sidebar-toggle">
+          <i class="icon icon-menu c-icon c-icon--32"></i>
+        </button>
+        <div class="c-nav-sidebar__header-content">
+          <div class="c-logo u-pad-v-2">
+  <a href="/" class="u-d-block" title="Help Scout Developers">
+    <img
+      src="/images/hs-developer-logo-wh.svg"
+      width="174"
+      height="32"
+      title="Help Scout Developers"
+      alt="Help Scout Developers"
+      class="c-logo__image"
+    />
+    <span class="u-sr-only">
+      <h1>Help Scout Developers</h1>
+    </span>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="o-scrolly__block">
+      <div class="js-SidebarNav c-nav-sidebar__menu u-mrg-b-10@md u-pad-b-5@md" id="js-nav-sidebar-menu"> <div class="c-nav-header"> <div class="o-flexy o-flexy--just-left o-flexy--gap-md"> <div class="o-flexy__item"> <a href="/" class="c-nav-header__back" title="Back"> <i class="icon icon-caret-left c-icon c-icon--12 u-d-block"></i> </a> </div> <div class="o-flexy__block tx-center u-mrg-l-0"> <strong class="t-tx-charcoal-500"> Mailbox API 1.0 </strong> </div> </div> </div> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--level-1 " role="navigation" aria-label="Sidebar nav level 1"> <li class=" c-nav__item "> <a href="/help-desk-api/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> <div class="o-flexy__item"> <i class="icon icon-caret-right tx-12 c-icon c-icon--12 js-nav-arrow c-nav__arrow"></i> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-2 " role="navigation" aria-label="Sidebar nav level 2"> <li class=" c-nav__item "> <a href="/help-desk-api/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/webhooks/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Webhooks </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/field-selectors/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Field Selectors </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/status-codes/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Status Codes </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/api-clients/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">API Clients </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/help-desk-api/conversations/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Endpoints </div> <div class="o-flexy__item"> <i class="icon icon-caret-right tx-12 c-icon c-icon--12 js-nav-arrow c-nav__arrow"></i> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-2 " role="navigation" aria-label="Sidebar nav level 2"> <li class=" c-nav__item "> <a href="/help-desk-api/conversations/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/help-desk-api/conversations/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Conversations </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/conversations/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Conversation </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/conversations/attachment-data/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Attachment Data </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/conversations/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Conversation </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/conversations/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Conversation </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/conversations/create-thread/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Thread </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/conversations/update-thread/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Thread </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/conversations/get-thread-source/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Thread Source </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/conversations/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Conversation </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/notes/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Note </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/conversations/create-attachment/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Attachment </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/conversations/delete-attachment/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Attachment </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/help-desk-api/customers/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Customers </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/help-desk-api/customers/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Customer </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/customers/list-mailbox/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Mailbox Customers </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/customers/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Customer </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/customers/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Customer </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/customers/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Customer </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/help-desk-api/mailboxes/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Mailboxes </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/help-desk-api/mailboxes/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Mailboxes </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/mailboxes/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Mailboxes </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/mailboxes/folders/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Folders </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/conversations/conversations/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Reports </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/help-desk-api/reports/conversations/conversations/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations: Overall </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/conversations/busy-times/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations: Busiest Time of Day </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/conversations/new/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations: New Conversations </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/conversations/received-messages/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations: Received Messages </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/conversations/drilldown/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations: Drill-Down </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/conversations/fields-drilldown/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations: Drill-Down (by Field) </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/conversations/new-drilldown/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations: Drill-Down (New Conversations) </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/docs/docs/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Docs: Overall </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/happiness/happiness/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Happiness: Overall </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/happiness/ratings/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Happiness: Ratings </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/productivity/productivity/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Productivity: Overall </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/productivity/first-response-time/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Productivity: First Response Time </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/productivity/replies-sent/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Productivity: Replies Sent </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/productivity/resolved/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Productivity: Resolved </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/productivity/resolution-time/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Productivity: Resolution Time </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/productivity/response-time/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Productivity: Response Time </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/productivity/drilldown/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Productivity: Drill-Down </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/company/company/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Company: Overall </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/company/customers-helped/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Company: Customers Helped </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/company/drilldown/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Company: Drill-Down </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/user/user/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User: Overall </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/user/conversation-history/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User: Customers Helped </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/user/customers-helped/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User: Customers Helped </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/user/drilldown/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User: Drill-Down </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/user/replies/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User: Replies </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/user/resolutions/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User: Resolutions </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/user/happiness/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User: Happiness </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/reports/user/ratings/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User: Ratings </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/help-desk-api/search/conversations/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Search </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/help-desk-api/search/conversations/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/search/customers/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Customers </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/help-desk-api/tags/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Tags </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/help-desk-api/tags/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Tags </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/help-desk-api/teams/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Teams </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/help-desk-api/teams/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Teams </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/teams/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Team </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/teams/team-members/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Team Members </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/help-desk-api/users/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Users </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/help-desk-api/users/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Users </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/users/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get User </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/users/mailbox-users/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Users by Mailbox </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/help-desk-api/hooks/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Webhooks </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/help-desk-api/hooks/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Webhook </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/help-desk-api/workflows/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Workflows </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/help-desk-api/workflows/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Workflows </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/workflows/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Workflows </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/workflows/conversation/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Run Workflow on a Single Conversation </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/workflows/conversations/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Run Workflow on 2+ Conversations </div> </div> </a> </li> </ul> </li> </ul> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/conversation/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Objects </div> <div class="o-flexy__item"> <i class="icon icon-caret-right tx-12 c-icon c-icon--12 js-nav-arrow c-nav__arrow"></i> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-2 " role="navigation" aria-label="Sidebar nav level 2"> <li class=" c-nav__item "> <a href="/help-desk-api/objects/conversation/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversation </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/help-desk-api/objects/conversation/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversation </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/attachment/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Attachment </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/attachment-data/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Attachment Data </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/source/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Source </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/thread/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Thread </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/field/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Field </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/customer/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Customer </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/help-desk-api/objects/customer/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Customer </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/address/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Address </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/chat/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Chat </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/email/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Email </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/phone/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Customer </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/social/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Social Profile </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/website/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Website </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/mailbox/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Mailbox </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/help-desk-api/objects/mailbox/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Mailbox </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/mailbox-ref/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Mailbox Ref </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/folder/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Folder </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/workflow/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Workflow </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/custom-field/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Custom Field </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/custom-field-option/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Custom Field Option </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/person/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Person </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/abbreviated-conversation/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Reports </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/help-desk-api/objects/abbreviated-conversation/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Abbreviated Conversation </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/busy-time-stats/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Busy Time Statistics </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/customer-stats/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Customer Statistics </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/handle-time-stats/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Handle Time Statistics </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/multiple-time-range-stats-conversations/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Multiple Time Range Statistics (Conversations) </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/multiple-time-range-stats-productivity/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Multiple Time Range Statistics (Productivity) </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/multiple-time-range-stats-company/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Multiple Time Range Statistics (Company) </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/multiple-time-range-stats-user/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Multiple Time Range Statistics (User) </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/new-conversation-stats/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">New Conversation Statistics </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/received-messages-stats/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Received Messages Statistics </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/replies-to-resolve-stats/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Replies to Resolve Statistics </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/response-time-stats/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Response Time Statistics </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/saved-reply-stats/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Saved Reply Statistics </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/tag-stats/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Tag Statistics </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/time-range-stats-conversations/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Time Range Statistics (Conversations) </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/time-range-stats-productivity/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Time Range Statistics (Productivity) </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/time-range-stats-company/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Time Range Statistics (Company) </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/time-range-stats-user/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Time Range Statistics (User) </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/user-stats-company/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User Statistics (Company) </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/workflow-stats/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Workflow Statistics </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/rating/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Rating </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/search-conversation/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">SearchConversation </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/search-customer/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">SearchCustomer </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/tag/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Tag </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/help-desk-api/objects/user/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User </div> </div> </a> </li> </ul> </li> </ul> </div>
+    </div>
+  </div>
+</div>
+
+      </aside>
+      <main class="s-docs-layout__main">
+        <div class="o-container o-container--site u-mrg-t-8 u-pad-h-5@sm u-pad-h-10@lg">
+          <div class="o-row">
+            <div class="o-col-12">
+              <section class="s-main-content" id="content">
+                
+<div class="o-row">
+  <div class="o-col-9@xl s-docs">
+    
+    
+
+
+<div id="s-docs" class="s-docs s-hs-docs s-hs-docs--time-range-statistics-(happiness) s-hs-docs--help-desk-api">
+  <div class="s-docs__top" id="hs-content-top"></div>
+  
+
+<h1>Time Range Statistics (Happiness)</h1>
+
+<p>The time range statistics object contains a summary of how happiness ratings over a date/time range.</p>
+
+<h2>Field Guide</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Notes</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>ratingsPercent</td>
+			<td>Double</td>
+			<td>Percentage of customers who submitted a rating</td>
+		</tr>
+		<tr>
+			<td>okay</td>
+			<td>Double</td>
+			<td>Percentage of <strong>Okay</strong> ratings received</td>
+		</tr>
+		<tr>
+			<td>great</td>
+			<td>Double</td>
+			<td>Percentage of <strong>Great</strong> ratings received</td>
+		</tr>
+		<tr>
+			<td>happinessScore</td>
+			<td>Double</td>
+			<td>This metric is calculated by subtracting the <strong>Not Good</strong> percentage from the <strong>Great</strong> percentage</td>
+		</tr>
+		<tr>
+			<td>okayCount</td>
+			<td>Int</td>
+			<td>Number of <strong>Okay</strong> ratings received</td>
+		</tr>
+		<tr>
+			<td>totalCustomersWithRatings</td>
+			<td>Int</td>
+			<td>Number of customers who submitted a rating</td>
+		</tr>
+		<tr>
+			<td>notGoodCount</td>
+			<td>Int</td>
+			<td>Number of <strong>Not Good</strong> ratings received</td>
+		</tr>
+		<tr>
+			<td>ratingsCount</td>
+			<td>Int</td>
+			<td>Number of ratings received</td>
+		</tr>
+		<tr>
+			<td>notGood</td>
+			<td>Double</td>
+			<td>Percentage of <strong>Not Good</strong> ratings received</td>
+		</tr>
+		<tr>
+			<td>greatCount</td>
+			<td>Int</td>
+			<td>Number of <strong>Great</strong> ratings received</td>
+		</tr>
+		<tr>
+			<td>totalCustomers</td>
+			<td>Int</td>
+			<td>Total number of customers, including those who did not submit a rating</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Example</h2>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"ratingsPercent"</span><span class="p">:</span><span class="w"> </span><span class="mf">35.77981651376147</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"okay"</span><span class="p">:</span><span class="w"> </span><span class="mf">30.909090909090907</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"great"</span><span class="p">:</span><span class="w"> </span><span class="mf">37.27272727272727</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"happinessScore"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.454545454545457</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"okayCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalCustomersWithRatings"</span><span class="p">:</span><span class="w"> </span><span class="mi">39</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"notGoodCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"ratingsCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"notGood"</span><span class="p">:</span><span class="w"> </span><span class="mf">31.818181818181817</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"greatCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalCustomers"</span><span class="p">:</span><span class="w"> </span><span class="mi">109</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+</div>
+
+  </div>
+  <div class="o-col-3@xl js-spy-sidebar ">
+    
+    
+<div
+  id="table-of-contents"
+  class="o-sticky u-mrg-b-10 u-pad-l-7@lg c-floating-sidebar-nav-container"
+  data-spy="affix"
+  data-offset-top="100"
+  data-offset-bottom="200"
+>
+  
+  <p id="toc-header" class="tx-xs tx-uppercase tx-600 t-tx-grey-800 u-mrg-v-1 is-hidden">
+    Contents
+  </p>
+  <ul id="toc" class="nav c-floating-sidebar-nav rx-sidebar-nav-width"></ul>
+</div>
+
+  </div>
+</div>
+
+              </section>
+              <div class="u-pad-t-10 u-mrg-t-10 u-mrg-b-0">
+  <span class="u-mrg-r-2 t-tx-charcoal-200">↑</span><a href="#" class="t-tx-charcoal-200 tx-sm">Back to top</a>
+</div>
+
+              <hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    
+
+<script type="text/javascript">
+var SEEDDATA = {  packs: [      ]};
+</script>
+
+    <!-- beacon embed -->
+<script type="text/javascript">!function(e,n){window.Beacon=n=function(e,n,d){window.Beacon.readyQueue.push({method:e,options:n,data:d})},n.readyQueue=[];var t=e.getElementsByTagName("script")[0],o=e.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://beacon-v2.helpscout.net",t.parentNode.insertBefore(o,t)}(document,window.Beacon||function(){})</script>
+<script>window.Beacon('init', 'aa90d610-923a-4528-95cc-934136cc7712')</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5226593-6', 'helpscout.net');
+ga('send', 'pageview');
+</script>
+
+
+
+
+  </body>
+</html>

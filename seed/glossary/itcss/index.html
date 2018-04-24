@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>
+    
+      
+        ITCSS
+      
+      | Help Scout Developers
+    
+  </title>
+  
+  <meta name="description" content="ITCSS is a CSS architecture created by Harry Roberts. It's an acronym that stands for Inverted Triangle CSS.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="/css/main.css?v=bcf4c478a88968f1873aa3822cbe2ebc">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+  <script src="/js/developer.js?v=4c29c6e17639aeacd57c56cc2d763f95" async defer></script>
+  <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async defer></script>
+</head>
+
+  <body class="tx-smooth">
+    <div class="s-docs-layout">
+      <aside class="s-docs-layout__sidebar t-bg-grey-200">
+        <div class="c-nav-sidebar">
+  <div class="o-scrolly">
+    <div class="o-scrolly__item">
+      <div class="c-nav-sidebar__header u-centralize t-bg-blue-500 t-tx-white">
+        <button class="c-button c-button--link c-nav-sidebar__toggle t-tx-white" id="js-nav-sidebar-toggle">
+          <i class="icon icon-menu c-icon c-icon--32"></i>
+        </button>
+        <div class="c-nav-sidebar__header-content">
+          <div class="c-logo u-pad-v-2">
+  <a href="/" class="u-d-block" title="Help Scout Developers">
+    <img
+      src="/images/hs-developer-logo-wh.svg"
+      width="174"
+      height="32"
+      title="Help Scout Developers"
+      alt="Help Scout Developers"
+      class="c-logo__image"
+    />
+    <span class="u-sr-only">
+      <h1>Help Scout Developers</h1>
+    </span>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="o-scrolly__block">
+      <div class="js-SidebarNav c-nav-sidebar__menu u-mrg-b-10@md u-pad-b-5@md" id="js-nav-sidebar-menu"> <div class="c-nav-header"> <div class="o-flexy o-flexy--just-left o-flexy--gap-md"> <div class="o-flexy__item"> <a href="/" class="c-nav-header__back" title="Back"> <i class="icon icon-caret-left c-icon c-icon--12 u-d-block"></i> </a> </div> <div class="o-flexy__block tx-center u-mrg-l-0"> <strong class="t-tx-charcoal-500"> Seed </strong> </div> </div> </div> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--level-1 " role="navigation" aria-label="Sidebar nav level 1"> <li class=" c-nav__item "> <a href="/seed/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/packs/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Seed Packs </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/examples/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Examples </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/css-unit-testing/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Unit Testing </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/glossary/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Glossary </div> </div> </a> </li> </ul> </div>
+    </div>
+  </div>
+</div>
+
+      </aside>
+      <main class="s-docs-layout__main">
+        <div class="o-container o-container--site u-mrg-t-8 u-pad-h-5@sm u-pad-h-10@lg">
+          <div class="o-row">
+            <div class="o-col-12">
+              <section class="s-main-content" id="content">
+                
+
+<div class="o-row">
+  <div class="o-col-9@xl s-docs">
+    
+      
+<header class="">
+  <!-- 
+
+
+ -->
+  
+
+  <h1 class="">
+    ITCSS
+  </h1>
+
+  
+
+  
+
+</header>
+
+
+    
+    
+
+
+<div id="s-docs" class="s-docs s-hs-docs s-hs-docs--itcss s-hs-docs--">
+  <div class="s-docs__top" id="hs-content-top"></div>
+  
+
+
+
+<p><a href="http://itcss.io/">ITCSS</a> is a CSS architecture created by <a href="https://twitter.com/csswizardry">Harry Roberts</a>.</p>
+
+<p>It’s an acronym that stands for:</p>
+
+<div class="tx-h2 u-mrg-t-5 u-mrg-b-8 t-tx-charcoal-200">
+  <strong class="t-tx-charcoal-600">I</strong>nverted
+  <strong class="t-tx-charcoal-600">T</strong>riangle
+  <strong class="t-tx-charcoal-600">CSS</strong>
+</div>
+
+<p>It’s a modern, and very awesome, CSS approach designed for scalability and maintainability. This architecture is achieved with mindful CSS code organization. This organization structure is based on CSS “specificity”, and can be visualized as an upside-down triangle.</p>
+
+<h2 id="the-triangle">The Triangle</h2>
+
+<p>As the name implies, your CSS code-based is to be organized in an upside-down triangle based on <strong>specificity</strong>. In other words, your super basic general styles rules be added first, and your incredibly, perhaps obnoxiously, specific rules and overrides should be added last.</p>
+
+<p>Behold, the <strong>Ultimate Triangle of Specificity</strong>! 🙌</p>
+
+<p><img src="/images/glossary/itcss.svg" alt="ITCSS: Diagram" /></p>
+
+<p>Note: Harry doesn’t <em>actually</em> call it the “Ultimate Triangle of Specificity”… but we are. Why not? It’s a cool name.</p>
+
+<p>The organization of specificity is defined be a series of “layers”.</p>
+
+<h3 id="layers">Layers</h3>
+
+<p>Note: Tools are specific to pre/post-processing languages like Sass or PostCSS, as mixins and functions aren’t supported in native CSS.</p>
+
+<ul>
+  <li><strong>Settings</strong> – Variable configurations for things like colors, fonts, sizes, etc…</li>
+  <li><strong>Tools</strong> – Globally used mixins and functions.</li>
+  <li><strong>Generic</strong> – CSS resets and normalizing rules to create a foundation for your styles.</li>
+  <li><strong>Elements</strong> – Style rules for bare HTML elements (like <code class="highlighter-rouge">h1</code> or <code class="highlighter-rouge">button</code>).</li>
+  <li><strong>Objects</strong> – Style rules for elements responsible for layout or structuring.</li>
+  <li><strong>Components</strong> – Style rules for UI <a href="/seed/glossary/components">components</a>.</li>
+  <li><strong>Trumps</strong> – Helper or utility rules that tweak Objects or Components by adjusting and override existing rules.</li>
+</ul>
+
+<h3 id="reach">Reach</h3>
+
+<p>In addition to specificity, the Triangle also illustrates the amount of things your rules will impact, or “Reach”.</p>
+
+<p><img src="/images/glossary/itcss-key-metrics.svg" alt="ITCSS: Key Metrics" /></p>
+
+<p>In the example below, we have two CSS rules: a super generic one and an incredibly specific one.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>styles.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Super super generic
+</span><span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">hotpink</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Incredibly specific
+</span><span class="nc">.s-purchase-page</span> <span class="nc">.c-modal</span> <span class="nt">a</span><span class="nc">.linky</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<p>The super generic one isn’t very specific, can be <em>easy</em> overridden with other rules. However, it has an incredible amount of “Reach”, since it updates every single <code class="highlighter-rouge">&lt;a&gt;</code> tag.</p>
+
+<p>On the other hand, the incredibly specific rule, only affects <code class="highlighter-rouge">&lt;a&gt;</code> tags in a very specific circumstance, so it’s “Reach” and impact is minimal.</p>
+
+<hr />
+
+<h2 id="see-also">See also</h2>
+
+<ul>
+  <li><a href="/seed/glossary/bem">BEM</a></li>
+</ul>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">CSS Wizardry</a></li>
+</ul>
+
+
+
+</div>
+
+  </div>
+  <div class="o-col-3@xl js-spy-sidebar ">
+    
+
+    
+<div id="table-of-contents" class="o-sticky u-mrg-b-10 u-pad-l-7@lg c-floating-sidebar-nav-container" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+  
+<p class="u-mrg-t-4@md u-mrg-b-8">
+  <a href="/seed/glossary/" class="c-button">
+    Back to Glossary
+  </a>
+</p>
+
+  <p id="toc-header" class="tx-xs tx-uppercase tx-600 t-tx-grey-800 u-mrg-v-1 is-hidden">
+    Contents
+  </p>
+  <ul id="toc" class="nav c-floating-sidebar-nav rx-sidebar-nav-width"></ul>
+</div>
+
+  </div>
+</div>
+
+              </section>
+              <div class="u-pad-t-10 u-mrg-t-10 u-mrg-b-0">
+  <span class="u-mrg-r-2 t-tx-charcoal-200">↑</span><a href="#" class="t-tx-charcoal-200 tx-sm">Back to top</a>
+</div>
+
+              <hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    
+
+<script type="text/javascript">
+var SEEDDATA = {  packs: [      ]};
+</script>
+
+    <!-- beacon embed -->
+<script type="text/javascript">!function(e,n){window.Beacon=n=function(e,n,d){window.Beacon.readyQueue.push({method:e,options:n,data:d})},n.readyQueue=[];var t=e.getElementsByTagName("script")[0],o=e.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://beacon-v2.helpscout.net",t.parentNode.insertBefore(o,t)}(document,window.Beacon||function(){})</script>
+<script>window.Beacon('init', 'aa90d610-923a-4528-95cc-934136cc7712')</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5226593-6', 'helpscout.net');
+ga('send', 'pageview');
+</script>
+
+
+
+
+  </body>
+</html>

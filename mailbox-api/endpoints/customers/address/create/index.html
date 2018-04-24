@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>
+    
+      
+        Create Address
+      
+      | Help Scout Developers
+    
+  </title>
+  
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="/css/main.css?v=deffa63fad5c3ae3180ad286d1f43adb">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+  <script src="/js/developer.js?v=0b68c6adc80a8b7b28d358b4b86124e7" async defer></script>
+  <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async defer></script>
+</head>
+
+  <body class="tx-smooth">
+    <div class="s-docs-layout">
+      <aside class="s-docs-layout__sidebar t-bg-grey-200">
+        <div class="c-nav-sidebar">
+  <div class="o-scrolly">
+    <div class="o-scrolly__item">
+      <div class="c-nav-sidebar__header u-centralize t-bg-blue-500 t-tx-white">
+        <button class="c-button c-button--link c-nav-sidebar__toggle t-tx-white" id="js-nav-sidebar-toggle">
+          <i class="icon icon-menu c-icon c-icon--32"></i>
+        </button>
+        <div class="c-nav-sidebar__header-content">
+          <div class="c-logo u-pad-v-2">
+  <a href="/" class="u-d-block" title="Help Scout Developers">
+    <img
+      src="/images/hs-developer-logo-wh.svg"
+      width="174"
+      height="32"
+      title="Help Scout Developers"
+      alt="Help Scout Developers"
+      class="c-logo__image"
+    />
+    <span class="u-sr-only">
+      <h1>Help Scout Developers</h1>
+    </span>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="o-scrolly__block">
+      <div class="js-SidebarNav c-nav-sidebar__menu u-mrg-b-10@md u-pad-b-5@md" id="js-nav-sidebar-menu"> <div class="c-nav-header"> <div class="o-flexy o-flexy--just-left o-flexy--gap-md"> <div class="o-flexy__item"> <a href="/" class="c-nav-header__back" title="Back"> <i class="icon icon-caret-left c-icon c-icon--12 u-d-block"></i> </a> </div> <div class="o-flexy__block tx-center u-mrg-l-0"> <strong class="t-tx-charcoal-500"> Mailbox API 2.0 <span class="c-badge u-mrg-l-2">BETA</span> </strong> </div> </div> </div> <ul class=" c-nav c-nav--stacked c-nav--md is-active c-nav--level-1 " role="navigation" aria-label="Sidebar nav level 1"> <li class=" c-nav__item "> <a href="/mailbox-api/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> <div class="o-flexy__item"> <i class="icon icon-caret-right tx-12 c-icon c-icon--12 js-nav-arrow c-nav__arrow"></i> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-2 " role="navigation" aria-label="Sidebar nav level 2"> <li class=" c-nav__item "> <a href="/mailbox-api/overview/authentication/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Authentication </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/overview/backward-compatibility/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Backward compatibility and API updates </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/overview/content_type/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Content Types </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/overview/errors/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Errors </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/overview/http-methods/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">HTTP Methods </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/overview/links/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Links to resources </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/overview/v1-v2-differences/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Main differences between V1 and V2 </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/overview/pagination/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Pagination </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/overview/rate-limiting/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Rate limiting </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/overview/status_codes/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Status codes </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/overview/time/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Time </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item is-active "> <a href="/mailbox-api/endpoints/conversations/list/" class=" c-nav__link js-SidebarNav__link is-active "> <div class="o-flexy"> <div class="o-flexy__item">Endpoints </div> <div class="o-flexy__item"> <i class="icon icon-caret-right tx-12 c-icon c-icon--12 js-nav-arrow c-nav__arrow"></i> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav is-active c-nav--level-2 " role="navigation" aria-label="Sidebar nav level 2"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/attachments/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Attachments </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/attachments/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Attachment </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/attachments/get-data/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Attachment Data </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/attachments/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Upload Attachment </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/custom_fields/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Custom fields </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/custom_fields/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Custom Fields </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/tags/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Tags </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/tags/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Tags </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/threads/chat/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Threads </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/threads/chat/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Chat Thread </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/threads/customer/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Customer Thread </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/threads/note/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Note </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/threads/phone/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Phone Thread </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/threads/reply/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Reply Thread </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/threads/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Threads </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Conversation </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Conversation </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Conversation </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Conversations </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/conversations/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Conversation </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item is-active "> <a href="/mailbox-api/endpoints/customers/list/" class=" c-nav__link js-SidebarNav__link is-active "> <div class="o-flexy"> <div class="o-flexy__item">Customers </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav is-active c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item is-active "> <a href="/mailbox-api/endpoints/customers/address/create/" class=" c-nav__link js-SidebarNav__link is-active "> <div class="o-flexy"> <div class="o-flexy__item">Address </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav is-active c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item is-active "> <a href="/mailbox-api/endpoints/customers/address/create/" class=" c-nav__link js-SidebarNav__link is-active "> <div class="o-flexy"> <div class="o-flexy__item">Create Address </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/address/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Address </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/address/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Address </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/address/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Address </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/chat_handles/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Chat handles </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/chat_handles/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Chat Handle </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/chat_handles/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Chat Handle </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/chat_handles/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Chats Handles </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/chat_handles/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Chat Handles </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/emails/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Emails </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/emails/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Email </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/emails/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Email </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/emails/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Emails </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/emails/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Email </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/phones/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Phones </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/phones/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Phone </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/phones/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Phone </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/phones/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Phones </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/phones/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Phone </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/social_profiles/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Social profiles </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/social_profiles/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Social Profile </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/social_profiles/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Social Profile </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/social_profiles/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Social Profiles </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/social_profiles/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Social Profile </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/websites/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Websites </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/websites/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Website </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/websites/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Website </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/websites/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Websites </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/websites/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Website </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Customer </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Customer </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Customers </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/customers/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Customer </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/mailboxes/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Mailboxes </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/mailboxes/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Mailbox </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/mailboxes/mailbox-fields/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Mailbox Custom Fields </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/mailboxes/mailbox-folders/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Mailbox Folders </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/mailboxes/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Mailboxes </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/company/reports-company-overall/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Reports </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/company/reports-company-overall/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Company </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/company/reports-company-overall/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Company Overall Report </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/company/reports-company-customers-helped/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Company Customers Helped </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/company/reports-company-drilldown/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Company Drilldown </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/conversations/reports-conversations-overall/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/conversations/reports-conversations-overall/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations - Overall Report </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/conversations/reports-conversations-busy-times/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations - Busiest Time of Day </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/conversations/reports-conversations-drilldown/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations - Drilldown </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/conversations/reports-conversations-field-drilldown/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations - Drilldown by Field </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/conversations/reports-conversations-new/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations - New Conversations </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/conversations/reports-conversations-new-drilldown/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations - New Conversations Drilldown </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/conversations/reports-conversations-received-messages/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Conversations - Received Messages </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/docs/reports-docs-overall/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Docs </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/docs/reports-docs-overall/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Docs Overall Report </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/happiness/reports-happiness-overall/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Happiness </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/happiness/reports-happiness-overall/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Happiness Overall Report </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/happiness/reports-happiness-ratings/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Happiness Ratings Report </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/productivity/reports-productivity-overall/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Productivity </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/productivity/reports-productivity-overall/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Productivity Overall Report </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/productivity/reports-productivity-first-response-time/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Productivity - First Response Time </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/productivity/reports-productivity-replies-sent/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Productivity - Replies Sent </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/productivity/reports-productivity-resolution-time/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Productivity - Resolution Time </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/productivity/reports-productivity-resolved/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Productivity - Resolved </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/user/reports-user/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-4 " role="navigation" aria-label="Sidebar nav level 4"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/user/reports-user/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User/Team Overall Report </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/user/reports-user-conversation-history/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User Conversation History </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/user/reports-user-customer-helped/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User Customers Helped </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/user/reports-user-drilldown/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User Drill-down </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/user/reports-user-happiness/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User Happiness </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/user/reports-user-happiness-drilldown/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User Happiness drilldown </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/user/reports-user-replies/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User Replies </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/reports/user/reports-user-resolutions/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">User Resolutions </div> </div> </a> </li> </ul> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/tags/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Tags </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/tags/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Tags </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/users/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Users </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/users/me/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Resource Owner </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/users/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get User </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/users/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Users </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/webhooks/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Webhooks </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/webhooks/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create or Update Webhook </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/webhooks/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Webhook </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/mailbox-api/endpoints/webhooks/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Webhook </div> </div> </a> </li> </ul> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/migration/transition-service/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Migration </div> <div class="o-flexy__item"> <i class="icon icon-caret-right tx-12 c-icon c-icon--12 js-nav-arrow c-nav__arrow"></i> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-2 " role="navigation" aria-label="Sidebar nav level 2"> <li class=" c-nav__item "> <a href="/mailbox-api/migration/transition-service/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Exchange V1 API Key for V2 OAuth token </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/mailbox-api/changelog/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Changelog </div> </div> </a> </li> </ul> </div>
+    </div>
+  </div>
+</div>
+
+      </aside>
+      <main class="s-docs-layout__main">
+        <div class="o-container o-container--site u-mrg-t-8 u-pad-h-5@sm u-pad-h-10@lg">
+          <div class="o-row">
+            <div class="o-col-12">
+              <section class="s-main-content" id="content">
+                
+
+<div class="o-row">
+  <div class="o-col-9@xl s-docs">
+    
+      
+<header class="">
+  <!-- 
+
+
+ -->
+  
+    <div class="o-flexy o-flexy--gap-md">
+    </div>
+  
+
+  <h1 class="">
+    Create Address
+  </h1>
+
+  
+
+  
+
+</header>
+
+
+    
+    
+
+
+<div id="s-docs" class="s-docs s-hs-docs s-hs-docs--create-address s-hs-docs--mailbox-api">
+  <div class="s-docs__top" id="hs-content-top"></div>
+  
+
+<h2 id="request">Request</h2>
+
+<div class="language-http highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nf">POST</span> <span class="nn">/v2/customers/100/address</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer oauth_token</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=UTF-8</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"city"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Dallas"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"state"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"TX"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"postalCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"74206"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"country"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"lines"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"123 West Main St"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Suite 123"</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div></div></div>
+
+<h2 id="request-fields">Request fields</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Path</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">city</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Y</td>
+      <td>City</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">state</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Y</td>
+      <td>State</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">postalCode</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Y</td>
+      <td>Postal code</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">country</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Y</td>
+      <td>Country</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">lines</code></td>
+      <td><code class="highlighter-rouge">Array</code></td>
+      <td>Y</td>
+      <td>Address lines</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="response">Response</h2>
+
+<div class="language-http highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Location</span><span class="p">:</span> <span class="s">https://api.helpscout.net/v2/customers/100/address/</span>
+
+</code></pre>
+</div></div></div>
+
+
+
+</div>
+
+  </div>
+  <div class="o-col-3@xl js-spy-sidebar ">
+    
+
+    
+<div id="table-of-contents" class="o-sticky u-mrg-b-10 u-pad-l-7@lg c-floating-sidebar-nav-container" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+  
+
+  <p id="toc-header" class="tx-xs tx-uppercase tx-600 t-tx-grey-800 u-mrg-v-1 is-hidden">
+    Contents
+  </p>
+  <ul id="toc" class="nav c-floating-sidebar-nav rx-sidebar-nav-width"></ul>
+</div>
+
+  </div>
+</div>
+
+              </section>
+              <div class="u-pad-t-10 u-mrg-t-10 u-mrg-b-0">
+  <span class="u-mrg-r-2 t-tx-charcoal-200">↑</span><a href="#" class="t-tx-charcoal-200 tx-sm">Back to top</a>
+</div>
+
+              <hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    
+
+<script type="text/javascript">
+var SEEDDATA = {  packs: [      ]};
+</script>
+
+    <!-- beacon embed -->
+<script type="text/javascript">!function(e,n){window.Beacon=n=function(e,n,d){window.Beacon.readyQueue.push({method:e,options:n,data:d})},n.readyQueue=[];var t=e.getElementsByTagName("script")[0],o=e.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://beacon-v2.helpscout.net",t.parentNode.insertBefore(o,t)}(document,window.Beacon||function(){})</script>
+<script>window.Beacon('init', 'aa90d610-923a-4528-95cc-934136cc7712')</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5226593-6', 'helpscout.net');
+ga('send', 'pageview');
+</script>
+
+
+
+
+  </body>
+</html>

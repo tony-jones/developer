@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Help Scout Developers - Mailboxes Beta - Help Scout Developers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link href="/css/launch.css" rel="stylesheet">
+    <link href="/css/syntax.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="alternate" type="application/rss+xml" title="Help Scout Blog" href="feed.xml">
+
+    <script src="/js/developer.js?v=2d3849d90d92f22df2eaf1dbe1115cf7" async defer></script>
+    <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+
+</head>
+<body>
+  <header id="mainNav" class="navbar" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/"><img src="/img/hs-developer-logo-wh.svg" alt="Help Scout" width="174" height="32"></a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+        </button>
+      </div><!--/navbar-header-->
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/custom-apps/" tabindex="-1">Custom Apps</a></li>
+          <li><a href="/beacons/" tabindex="-1">Beacon</a></li>
+          <li><a href="/beacon-2/" tabindex="-1">Beacon 2.0</span></a></li>
+          <li><a href="/help-desk-api/" tabindex="-1">Mailbox API</a></li>
+          <li><a href="/docs-api/" tabindex="-1">Docs API</a></li>
+          <li><a href="/open-source/" tabindex="-1">Open Source</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/container-->
+  </header>
+
+	<section id="wrapper">
+		<section id="content" class="container">
+			<div class="paper single-col">
+				<h1 id="new-mailboxes---beta">New Mailboxes - Beta</h1>
+<p>Your Help Scout mailbox experience is about to be much faster! We’ve spent the last few months refactoring mailboxes from the ground up, making all conversation actions and general mailbox updates much snappier across the board.</p>
+
+<p>More than 10,000 lines of code were refactored as part of this project, which is why we need your help before releasing mailboxes to all Help Scout customers. We’d love for you to start using the new version of mailboxes <strong>today</strong>!</p>
+
+<h2 id="accessing-the-beta">Accessing the Beta</h2>
+<p>Our team has been using the beta since mid-October. We don’t expect any problems or issues related to sending messages or updating conversations, as none of that has changed. It’s safe! If something breaks, it will likely be related to the user interface.</p>
+
+<p>Anyone on your team can help test the new mailboxes. Here’s how:</p>
+
+<ol>
+  <li>Visit https://secure-beta.helpscout.net/</li>
+  <li>Log in with your standard Help Scout credentials</li>
+  <li>Get to work!</li>
+</ol>
+
+<p>All of your account data is the same between the beta environment and the current production environment. Any changes you make while using the beta URL will be available if you switch back to the standard URL.</p>
+
+<h2 id="outstanding-issues">Outstanding Issues</h2>
+
+<p><em>None that we’re aware of right now!</em></p>
+
+<h2 id="safety-net">Safety Net</h2>
+<p>If the app feels sluggish for any reason or if you run into any errors, please let us know. Keep in mind you can continue where you left off by reverting back to the standard Help Scout URL: https://secure.helpscout.net. Your work between the two sites will always be in sync.</p>
+
+<h2 id="next-up">Next Up</h2>
+<p>This is the first big milestone in a series of improvements that are coming to Help Scout. Once the new mailboxes are available for everyone and feeling stable, we’ll start pushing real-time activity (folder counts, new messages, updates) to mailboxes as it happens.</p>
+
+<h2 id="feedback">Feedback</h2>
+<p>If you’ve discovered a bug or would like to share some general feedback, send an email to help@helpscout.net or click the <strong>Get Help</strong> link in the app to get in touch. Your feedback is super important, so don’t be shy. We’d love to hear from you!</p>
+
+			</div><!--/paper-->
+		</section>
+<hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+

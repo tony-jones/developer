@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>
+    
+      
+        Quick start guide: Seed packs (CSS Modules)
+      
+      | Help Scout Developers
+    
+  </title>
+  
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="/css/main.css?v=bcf4c478a88968f1873aa3822cbe2ebc">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+  <script src="/js/developer.js?v=4c29c6e17639aeacd57c56cc2d763f95" async defer></script>
+  <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async defer></script>
+</head>
+
+  <body class="tx-smooth">
+    <div class="s-docs-layout">
+      <aside class="s-docs-layout__sidebar t-bg-grey-200">
+        <div class="c-nav-sidebar">
+  <div class="o-scrolly">
+    <div class="o-scrolly__item">
+      <div class="c-nav-sidebar__header u-centralize t-bg-blue-500 t-tx-white">
+        <button class="c-button c-button--link c-nav-sidebar__toggle t-tx-white" id="js-nav-sidebar-toggle">
+          <i class="icon icon-menu c-icon c-icon--32"></i>
+        </button>
+        <div class="c-nav-sidebar__header-content">
+          <div class="c-logo u-pad-v-2">
+  <a href="/" class="u-d-block" title="Help Scout Developers">
+    <img
+      src="/images/hs-developer-logo-wh.svg"
+      width="174"
+      height="32"
+      title="Help Scout Developers"
+      alt="Help Scout Developers"
+      class="c-logo__image"
+    />
+    <span class="u-sr-only">
+      <h1>Help Scout Developers</h1>
+    </span>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="o-scrolly__block">
+      <div class="js-SidebarNav c-nav-sidebar__menu u-mrg-b-10@md u-pad-b-5@md" id="js-nav-sidebar-menu"> <div class="c-nav-header"> <div class="o-flexy o-flexy--just-left o-flexy--gap-md"> <div class="o-flexy__item"> <a href="/" class="c-nav-header__back" title="Back"> <i class="icon icon-caret-left c-icon c-icon--12 u-d-block"></i> </a> </div> <div class="o-flexy__block tx-center u-mrg-l-0"> <strong class="t-tx-charcoal-500"> Seed </strong> </div> </div> </div> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--level-1 " role="navigation" aria-label="Sidebar nav level 1"> <li class=" c-nav__item "> <a href="/seed/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/packs/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Seed Packs </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/examples/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Examples </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/css-unit-testing/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Unit Testing </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/glossary/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Glossary </div> </div> </a> </li> </ul> </div>
+    </div>
+  </div>
+</div>
+
+      </aside>
+      <main class="s-docs-layout__main">
+        <div class="o-container o-container--site u-mrg-t-8 u-pad-h-5@sm u-pad-h-10@lg">
+          <div class="o-row">
+            <div class="o-col-12">
+              <section class="s-main-content" id="content">
+                
+
+<div class="o-row">
+  <div class="o-col-9@xl s-docs">
+    
+      
+<header class="">
+  <!-- 
+
+
+ -->
+  
+    <div class="o-flexy o-flexy--gap-md">
+    </div>
+  
+
+  <h1 class="">
+    Quick start guide: Seed packs (CSS Modules)
+  </h1>
+
+  
+
+  
+
+</header>
+
+
+    
+    
+
+
+<div id="s-docs" class="s-docs s-hs-docs s-hs-docs--quick-start-guide:-seed-packs-(css-modules) s-hs-docs--guides">
+  <div class="s-docs__top" id="hs-content-top"></div>
+  
+
+<p>This guide will help you get started with Seed CSS. It will walk you through how you can easily load modularized CSS from our collection of pre-made Seed packs.</p>
+
+<p>Note: This guide will be focusing on a Node based CSS compiling workflow (specifically node-sass, gulp, and grunt). A little bit of knowledge and experience with these workflows will be extremely useful in following along.</p>
+
+<hr />
+
+<p>Getting setup with Seed packs can be thought of in 3 steps (the <strong>“three I’s”</strong> if you will):</p>
+
+<p><strong>Install</strong>: Download the CSS modules (Seed packs) from npm</p>
+
+<p><strong>Include</strong>: Setup the packs with your Sass workflow</p>
+
+<p><strong>Import</strong>: Adding the packs into your Sass code base</p>
+
+<hr />
+
+<h2 id="1-install">1. Install</h2>
+
+<p>Seed’s CSS modules live on and are managed by <a href="https://www.npmjs.com/">npm</a> (Node’s package manager). If you’re workflow already has a <code class="highlighter-rouge">package.json</code> file, then you’re ready to start adding some <a href="/packs">Seed packs</a>!</p>
+
+<p>For this guide, we’re going to be installing <a href="/seed/packs/seed-button"><code class="highlighter-rouge">seed-button</code></a>, <a href="/seed/packs/seed-input"><code class="highlighter-rouge">seed-input</code></a>, and <a href="/seed/packs/seed-reset"><code class="highlighter-rouge">seed-reset</code></a>.</p>
+
+<p>Run the following command in your command line:</p>
+
+<div class="highlighter-rouge "><div class="highlight highlight--none"><pre><code>npm install --save seed-button seed-input seed-reset
+</code></pre></div></div>
+
+<p>This will fetch and install all three Seed packs to your local development environment.</p>
+
+<p>If you take a look at your <code class="highlighter-rouge">package.json</code> under <code class="highlighter-rouge">dependencies</code>, you will see the Seed packs and their latest versions:</p>
+
+<div class="language- highlighter-rouge"><div class="highlight-header"><pre>package.json</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code>"dependencies": {
+  "seed-button": "^0.1.10",
+  "seed-input": "0.0.3",
+  "seed-reset": "^0.1.1"
+}
+</code></pre>
+</div></div></div>
+
+<p>(Note: Your Seed pack versions may be different than the ones above)</p>
+
+<h2 id="2-include">2. Include</h2>
+
+<p>After downloading our Seed packs, we have to update our Sass build process be able to locate our packs. To make this process <strong>super</strong> easy (almost magically easy), we’ve created a node module called <strong><a href="https://github.com/helpscout/seed-harvester">seed-harvester</a></strong>. It automatically finds and adds the paths to your Sass compiler.</p>
+
+<p>To install <code class="highlighter-rouge">seed-harvester</code>, run the following command in your command line:</p>
+
+<div class="highlighter-rouge "><div class="highlight highlight--none"><pre><code>npm install seed-harvester --save-dev
+</code></pre></div></div>
+
+<p>Next, open add the <code class="highlighter-rouge">seed-harvester</code> module to your Sass compiler script(s). Below are some examples of how to do it for various node-based SCSS workflows:</p>
+
+<ul>
+  <li><a href="#gulp">Gulp</a></li>
+  <li><a href="#grunt">Grunt</a></li>
+  <li><a href="#node-sass">Node Sass</a></li>
+</ul>
+
+<h3 id="gulp">Gulp</h3>
+
+<p>Below is a simple example config for <a href="http://gulpjs.com/">Gulp</a>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight-header"><pre>gulpfile.js</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Require gulp things</span>
+<span class="kd">var</span> <span class="nx">gulp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">sass</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-sass'</span><span class="p">);</span>
+<span class="c1">// Add seed-harvester</span>
+<span class="kd">var</span> <span class="nx">harvester</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'seed-harvester'</span><span class="p">);</span>
+<span class="c1">// Automatically find Seed packs</span>
+<span class="kd">var</span> <span class="nx">paths</span> <span class="o">=</span> <span class="nx">harvester</span><span class="p">(</span>
+<span class="c1">// You can add your own paths here, example:</span>
+<span class="c1">// '/app/src/scss/'</span>
+<span class="p">);</span>
+
+<span class="c1">// Build the CSS</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'styles'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="s1">'./scss/main.scss'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">sass</span><span class="p">({</span>
+      <span class="na">includePaths</span><span class="p">:</span> <span class="nx">paths</span>
+    <span class="p">}))</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="s1">'./dist'</span><span class="p">));</span>
+<span class="p">});</span>
+</code></pre>
+</div></div></div>
+
+<h3 id="grunt">Grunt</h3>
+
+<p>Below is a simple example config for <a href="http://gruntjs.com/">Grunt</a>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight-header"><pre>Gruntfile.js</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Add seed-harvester</span>
+<span class="kd">var</span> <span class="nx">harvester</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'seed-harvester'</span><span class="p">);</span>
+<span class="c1">// Automatically find Seed packs</span>
+<span class="kd">var</span> <span class="nx">paths</span> <span class="o">=</span> <span class="nx">harvester</span><span class="p">(</span>
+  <span class="c1">// You can add your own paths here, example:</span>
+  <span class="c1">// '/app/src/scss/'</span>
+<span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+    <span class="na">sass</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">options</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">includePaths</span><span class="p">:</span> <span class="nx">paths</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="na">dist</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">files</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">'main.css'</span><span class="p">:</span> <span class="s1">'main.scss'</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">'grunt-contrib-sass'</span><span class="p">);</span>
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">'default'</span><span class="p">,[</span><span class="s1">'sass'</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<h3 id="node-sass">Node Sass</h3>
+
+<p>Below is a simple example script for <a href="https://github.com/sass/node-sass">node-sass</a>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight-header"><pre>build-sass.js</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">sass</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'node-sass'</span><span class="p">);</span>
+<span class="c1">// Add seed-harvester</span>
+<span class="kd">var</span> <span class="nx">harvester</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'seed-harvester'</span><span class="p">);</span>
+<span class="c1">// Automatically find Seed packs</span>
+<span class="kd">var</span> <span class="nx">paths</span> <span class="o">=</span> <span class="nx">harvester</span><span class="p">(</span>
+  <span class="c1">// You can add your own paths here, example:</span>
+  <span class="c1">// '/app/src/scss/'</span>
+<span class="p">);</span>
+
+<span class="nx">sass</span><span class="p">.</span><span class="nx">render</span><span class="p">({</span>
+  <span class="na">file</span><span class="p">:</span> <span class="s1">'./scss/main.scss'</span><span class="p">,</span>
+  <span class="na">includePaths</span><span class="p">:</span> <span class="nx">paths</span>
+<span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">process</span><span class="p">.</span><span class="nx">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'./dist/main'</span><span class="p">,</span> <span class="nx">result</span><span class="p">.</span><span class="nx">css</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre>
+</div></div></div>
+
+<h2 id="3-import">3. Import</h2>
+
+<p>Finally! To render the CSS from the Seed packs, you need to <code class="highlighter-rouge">@import</code> them into your Sass code.</p>
+
+<p>In the example below, you can see that we’ve imported <code class="highlighter-rouge">seed-reset</code>, <code class="highlighter-rouge">seed-button</code>, and <code class="highlighter-rouge">seed-input</code> at the top.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>main.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Import seed packs
+</span><span class="k">@import</span> <span class="s2">"pack/seed-reset/_index"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"pack/seed-button/_index"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"pack/seed-input/_index"</span><span class="p">;</span>
+
+<span class="nt">html</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#f9f9f9</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">form</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">40px</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">320px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">label</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<p>Seed packs don’t necessarily have to be imported at the start/top of your Sass code base. For the most part, it doesn’t matter where they are imported (assuming your own class names play nicely with the Seed pack class names). That’s because each Seed pack is a self-contained module that’s designed to work out of the box!</p>
+
+<hr />
+
+<h2 id="example">Example</h2>
+
+<p>You can check our our <a href="https://github.com/helpscout/seed-sample-project">Seed sample project</a> over on Github. Once you save it onto your computer, open up the example <a href="https://github.com/helpscout/seed-sample-project/blob/master/example/index.html"><code class="highlighter-rouge">index.html</code></a> to see the Seed CSS styles in action!</p>
+
+
+</div>
+
+  </div>
+  <div class="o-col-3@xl js-spy-sidebar ">
+    
+
+    
+<div id="table-of-contents" class="o-sticky u-mrg-b-10 u-pad-l-7@lg c-floating-sidebar-nav-container" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+  
+
+  <p id="toc-header" class="tx-xs tx-uppercase tx-600 t-tx-grey-800 u-mrg-v-1 is-hidden">
+    Contents
+  </p>
+  <ul id="toc" class="nav c-floating-sidebar-nav rx-sidebar-nav-width"></ul>
+</div>
+
+  </div>
+</div>
+
+              </section>
+              <div class="u-pad-t-10 u-mrg-t-10 u-mrg-b-0">
+  <span class="u-mrg-r-2 t-tx-charcoal-200">↑</span><a href="#" class="t-tx-charcoal-200 tx-sm">Back to top</a>
+</div>
+
+              <hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    
+
+<script type="text/javascript">
+var SEEDDATA = {  packs: [      ]};
+</script>
+
+    <!-- beacon embed -->
+<script type="text/javascript">!function(e,n){window.Beacon=n=function(e,n,d){window.Beacon.readyQueue.push({method:e,options:n,data:d})},n.readyQueue=[];var t=e.getElementsByTagName("script")[0],o=e.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://beacon-v2.helpscout.net",t.parentNode.insertBefore(o,t)}(document,window.Beacon||function(){})</script>
+<script>window.Beacon('init', 'aa90d610-923a-4528-95cc-934136cc7712')</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5226593-6', 'helpscout.net');
+ga('send', 'pageview');
+</script>
+
+
+
+
+  </body>
+</html>

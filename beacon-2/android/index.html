@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>
+    
+      
+        Beacon for Android
+      
+      | Help Scout Developers
+    
+  </title>
+  
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="/css/main.css?v=1aaa05f01aa0681b753a1652a394f371">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+  <script src="/js/developer.js?v=cb8ed85e34d54065ae4537c0e77e504c" async defer></script>
+  <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async defer></script>
+</head>
+
+  <body class="tx-smooth">
+    <div class="s-docs-layout">
+      <aside class="s-docs-layout__sidebar t-bg-grey-200">
+        <div class="c-nav-sidebar">
+  <div class="o-scrolly">
+    <div class="o-scrolly__item">
+      <div class="c-nav-sidebar__header u-centralize t-bg-blue-500 t-tx-white">
+        <button class="c-button c-button--link c-nav-sidebar__toggle t-tx-white" id="js-nav-sidebar-toggle">
+          <i class="icon icon-menu c-icon c-icon--32"></i>
+        </button>
+        <div class="c-nav-sidebar__header-content">
+          <div class="c-logo u-pad-v-2">
+  <a href="/" class="u-d-block" title="Help Scout Developers">
+    <img
+      src="/images/hs-developer-logo-wh.svg"
+      width="174"
+      height="32"
+      title="Help Scout Developers"
+      alt="Help Scout Developers"
+      class="c-logo__image"
+    />
+    <span class="u-sr-only">
+      <h1>Help Scout Developers</h1>
+    </span>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="o-scrolly__block">
+      <div class="js-SidebarNav c-nav-sidebar__menu u-mrg-b-10@md u-pad-b-5@md" id="js-nav-sidebar-menu"> <div class="c-nav-header"> <div class="o-flexy o-flexy--just-left o-flexy--gap-md"> <div class="o-flexy__item"> <a href="/" class="c-nav-header__back" title="Back"> <i class="icon icon-caret-left c-icon c-icon--12 u-d-block"></i> </a> </div> <div class="o-flexy__block tx-center u-mrg-l-0"> <strong class="t-tx-charcoal-500"> Beacon 2.0 <span class="c-badge u-mrg-l-2">PRIVATE BETA</span> </strong> </div> </div> </div> <ul class=" c-nav c-nav--stacked c-nav--md is-active c-nav--level-1 " role="navigation" aria-label="Sidebar nav level 1"> <li class=" c-nav__item "> <a href="/beacon-2/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/beacon-2/web/javascript-api/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Beacon for Web </div> <div class="o-flexy__item"> <i class="icon icon-caret-right tx-12 c-icon c-icon--12 js-nav-arrow c-nav__arrow"></i> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-2 " role="navigation" aria-label="Sidebar nav level 2"> <li class=" c-nav__item "> <a href="/beacon-2/web/javascript-api/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Javascript API </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/beacon-2/web/secure-mode/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Secure Mode </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item is-active "> <a href="/beacon-2/android/" class=" c-nav__link js-SidebarNav__link is-active "> <div class="o-flexy"> <div class="o-flexy__item">Beacon for Android </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/beacon-2/ios/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Beacon for iOS </div> </div> </a> </li> </ul> </div>
+    </div>
+  </div>
+</div>
+
+      </aside>
+      <main class="s-docs-layout__main">
+        <div class="o-container o-container--site u-mrg-t-8 u-pad-h-5@sm u-pad-h-10@lg">
+          <div class="o-row">
+            <div class="o-col-12">
+              <section class="s-main-content" id="content">
+                
+
+<div class="o-row">
+  <div class="o-col-9@xl s-docs">
+    
+      
+<header class="">
+  <!-- 
+
+
+ -->
+  
+    <div class="o-flexy o-flexy--gap-md">
+    </div>
+  
+
+  <h1 class="">
+    Beacon for Android
+  </h1>
+
+  
+
+  
+
+</header>
+
+
+    
+    
+
+
+<div id="s-docs" class="s-docs s-hs-docs s-hs-docs--beacon-for-android s-hs-docs--beacon-2">
+  <div class="s-docs__top" id="hs-content-top"></div>
+  
+
+<h2 id="installation">Installation</h2>
+<p>The Beacon Android SDK is available from JCenter so simply add the following lines to your app’s <code class="highlighter-rouge">build.gradle</code> file.</p>
+
+<div class="language-groovy highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="n">dependencies</span> <span class="o">{</span>
+  <span class="n">implementation</span> <span class="s2">"com.helpscout:beacon-core:$beaconVersion"</span>
+  <span class="n">implementation</span> <span class="s2">"com.helpscout:beacon-ui:$beaconVersion"</span>
+<span class="o">}</span>
+</code></pre>
+</div></div></div>
+
+<h2 id="initialize">Initialize</h2>
+<p>Initialize the Beacon SDK with your Beacon ID by adding the following call to the <code class="highlighter-rouge">Beacon.Builder()</code> in the  <code class="highlighter-rouge">Application.onCreate()</code> method of your <a href="https://developer.android.com/reference/android/app/Application.html">Application class</a></p>
+
+<div class="language-java highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="n">Beacon</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">withContext</span><span class="o">(</span><span class="k">this</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">withBeaconId</span><span class="o">(</span><span class="s">"76d18b11-41f4-4d34-9a8c-08679d4759e3"</span><span class="o">)</span>       
+  <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+</code></pre>
+</div></div></div>
+
+<p>Beacon ID and <code class="highlighter-rouge">Context</code> fields are mandatory. Failing to provide any of those will throw an <code class="highlighter-rouge">IllegalArgumentException</code>
+when an interaction with the <code class="highlighter-rouge">Beacon</code> object is done. You can find all your Beacon IDs in
+the <a href="https://developer.helpscout.com/beacons/">Beacon developer website</a>. This id
+links all the configuration you’ve done in the Beacon Builder with the instance of Beacon.</p>
+
+<h2 id="launch-beacon">Launch Beacon</h2>
+
+<div class="language-java highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="n">BeaconActivity</span><span class="o">.</span><span class="na">open</span><span class="o">(</span><span class="n">context</span><span class="o">)</span>
+</code></pre>
+</div></div></div>
+
+<h2 id="authenticating-users">Authenticating users</h2>
+
+<p>To allow your users to create new Conversations and link them to their previous Conversations in Help Scout you’ll need to authenticate them with either Basic or Secure mode.
+Typically the <code class="highlighter-rouge">Beacon.login(..)</code> or <code class="highlighter-rouge">Beacon.loginSecureMode(..)</code>  should be called immediately after successful login to your services.</p>
+
+<h3 id="basic-mode">Basic Mode</h3>
+
+<p>Basic mode authentication requires an user identifier, typically this is user’s email.</p>
+<div class="language-java highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code>  <span class="n">Beacon</span><span class="o">.</span><span class="na">login</span><span class="o">(</span><span class="s">"user@domain.com"</span><span class="o">);</span>
+</code></pre>
+</div></div></div>
+
+<h3 id="secure-mode">Secure Mode</h3>
+
+<p>Secure mode authentication uses an user identifier (similar to basic mode) but also requires a signature. The signature must be computed on a <em>per user</em> basis using the secret key. The Secret Key is provided on the Manage Beacon page &gt; Messaging &gt; Advance Options</p>
+
+<p>Note: the Secret key should <em>not</em> be stored in the app, instead your server should provide the computed signature value.</p>
+
+<div class="language-java highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code>  <span class="n">Beacon</span><span class="o">.</span><span class="na">loginSecureMode</span><span class="o">(</span><span class="s">"user@domain.com"</span><span class="o">,</span> <span class="s">"8235545a15c6f41b64e3c47e5c94d3..."</span><span class="o">);</span>
+</code></pre>
+</div></div></div>
+
+<h1 id="advance-setupconfiguration">Advance setup/configuration</h1>
+
+<p>There are three main components that construct the Beacon SDK that are split over two modules.</p>
+
+<ul>
+  <li>beacon-core
+    <ul>
+      <li>Beacon Builder -  <code class="highlighter-rouge">Beacon.Builder()</code></li>
+      <li>Public Data Layer - <code class="highlighter-rouge">BeaconRepository</code></li>
+    </ul>
+  </li>
+  <li>beacon-ui
+    <ul>
+      <li>Easiest way to integrate Beacon features into your app</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="beacon-ui-mode">Beacon UI Mode</h2>
+
+<p>The easiest and recommended way to interact with Beacon is to use it’s UI Mode with the <code class="highlighter-rouge">ui</code> module. The SDK takes care of everything, and
+this mode has all the features that Beacon provides.</p>
+
+<h3 id="launching-the-beacon-ui">Launching the Beacon UI</h3>
+
+<p>The entry point is an <code class="highlighter-rouge">Activity</code>. For convenience, we’ve created a static method that will allow you to launch it from anywhere in your code.
+The only requirement is to have created a <code class="highlighter-rouge">Beacon</code> before, as described above.</p>
+
+<h4 id="beaconactivity">BeaconActivity</h4>
+
+<div class="language-java highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code>  <span class="n">BeaconActivity</span><span class="o">.</span><span class="na">open</span><span class="o">(</span><span class="n">context</span><span class="o">)</span>
+</code></pre>
+</div></div></div>
+
+<h4 id="beaconfabview">BeaconFabView</h4>
+
+<p><code class="highlighter-rouge">BeaconFabView</code> is an extension of the <code class="highlighter-rouge">FloatingActionButton</code> widget provided by the Android
+Design Library. This <code class="highlighter-rouge">Widget</code> is very similar to what your users will see when visiting your website if
+Beacon is enabled.</p>
+
+<div class="language-xml highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nt">&lt;com.helpscout.beacon.ui.BeaconFabView</span>
+    <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+    <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+    <span class="na">app:beacon_id=</span><span class="s">"Your_Beacon_Id"</span><span class="nt">/&gt;</span>
+</code></pre>
+</div></div></div>
+
+<p>In order to stat using <code class="highlighter-rouge">BeaconView</code>, you need to assign a beaconId. Either in the XML <code class="highlighter-rouge">app:beacon_id="Your_Beacon_Id"</code> or code <code class="highlighter-rouge">BeaconFabView.setBeaconId("Your_Beacon_Id")</code>. This is mandatory and the
+SDK will throw an <code class="highlighter-rouge">IllegalArgumentException</code> if it’s missing.</p>
+
+<p>By default, the <code class="highlighter-rouge">BeaconFabView</code> will use the default Beacon color, but it can be easily customised by adding your own theme:</p>
+
+<div class="language-xml highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"AppTheme.FAB"</span> <span class="na">parent=</span><span class="s">"Theme.AppCompat.Light"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"colorAccent"</span><span class="nt">&gt;</span>@color/colorPrimary<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/style&gt;</span>
+</code></pre>
+</div></div></div>
+
+<p>And adding that style to the <code class="highlighter-rouge">BeaconFabView</code></p>
+
+<div class="language-xml highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nt">&lt;com.helpscout.beacon.ui.BeaconFabView</span>
+    <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+    <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+    <span class="na">android:theme=</span><span class="s">"@style/MyTheme.MyBeaconView"</span>
+    <span class="na">app:beacon_id=</span><span class="s">"Your_Beacon_Id"</span><span class="nt">/&gt;</span>
+</code></pre>
+</div></div></div>
+
+<h3 id="customisation">Customisation</h3>
+
+<p>The Beacon SDK allows for some customisation of it’s color and text. We’ve made public a number of color and text
+resources that will make it easy for you to add the look and feel of your own brand. Overriding any of these
+values, you’ll get the desired result:</p>
+
+<h4 id="colors">Colors</h4>
+
+<div class="language-xml highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"hs_beacon_colorPrimary"</span><span class="nt">&gt;</span>@color/primary<span class="nt">&lt;/color&gt;</span>
+<span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"hs_beacon_colorPrimaryDark"</span><span class="nt">&gt;</span>@color/primary_dark<span class="nt">&lt;/color&gt;</span>
+<span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"hs_beacon_colorAccent"</span><span class="nt">&gt;</span>@color/accent<span class="nt">&lt;/color&gt;</span>
+</code></pre>
+</div></div></div>
+
+<p>These three colors work the same way as their counterparts in <code class="highlighter-rouge">AppCompat</code>. By overriding
+the desired values you’ll be able to customise the color values in the SDK.</p>
+
+<p><a href="https://github.com/helpscout/beacon-android-sdk-sample/tree/master/sample-customisation">Sample project that shows colour customisation</a></p>
+
+<h4 id="strings">Strings</h4>
+
+<p>Same goes for strings, there are a number of texts that can be overriden:</p>
+
+<div class="language-xml highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">"hs_beacon_toolbar_title"</span><span class="nt">&gt;</span>My new title<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">"hs_beacon_suggestions_header_title"</span><span class="nt">&gt;</span>My new header<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">"hs_beacon_search_hint"</span><span class="nt">&gt;</span>My new search hint<span class="nt">&lt;/string&gt;</span>
+</code></pre>
+</div></div></div>
+
+<p><a href="https://github.com/helpscout/beacon-android-sdk-sample">link to project sample</a></p>
+
+<h3 id="permissions">Permissions</h3>
+
+<p>The Beacon SDK only requires Internet permission which is defined in the core module.</p>
+
+<h2 id="public-api-core">Public API (Core)</h2>
+
+<p>If all you are looking to do is to expose the knowledge database of articles, the Public API mode is your best bet.
+We provide you with a <code class="highlighter-rouge">Repository</code> (you can read more about this pattern <a href="https://msdn.microsoft.com/en-us/library/ff649690.aspx">here</a>. You’ll only need to include the <code class="highlighter-rouge">core</code> dependency.</p>
+
+<p>The only requirement is to have created a <code class="highlighter-rouge">Beacon</code> with the <code class="highlighter-rouge">Beacon.Builder</code> as described above.</p>
+
+<div class="language-java highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="n">BeaconRepository</span> <span class="n">repository</span> <span class="o">=</span> <span class="n">Beacon</span><span class="o">.</span><span class="na">getRepositoryInstance</span><span class="o">()</span>
+</code></pre>
+</div></div></div>
+
+<p>This <code class="highlighter-rouge">Repository</code> allows you to fetch a few collections:</p>
+
+<h3 id="exposed-methods">Exposed methods</h3>
+
+<ul>
+  <li>Fetch all articles article by id: <code class="highlighter-rouge">List&lt;BeaconArticle&gt; articles = repository.getArticles()</code></li>
+  <li>Fetch an article by id: <code class="highlighter-rouge">BeaconArticle article = repository.getArticleById(articleId)</code></li>
+  <li>Search for an article: <code class="highlighter-rouge">List&lt;BeaconArticle&gt; articles = repository.searchArticles(query)</code></li>
+</ul>
+
+<h3 id="threading">Threading</h3>
+
+<p>All the calls made to the <code class="highlighter-rouge">BeaconRepository</code> are synchronous. Meaning that you’ll have to provide a threading
+mechanism. Instead of being opinionated about it, we prefer to give you the option to use whatever mechanism works
+best for you.</p>
+
+<p><a href="https://github.com/helpscout/beacon-android-sdk-sample/tree/master/sample-core">Sample to project that shows using core only</a></p>
+
+<h2 id="permissions-1">Permissions</h2>
+
+<p>The Beacon SDK only needs Internet permission which is defined in the Core module.</p>
+
+
+</div>
+
+  </div>
+  <div class="o-col-3@xl js-spy-sidebar ">
+    
+
+    
+<div id="table-of-contents" class="o-sticky u-mrg-b-10 u-pad-l-7@lg c-floating-sidebar-nav-container" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+  
+
+  <p id="toc-header" class="tx-xs tx-uppercase tx-600 t-tx-grey-800 u-mrg-v-1 is-hidden">
+    Contents
+  </p>
+  <ul id="toc" class="nav c-floating-sidebar-nav rx-sidebar-nav-width"></ul>
+</div>
+
+  </div>
+</div>
+
+              </section>
+              <div class="u-pad-t-10 u-mrg-t-10 u-mrg-b-0">
+  <span class="u-mrg-r-2 t-tx-charcoal-200">↑</span><a href="#" class="t-tx-charcoal-200 tx-sm">Back to top</a>
+</div>
+
+              <hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    
+
+<script type="text/javascript">
+var SEEDDATA = {  packs: [      ]};
+</script>
+
+    <!-- beacon embed -->
+<script type="text/javascript">!function(e,n){window.Beacon=n=function(e,n,d){window.Beacon.readyQueue.push({method:e,options:n,data:d})},n.readyQueue=[];var t=e.getElementsByTagName("script")[0],o=e.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://beacon-v2.helpscout.net",t.parentNode.insertBefore(o,t)}(document,window.Beacon||function(){})</script>
+<script>window.Beacon('init', 'aa90d610-923a-4528-95cc-934136cc7712')</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5226593-6', 'helpscout.net');
+ga('send', 'pageview');
+</script>
+
+
+
+
+  </body>
+</html>

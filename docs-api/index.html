@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>
+    
+      
+        Docs API Overview
+      
+      | Help Scout Developers
+    
+  </title>
+  
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="/css/main.css?v=b9be20217ee40792d969eb2f52a789ab">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+  <script src="/js/developer.js?v=2d3849d90d92f22df2eaf1dbe1115cf7" async defer></script>
+  <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async defer></script>
+</head>
+
+  <body class="tx-smooth">
+    <div class="s-docs-layout">
+      <aside class="s-docs-layout__sidebar t-bg-grey-200">
+        <div class="c-nav-sidebar">
+  <div class="o-scrolly">
+    <div class="o-scrolly__item">
+      <div class="c-nav-sidebar__header u-centralize t-bg-blue-500 t-tx-white">
+        <button class="c-button c-button--link c-nav-sidebar__toggle t-tx-white" id="js-nav-sidebar-toggle">
+          <i class="icon icon-menu c-icon c-icon--32"></i>
+        </button>
+        <div class="c-nav-sidebar__header-content">
+          <div class="c-logo u-pad-v-2">
+  <a href="/" class="u-d-block" title="Help Scout Developers">
+    <img
+      src="/images/hs-developer-logo-wh.svg"
+      width="174"
+      height="32"
+      title="Help Scout Developers"
+      alt="Help Scout Developers"
+      class="c-logo__image"
+    />
+    <span class="u-sr-only">
+      <h1>Help Scout Developers</h1>
+    </span>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="o-scrolly__block">
+      <div class="js-SidebarNav c-nav-sidebar__menu u-mrg-b-10@md u-pad-b-5@md" id="js-nav-sidebar-menu"> <div class="c-nav-header"> <div class="o-flexy o-flexy--just-left o-flexy--gap-md"> <div class="o-flexy__item"> <a href="/" class="c-nav-header__back" title="Back"> <i class="icon icon-caret-left c-icon c-icon--12 u-d-block"></i> </a> </div> <div class="o-flexy__block tx-center u-mrg-l-0"> <strong class="t-tx-charcoal-500"> Docs API </strong> </div> </div> </div> <ul class=" c-nav c-nav--stacked c-nav--md is-active c-nav--level-1 " role="navigation" aria-label="Sidebar nav level 1"> <li class=" c-nav__item is-active "> <a href="/docs-api/" class=" c-nav__link js-SidebarNav__link is-active "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> <div class="o-flexy__item"> <i class="icon icon-caret-right tx-12 c-icon c-icon--12 js-nav-arrow c-nav__arrow"></i> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav is-active c-nav--level-2 " role="navigation" aria-label="Sidebar nav level 2"> <li class=" c-nav__item is-active "> <a href="/docs-api/" class=" c-nav__link js-SidebarNav__link is-active "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/docs-status-codes/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Status Codes </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/docs-api/articles/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Endpoints </div> <div class="o-flexy__item"> <i class="icon icon-caret-right tx-12 c-icon c-icon--12 js-nav-arrow c-nav__arrow"></i> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-2 " role="navigation" aria-label="Sidebar nav level 2"> <li class=" c-nav__item "> <a href="/docs-api/articles/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Articles </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/docs-api/articles/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Articles </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/articles/search/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Search Articles </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/articles/list-related/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Related Articles </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/articles/revisions/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Revisions </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/articles/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Article </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/articles/revisions/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Revision </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/articles/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Article </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/articles/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Article </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/articles/upload/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Upload Article </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/articles/update-view-count/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update View Count </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/articles/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Article </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/articles/save-draft/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Save Article Draft </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/articles/delete-draft/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Article Draft </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/docs-api/assets/create-article/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Assets </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/docs-api/assets/create-article/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Article Assets </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/assets/create-settings/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Settings Assets </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/docs-api/categories/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Categories </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/docs-api/categories/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Categories </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/categories/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Category </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/categories/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Category </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/categories/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Category </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/categories/order/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Category Order </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/categories/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Category </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/docs-api/collections/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Collections </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/docs-api/collections/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Collections </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/collections/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Collection </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/collections/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Collection </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/collections/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Collection </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/collections/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Collection </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/docs-api/redirects/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Redirects </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/docs-api/redirects/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Redirects </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/redirects/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Redirect </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/redirects/find/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Find Redirect </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/redirects/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Redirect </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/redirects/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Redirect </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/redirects/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Redirect </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/docs-api/sites/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Sites </div> <div class="o-flexy__item"> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-3 " role="navigation" aria-label="Sidebar nav level 3"> <li class=" c-nav__item "> <a href="/docs-api/sites/list/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">List Sites </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/sites/get/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Get Site </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/sites/create/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Create Site </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/sites/update/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Update Site </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/sites/transfer/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Transfer Site </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/sites/delete/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Delete Site </div> </div> </a> </li> </ul> </li> </ul> </li> <li class=" c-nav__item "> <a href="/docs-api/objects/article/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Objects </div> <div class="o-flexy__item"> <i class="icon icon-caret-right tx-12 c-icon c-icon--12 js-nav-arrow c-nav__arrow"></i> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-2 " role="navigation" aria-label="Sidebar nav level 2"> <li class=" c-nav__item "> <a href="/docs-api/objects/article/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Article </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/objects/article-ref/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">ArticleRef </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/objects/article-revision/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">ArticleRevision </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/objects/article-revision-ref/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">ArticleRevisionRef </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/objects/article-search/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">ArticleSearch </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/objects/category/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Category </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/objects/collection/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Collection </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/objects/person/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Person </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/objects/redirect/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Redirect </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/docs-api/objects/site/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Site </div> </div> </a> </li> </ul> </li> </ul> </div>
+    </div>
+  </div>
+</div>
+
+      </aside>
+      <main class="s-docs-layout__main">
+        <div class="o-container o-container--site u-mrg-t-8 u-pad-h-5@sm u-pad-h-10@lg">
+          <div class="o-row">
+            <div class="o-col-12">
+              <section class="s-main-content" id="content">
+                
+<div class="o-row">
+  <div class="o-col-9@xl s-docs">
+    
+    
+
+
+<div id="s-docs" class="s-docs s-hs-docs s-hs-docs--docs-api-overview s-hs-docs--docs-api">
+  <div class="s-docs__top" id="hs-content-top"></div>
+  
+
+<h1>Overview</h1>
+<h2>Your API Key</h2>
+<p>Each User has a Docs API key, which is separate from any Mailbox API keys. To generate view or regenerate the API key,
+click the "person" icon on the top right of your account, next to the search, then click <strong>Your Profile</strong>.</p>
+<p><img src="/img/content/your-profile.png" alt="Your Profile" class="t-bdr"></p>
+<p>Next, click the <strong>Authentication</strong> link in the menu on the left and select <strong>API Keys</strong> tab</p>
+
+<p><img src="/img/content/api-keys.png" alt="API Keys" class="t-bdr"></p>
+
+<h2>Authentication</h2>
+<p>This is an HTTPS-only API. Authentication is based on API Keys. Each API Key is associated with a Help Scout user. Results returned from various responses are based upon the role of the user to which the API key is tied.</p>
+
+<p>The API Key is passed via HTTP Basic Authentication and goes in the username field. A dummy password, such as X, goes in the password field.</p>
+
+<p>To try the API via curl on the command-line, the general form used would be:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">curl --user API_KEY:DUMMY_PASSWORD API_URL</code></pre></figure>
+
+<p>For instance, if your API key is 60783dd23ef, you would execute:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">curl --user 60783dd23ef:X https://docsapi.helpscout.net/v1/collections</code></pre></figure>
+
+<h2>Endpoints</h2>
+<p>All API requests are made to <strong>https://docsapi.helpscout.net/</strong> and all requests are served over HTTPS. The current version is v1.</p>
+
+<h2>Formats</h2>
+<p>The API will only support JSON at this time.</p>
+
+<h2>Correlation ID Response Header</h2>
+<p>All responses from the API contain a <strong>Correlation-Id</strong> header. This header contains a value (a UUID) which is used by Help Scout to trace interactions between our various APIs.  In the case of an error and you're contacting the Help Scout team then include one or more of these IDs and developers will be able to assist quicker.</p>
+
+<p>For instance if you wanted to print all headers on a curl request to access the Correlation-Id you would do the following:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">curl -v --user 60783dd23ef:X https://docsapi.helpscout.net/v1/collections</code></pre></figure>
+
+<p>You would see console output like the following:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  HTTP/1.1 200 OK
+  Correlation-Id: 08d7aa72-4afb-4c2a-b027-45dacee1e1a0</code></pre></figure>
+
+<h2>Rate Limiting</h2>
+<p>Each account is allowed to make a limited number of requests per 10 minute period. This limit is based on the number of Docs Sites the account has:<p>
+<table>
+    <thead>
+        <tr>
+            <th>Number of Sites</th>
+            <th>Rate Limit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>2000 requests every 10 mins</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>3000 requests every 10 mins</td>
+        </tr>
+        <tr>
+            <td>3 or more</td>
+            <td>4000 requests every 10 mins</td>
+        </tr>
+    </tbody>
+</table>
+<p>Headers are returned with every API response to detail the current rate limiting status:</p>
+<table>
+    <thead>
+        <tr>
+            <th>Header Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>X-RateLimit-Limit</td>
+            <td>The maximum number of requests the account is permitted to make per 10 minute period</td>
+        </tr>
+        <tr>
+            <td>X-RateLimit-Remaining</td>
+            <td>The number of requests remaining in the current rate limit window</td>
+        </tr>
+        <tr>
+            <td>X-RateLimit-Reset</td>
+            <td>The number of seconds until the current rate limit window expires</td>
+        </tr>
+    </tbody>
+</table>
+<p>Response code 429 is returned when the limit has been reached.</p>
+
+<p><b>Note:</b> Usage of the Help Scout Docs administration interface generates requests to Docs API. These requests also count towards the rate limit. </p>
+
+<h2>Response Envelopes</h2>
+<p>The API returns one of three envelopes depending upon the request issued:</p>
+<ol>
+    <li>Single Item Envelope</li>
+    <li>Collections Envelope</li>
+    <li>Error Envelope</li>
+</ol>
+<h3>Single Item Envelope</h3>
+<p>All dates/times are returned in ISO8601 format and in UTC timezone.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">Status: 200 OK
+{
+    "article": {
+        "id": 1234,
+        ...
+        "createdAt": "2012-07-17T13:41:01Z"
+    }
+}</code></pre></figure>
+
+<h3>Collections Envelope</h3>
+<p>All dates/times are returned in ISO8601 format and in UTC timezone.  Collections return a maximum of 50 records per page.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">Status: 200 OK
+{
+    "page": 1,
+    "pages": 24,
+    "count": 1154,
+    "items": [
+        {
+            "id": 1234,
+            ...
+            "createdAt": "2012-07-17T13:41:01Z"
+        },
+        {
+            "id": 5678,
+            ...
+            "createdAt": "2012-07-15T08:12:15Z"
+        },
+        ...
+    ]
+}</code></pre></figure>
+
+<h3>Error Envelope</h3>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">Status: 403 Forbidden
+{
+    "status": 403,
+    "message": "The specified resource was not found: '/v1/fake'"
+}</code></pre></figure>
+
+</div>
+
+  </div>
+  <div class="o-col-3@xl js-spy-sidebar ">
+    
+    
+<div
+  id="table-of-contents"
+  class="o-sticky u-mrg-b-10 u-pad-l-7@lg c-floating-sidebar-nav-container"
+  data-spy="affix"
+  data-offset-top="100"
+  data-offset-bottom="200"
+>
+  
+  <p id="toc-header" class="tx-xs tx-uppercase tx-600 t-tx-grey-800 u-mrg-v-1 is-hidden">
+    Contents
+  </p>
+  <ul id="toc" class="nav c-floating-sidebar-nav rx-sidebar-nav-width"></ul>
+</div>
+
+  </div>
+</div>
+
+              </section>
+              <div class="u-pad-t-10 u-mrg-t-10 u-mrg-b-0">
+  <span class="u-mrg-r-2 t-tx-charcoal-200">↑</span><a href="#" class="t-tx-charcoal-200 tx-sm">Back to top</a>
+</div>
+
+              <hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    
+
+<script type="text/javascript">
+var SEEDDATA = {  packs: [      ]};
+</script>
+
+    <!-- beacon embed -->
+<script type="text/javascript">!function(e,n){window.Beacon=n=function(e,n,d){window.Beacon.readyQueue.push({method:e,options:n,data:d})},n.readyQueue=[];var t=e.getElementsByTagName("script")[0],o=e.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://beacon-v2.helpscout.net",t.parentNode.insertBefore(o,t)}(document,window.Beacon||function(){})</script>
+<script>window.Beacon('init', 'aa90d610-923a-4528-95cc-934136cc7712')</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5226593-6', 'helpscout.net');
+ga('send', 'pageview');
+</script>
+
+
+
+
+  </body>
+</html>

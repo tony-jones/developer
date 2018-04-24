@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>
+    
+      
+        Javascript API
+      
+      | Help Scout Developers
+    
+  </title>
+  
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="/css/main.css?v=b9be20217ee40792d969eb2f52a789ab">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+  <script src="/js/developer.js?v=2d3849d90d92f22df2eaf1dbe1115cf7" async defer></script>
+  <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async defer></script>
+</head>
+
+  <body class="tx-smooth">
+    <div class="s-docs-layout">
+      <aside class="s-docs-layout__sidebar t-bg-grey-200">
+        <div class="c-nav-sidebar">
+  <div class="o-scrolly">
+    <div class="o-scrolly__item">
+      <div class="c-nav-sidebar__header u-centralize t-bg-blue-500 t-tx-white">
+        <button class="c-button c-button--link c-nav-sidebar__toggle t-tx-white" id="js-nav-sidebar-toggle">
+          <i class="icon icon-menu c-icon c-icon--32"></i>
+        </button>
+        <div class="c-nav-sidebar__header-content">
+          <div class="c-logo u-pad-v-2">
+  <a href="/" class="u-d-block" title="Help Scout Developers">
+    <img
+      src="/images/hs-developer-logo-wh.svg"
+      width="174"
+      height="32"
+      title="Help Scout Developers"
+      alt="Help Scout Developers"
+      class="c-logo__image"
+    />
+    <span class="u-sr-only">
+      <h1>Help Scout Developers</h1>
+    </span>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="o-scrolly__block">
+      <div class="js-SidebarNav c-nav-sidebar__menu u-mrg-b-10@md u-pad-b-5@md" id="js-nav-sidebar-menu"> <div class="c-nav-header"> <div class="o-flexy o-flexy--just-left o-flexy--gap-md"> <div class="o-flexy__item"> <a href="/" class="c-nav-header__back" title="Back"> <i class="icon icon-caret-left c-icon c-icon--12 u-d-block"></i> </a> </div> <div class="o-flexy__block tx-center u-mrg-l-0"> <strong class="t-tx-charcoal-500"> Beacon 1.0 </strong> </div> </div> </div> <ul class=" c-nav c-nav--stacked c-nav--md is-active c-nav--level-1 " role="navigation" aria-label="Sidebar nav level 1"> <li class=" c-nav__item "> <a href="/beacons/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/beacons/customization/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Customization </div> </div> </a> </li> <li class=" c-nav__item is-active "> <a href="/beacons/javascript-api/" class=" c-nav__link js-SidebarNav__link is-active "> <div class="o-flexy"> <div class="o-flexy__item">Javascript API </div> </div> </a> </li> </ul> </div>
+    </div>
+  </div>
+</div>
+
+      </aside>
+      <main class="s-docs-layout__main">
+        <div class="o-container o-container--site u-mrg-t-8 u-pad-h-5@sm u-pad-h-10@lg">
+          <div class="o-row">
+            <div class="o-col-12">
+              <section class="s-main-content" id="content">
+                
+
+<div class="o-row">
+  <div class="o-col-9@xl s-docs">
+    
+      
+<header class="">
+  <!-- 
+<a href="/beacons/" class="tx-700 t-tx-grey-800 c-link c-link--plain">Beacons</a>
+
+
+
+ -->
+  
+    <div class="o-flexy o-flexy--gap-md">
+    </div>
+  
+
+  <h1 class="">
+    Javascript API
+  </h1>
+
+  
+
+  
+
+</header>
+
+
+    
+    
+
+
+<div id="s-docs" class="s-docs s-hs-docs s-hs-docs--javascript-api s-hs-docs--beacons">
+  <div class="s-docs__top" id="hs-content-top"></div>
+  
+
+<p>The Javascript API exposes the following methods to the global object HS.beacon. You can use them to control your Beacon programmatically, both in modal and popover mode.</p>
+
+<h2 id="ready">.ready()</h2>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span> <span class="nx">handler</span> <span class="p">);</span>
+</code></pre>
+</div></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paramaters</th>
+      <th>Type</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>handler</td>
+      <td><code class="highlighter-rouge">function</code></td>
+      <td>yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Specify a function to execute as soon as the Beacon has been mounted in the DOM. Useful for describing initial-load actions such as <a href="#suggest">suggestions</a> or <a href="#identify">identifying users</a>. If you call this method <em>after</em> the Beacon has been mounted, its handler function will be executed immediately. The value of <code class="highlighter-rouge">this</code> inside the handler function points to the <code class="highlighter-rouge">HS.beacon</code> object itself.</p>
+
+<p><strong>Important!</strong> You must use this method if you want to call any of the other methods described on this page <em>before</em> the Beacon is initialized. You’ll get an error if you try to use any other method before it’s ready, so it’s always a good idea to wrap your calls in a <code class="highlighter-rouge">ready</code> handler.</p>
+
+<h5 id="example">Example</h5>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Open the Beacon as soon as it's ready</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre>
+</div></div></div>
+
+<hr />
+
+<h2 id="open">.open()</h2>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+</code></pre>
+</div></div></div>
+
+<p>Open the Beacon if it’s closed, or does nothing if it’s opened. This method always returns the Beacon component object. You can use this method to trigger the Beacon when a user clicks on a custom link or button.</p>
+
+<div class="c-alert " role="alert"> <strong>Note:</strong> When using the Modal version, you must use this method to display the modal. </div>
+
+<h5 id="example-1">Example</h5>
+
+<div class="c-card hs-code u-mrg-t-4 u-mrg-b-7" data-js=""><div class="u-pad-5 hs-code__example" data-example-id="">
+<button id="btn-open" class="c-button">Open Beacon</button>
+</div></div>
+
+<p><strong>HTML</strong></p>
+
+<div class="language-html highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"btn-open"</span><span class="nt">&gt;</span>Open Beacon<span class="nt">&lt;/button&gt;</span>
+</code></pre>
+</div></div></div>
+
+<p><strong>JS (jQuery)</strong></p>
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'#btn-open'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre>
+</div></div></div>
+
+<hr />
+
+<h2 id="close">.close()</h2>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+</code></pre>
+</div></div></div>
+
+<p>Close the Beacon if it’s opened, or does nothing if it’s closed. This method always returns the Beacon component object.</p>
+
+<h5 id="example-2">Example</h5>
+
+<div class="c-card hs-code u-mrg-t-4 u-mrg-b-7" data-js=""><div class="u-pad-5 hs-code__example" data-example-id="">
+<button id="btn-close" class="c-button">Close Beacon</button>
+</div></div>
+
+<p><strong>HTML</strong></p>
+<div class="language-html highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"btn-close"</span><span class="nt">&gt;</span>Close Beacon<span class="nt">&lt;/button&gt;</span>
+</code></pre>
+</div></div></div>
+
+<p><strong>JS (jQuery)</strong></p>
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'#btn-close'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre>
+</div></div></div>
+
+<hr />
+
+<h2 id="toggle">.toggle()</h2>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">toggle</span><span class="p">();</span>
+</code></pre>
+</div></div></div>
+
+<p>Toggle Beacon’s state (open / close). Always returns the Beacon component object.</p>
+
+<h5 id="example-3">Example</h5>
+
+<div class="c-card hs-code u-mrg-t-4 u-mrg-b-7" data-js=""><div class="u-pad-5 hs-code__example" data-example-id="">
+<button id="btn-toggle" class="c-button">Toggle Beacon</button>
+</div></div>
+
+<p><strong>HTML</strong></p>
+<div class="language-html highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"btn-toggle"</span><span class="nt">&gt;</span>Toggle Beacon<span class="nt">&lt;/button&gt;</span>
+</code></pre>
+</div></div></div>
+
+<p><strong>JS (jQuery)</strong></p>
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'#btn-toggle'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">toggle</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre>
+</div></div></div>
+
+<hr />
+
+<h2 id="identify">.identify()</h2>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">identify</span><span class="p">(</span> <span class="nx">userObject</span> <span class="p">);</span>
+</code></pre>
+</div></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paramaters</th>
+      <th>Type</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>userObject</td>
+      <td><code class="highlighter-rouge">object</code></td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The identify method serves two purposes: it uses the <code class="highlighter-rouge">name</code> and <code class="highlighter-rouge">email</code> attributes from the <code class="highlighter-rouge">userObject</code> to pre-populate Beacon’s contact form. Also, if you fill this object with additional custom attributes, the information will show up in the Help Scout conversation, in the “Customer Information” section.</p>
+
+<h5 id="example-4">Example</h5>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">identify</span><span class="p">({</span>
+    <span class="na">name</span><span class="p">:</span> <span class="s1">'Pete "Maverick" Mitchell'</span><span class="p">,</span>
+    <span class="na">email</span><span class="p">:</span> <span class="s1">'maverick@topgunschool.com'</span><span class="p">,</span>
+    <span class="na">Age</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span>
+    <span class="s1">'Favorite Song'</span><span class="p">:</span> <span class="s1">'You\'ve lost that lovin\' feeling'</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre>
+</div></div></div>
+
+<p><strong>How it looks in Help Scout</strong></p>
+
+<p><img src="/img/content/beacon-note.png" alt="Beacon Note" /></p>
+
+<hr />
+
+<h2 id="prefill">.prefill()</h2>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">prefill</span><span class="p">(</span> <span class="nx">formObject</span> <span class="p">);</span>
+</code></pre>
+</div></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paramaters</th>
+      <th>Type</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>formObject</td>
+      <td><code class="highlighter-rouge">object</code></td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The prefill method serves two purposes: it uses the <code class="highlighter-rouge">subject</code> and <code class="highlighter-rouge">topic</code> attributes from the <code class="highlighter-rouge">formObject</code> to pre-populate Beacon’s contact form. Note that pre-filled form fields are hidden by default, unless the <a href="/beacons/customization#showContactFields"><code class="highlighter-rouge">showContactFields</code></a> option is enabled.</p>
+
+<h5 id="example-5">Example</h5>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">prefill</span><span class="p">({</span>
+    <span class="na">subject</span><span class="p">:</span> <span class="s1">'I feel the need... the need for speed!'</span><span class="p">,</span>
+    <span class="na">topic</span><span class="p">:</span> <span class="s1">'need-help'</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre>
+</div></div></div>
+
+<hr />
+
+<h2 id="search">.search()</h2>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span> <span class="nx">query</span> <span class="p">);</span>
+</code></pre>
+</div></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paramaters</th>
+      <th>Type</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>query</td>
+      <td><code class="highlighter-rouge">string</code></td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Trigger a Docs search</strong></p>
+
+<p><strong>Note:</strong> Triggering the search won’t automatically open the Beacon if it’s closed, you’ll need to use the <a href="#open">.open()</a> method for that purpose.</p>
+
+<h5 id="example-6">Example</h5>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s1">'workflows'</span><span class="p">);</span>
+</code></pre>
+</div></div></div>
+
+<hr />
+
+<h2 id="suggest">.suggest()</h2>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">suggest</span><span class="p">(</span> <span class="nx">articlesIds</span> <span class="p">);</span>
+</code></pre>
+</div></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paramaters</th>
+      <th>Type</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>articlesIds</td>
+      <td><code class="highlighter-rouge">array</code></td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Show a list of suggested articles instead of the default search box. This method is a great way to show helpful articles relating to the page your customer is viewing. This method receives an array of articleIds. To find the ID of a particular article, you can go to manage that article in Help Scout and check the last parameter in the URL:</p>
+
+<p><img class="t-bdr" src="/img/content/articleId.png" alt="Article ID" /></p>
+
+<h5 id="example-7">Example</h5>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">suggest</span><span class="p">([</span>
+    <span class="s1">'524db818e4b0c2199a391f34'</span><span class="p">,</span>
+    <span class="s1">'525d5a44e4b0a3224aa066b2'</span><span class="p">,</span>
+    <span class="s1">'52a603d4e4b010488044bc1a'</span><span class="p">,</span>
+    <span class="s1">'545000abe4b07fce1b00cab1'</span>
+  <span class="p">]);</span>
+<span class="p">});</span>
+</code></pre>
+</div></div></div>
+
+<hr />
+
+<h2 id="show">.show()</h2>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span> <span class="nx">articleId</span> <span class="p">);</span>
+</code></pre>
+</div></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Type</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>articleId</td>
+      <td><code class="highlighter-rouge">string</code></td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Show a particular article. This method receives an articleId. to find the ID of a particular article, you can go to manage that article in Help Scout and check the last parameter in the URL:</p>
+
+<p><img src="/img/content/articleId.png" alt="Article ID" /></p>
+
+<h5 id="example-8">Example</h5>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="s1">'524db818e4b0c2199a391f34'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+</div></div></div>
+
+<h5 id="data-beacon-article">data-beacon-article</h5>
+
+<p>Another way to show a particular article inside beacon is to simply add a <code class="highlighter-rouge">data-beacon-article="524db818e4b0c2199a391f34"</code> attribute to any article link on your main page. Rather than taking you to the article page, clicks on this link will instead open that article inside Beacon, the same as if you had manually called <a href="#show"><code class="highlighter-rouge">HS.beacon.show(articleId)</code></a>.</p>
+
+<h5 id="how-it-looks-like-in-action">How it looks like in action</h5>
+
+<p><img src="/img/content/data-beacon-article.gif" alt="data-beacon-article example" /></p>
+
+<hr />
+
+<h2 id="reset">.reset()</h2>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
+</code></pre>
+</div></div></div>
+
+<p>Reset the Beacon to its initial state, clearing both the search and contact forms, and returning to the initial screen. This method is helpful in an SPA scenario where you would want to clear the Beacon without a full-page refresh.</p>
+
+<hr />
+
+<h2 id="init">.init()</h2>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+</code></pre>
+</div></div></div>
+
+<p>This methods renders the Beacon on the page in the case its initialization was prevented by setting the <code class="highlighter-rouge">autoInit</code> config to <code class="highlighter-rouge">false</code>, or if it was previously destroyed by the <a href="#destroy">destroy()</a> method.</p>
+
+<hr />
+
+<h2 id="destroy">.destroy()</h2>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">HS</span><span class="p">.</span><span class="nx">beacon</span><span class="p">.</span><span class="nx">destroy</span><span class="p">();</span>
+</code></pre>
+</div></div></div>
+
+<p>Unmounts the Beacon from the page. To re-render it, use the <a href="#init">init()</a> method.</p>
+
+
+</div>
+
+  </div>
+  <div class="o-col-3@xl js-spy-sidebar ">
+    
+
+    
+<div id="table-of-contents" class="o-sticky u-mrg-b-10 u-pad-l-7@lg c-floating-sidebar-nav-container" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+  
+
+  <p id="toc-header" class="tx-xs tx-uppercase tx-600 t-tx-grey-800 u-mrg-v-1 is-hidden">
+    Contents
+  </p>
+  <ul id="toc" class="nav c-floating-sidebar-nav rx-sidebar-nav-width"></ul>
+</div>
+
+  </div>
+</div>
+
+              </section>
+              <div class="u-pad-t-10 u-mrg-t-10 u-mrg-b-0">
+  <span class="u-mrg-r-2 t-tx-charcoal-200">↑</span><a href="#" class="t-tx-charcoal-200 tx-sm">Back to top</a>
+</div>
+
+              <hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    
+
+<script type="text/javascript">
+var SEEDDATA = {  packs: [      ]};
+</script>
+
+    <!-- beacon embed -->
+<script type="text/javascript">!function(e,n){window.Beacon=n=function(e,n,d){window.Beacon.readyQueue.push({method:e,options:n,data:d})},n.readyQueue=[];var t=e.getElementsByTagName("script")[0],o=e.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://beacon-v2.helpscout.net",t.parentNode.insertBefore(o,t)}(document,window.Beacon||function(){})</script>
+<script>window.Beacon('init', 'aa90d610-923a-4528-95cc-934136cc7712')</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5226593-6', 'helpscout.net');
+ga('send', 'pageview');
+</script>
+
+
+
+
+  </body>
+</html>

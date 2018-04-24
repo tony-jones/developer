@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>
+    
+      
+        Publish
+      
+      | Help Scout Developers
+    
+  </title>
+  
+  <meta name="description" content="Mixin that acts as an include guard, preventing undesired duplication of compiled CSS styles.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="/css/main.css?v=4ea9918ca741020c4e1f80a6744c2495">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+  <script src="/js/developer.js?v=e646c53294c15d72f4e77118ca4d6103" async defer></script>
+  <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async defer></script>
+</head>
+
+  <body class="tx-smooth">
+    <div class="s-docs-layout">
+      <aside class="s-docs-layout__sidebar t-bg-grey-200">
+        <div class="c-nav-sidebar">
+  <div class="o-scrolly">
+    <div class="o-scrolly__item">
+      <div class="c-nav-sidebar__header u-centralize t-bg-blue-500 t-tx-white">
+        <button class="c-button c-button--link c-nav-sidebar__toggle t-tx-white" id="js-nav-sidebar-toggle">
+          <i class="icon icon-menu c-icon c-icon--32"></i>
+        </button>
+        <div class="c-nav-sidebar__header-content">
+          <div class="c-logo u-pad-v-2">
+  <a href="/" class="u-d-block" title="Help Scout Developers">
+    <img
+      src="/images/hs-developer-logo-wh.svg"
+      width="174"
+      height="32"
+      title="Help Scout Developers"
+      alt="Help Scout Developers"
+      class="c-logo__image"
+    />
+    <span class="u-sr-only">
+      <h1>Help Scout Developers</h1>
+    </span>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="o-scrolly__block">
+      <div class="js-SidebarNav c-nav-sidebar__menu u-mrg-b-10@md u-pad-b-5@md" id="js-nav-sidebar-menu"> <div class="c-nav-header"> <div class="o-flexy o-flexy--just-left o-flexy--gap-md"> <div class="o-flexy__item"> <a href="/" class="c-nav-header__back" title="Back"> <i class="icon icon-caret-left c-icon c-icon--12 u-d-block"></i> </a> </div> <div class="o-flexy__block tx-center u-mrg-l-0"> <strong class="t-tx-charcoal-500"> Seed </strong> </div> </div> </div> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--level-1 " role="navigation" aria-label="Sidebar nav level 1"> <li class=" c-nav__item "> <a href="/seed/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/packs/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Seed Packs </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/examples/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Examples </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/css-unit-testing/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Unit Testing </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/glossary/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Glossary </div> </div> </a> </li> </ul> </div>
+    </div>
+  </div>
+</div>
+
+      </aside>
+      <main class="s-docs-layout__main">
+        <div class="o-container o-container--site u-mrg-t-8 u-pad-h-5@sm u-pad-h-10@lg">
+          <div class="o-row">
+            <div class="o-col-12">
+              <section class="s-main-content" id="content">
+                
+
+<div class="o-row">
+  <div class="o-col-9@xl s-docs">
+    
+      
+<header class="">
+  <!-- 
+
+
+ -->
+  
+    <div class="o-flexy o-flexy--gap-md">
+    </div>
+  
+
+  <h1 class="">
+    Publish
+  </h1>
+
+  
+    <div class="tx-700">
+      <p class="u-mrg-t-0 u-mrg-b-2"><a href="https://github.com/helpscout/seed-publish" target="_blank" class="c-link--view-source tx-sm">View Source</a></p>
+    </div>
+  
+
+  
+      <div class="o-flexy__item u-d-none u-d-block@sm">
+        <a href="https://travis-ci.org/helpscout/seed-publish" target="_blank" class="tx-no-underline">
+          <img src="https://travis-ci.org/helpscout/seed-publish.svg?branch=master">
+        </a>
+        <a href="https://www.npmjs.com/package/seed-publish" target="_blank" class="tx-no-underline">
+          <img src="https://badge.fury.io/js/seed-publish.svg">
+        </a>
+      </div>
+  
+
+</header>
+
+
+    
+    
+
+
+<div id="s-docs" class="s-docs s-hs-docs s-hs-docs--publish s-hs-docs--mixin">
+  <div class="s-docs__top" id="hs-content-top"></div>
+  
+
+<p>A library that provides the ability to setup include guards, preventing undesired duplication of compiled CSS styles.</p>
+
+<h2 id="install">Install</h2>
+
+<div class="highlighter-rouge "><div class="highlight highlight--none"><pre><code>npm install seed-publish --save
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="about">About</h2>
+
+<p><code class="highlighter-rouge">seed-publish</code> is a mixin combo that acts as an “<a href="https://en.wikipedia.org/wiki/Include_guard">include guard</a>” that prevents undesired duplicate CSS rendering. This can potentially occur from multiple uses of <code class="highlighter-rouge">@import</code> – a common design pattern in Seed CSS.</p>
+
+<p>These mixins will likely be used <strong>in the creation of Seed Packs</strong>.</p>
+
+<h3 id="problem">Problem</h3>
+
+<p>Leveraging existing styles is fundamental to the scalable CSS. Let’s pretend we have this amazing <code class="highlighter-rouge">.box</code> component pack:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>pack/box/__index.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<p>Next, we want to create another component pack that uses our existing <code class="highlighter-rouge">.box</code> component pack:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>pack/menu/__index.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Add in dependency styles
+</span><span class="k">@import</span> <span class="s2">"pack/box/_index"</span><span class="p">;</span>
+<span class="c1">// Create our menu component
+</span><span class="nc">.menu</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+
+  <span class="nc">.box</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<p>Finally, in our main project, we want to use both!</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>project.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Components
+</span><span class="k">@import</span> <span class="s2">"pack/box/_index"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"pack/menu/_index"</span><span class="p">;</span>
+</code></pre>
+</div></div></div>
+
+<p>However, because our <code class="highlighter-rouge">menu</code> component already imported our <code class="highlighter-rouge">box</code> component, the resulting CSS will be double box component:</p>
+<div class="language-css highlighter-rouge"><div class="highlight-header"><pre>project.css</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.menu</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.menu</span> <span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<h3 id="workarounds">Workarounds</h3>
+
+<p>We <strong>could</strong> just omit importing of <code class="highlighter-rouge">box</code> in our <code class="highlighter-rouge">menu</code> component pack. But this means that the pack is incomplete, and it is up to the project importing it to provide the missing styles.</p>
+
+<p>Alternatively, we <strong>could</strong> omit importing of the <code class="highlighter-rouge">box</code> component pack in our <code class="highlighter-rouge">project.scss</code>. But that also isn’t very good because there’s this slightly mysterious layer of abstraction that we have little to no control over.</p>
+
+<p>These issues compound as we create or import more complicated components that, like our <code class="highlighter-rouge">menu</code> component, have multiple dependencies.</p>
+
+<p><strong>We need something to control these imports</strong>.</p>
+
+<p>Which is what <code class="highlighter-rouge">seed-publish</code> aims to solve.</p>
+
+<h3 id="conditional-imports">Conditional imports</h3>
+
+<p>You <strong>cannot</strong> use <code class="highlighter-rouge">@import</code> inside of directives with Sass (which is what the condition <code class="highlighter-rouge">@if/@else</code> methods are). This has been a <a href="https://github.com/sass/sass/issues/739">reported issue</a> (and heavily requested feature) with Sass since <strong>2013</strong>. The core team have stated that they are working in a new <code class="highlighter-rouge">@import</code> method in the next version of Sass, but there is no word on when that may be coming.</p>
+
+<p>Conditional imports were accidentally working in <a href="https://github.com/sass/node-sass/releases/tag/v3.4.2">v3.4.2 of Node Sass</a>, but that has since been patched.</p>
+
+<hr />
+
+<h2 id="mixins">Mixins</h2>
+
+<p>Rex, the lovable dinosaur from Disney Pixar’s Toy Story, will be used to illustrate how <code class="highlighter-rouge">seed-publish</code>’s mixins can be used to customize the styles of a Rex CSS component.</p>
+
+<div class="tx-center u-mrg-v-8">
+  <img src="/images/examples/rex.jpg" width="300" />
+</div>
+
+<h3 id="export">export</h3>
+
+<p><strong>export($name)</strong> (Mixin)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Argument</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">$name</code></td>
+      <td>String</td>
+      <td>The <strong>unique name</strong> of the module you want guarded/controlled.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">@content</code></td>
+      <td>Content</td>
+      <td>The styles you want guarded/controlled.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>_rex.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Dependencies
+</span><span class="k">@import</span> <span class="s2">"pack/seed-publish/_index"</span><span class="p">;</span>
+
+<span class="k">@include</span> <span class="nd">export</span><span class="p">(</span><span class="n">rex</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.rex</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<p>There is <strong>no limit</strong> on the number of times the <code class="highlighter-rouge">export</code> mixin can be used on a unique name. This is useful for controlling styles across multiple files.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>_rex.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Dependencies
+</span><span class="k">@import</span> <span class="s2">"pack/seed-publish/_index"</span><span class="p">;</span>
+
+<span class="k">@include</span> <span class="nd">export</span><span class="p">(</span><span class="n">rex</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.rex</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@import</span> <span class="s2">"./battery"</span><span class="p">;</span>
+</code></pre>
+</div></div></div>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>_battery.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Dependencies
+</span><span class="k">@import</span> <span class="s2">"pack/seed-publish/_index"</span><span class="p">;</span>
+
+<span class="k">@include</span> <span class="nd">export</span><span class="p">(</span><span class="n">rex</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.rex-battery</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<p><strong>Note</strong>: You <strong>cannot</strong> use an <code class="highlighter-rouge">@import</code> inside the <code class="highlighter-rouge">export</code> mixin. That is because <code class="highlighter-rouge">export</code> uses a series of <code class="highlighter-rouge">@if</code> statements behind the scenes, and Sass does not allow for <code class="highlighter-rouge">@import</code> to be used within conditional statements. (<a href="/seed/packs/seed-publish/conditional-imports">See above</a>)</p>
+
+<hr />
+
+<h3 id="publish">publish</h3>
+
+<p><strong>publish($name)</strong> (Mixin)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Argument</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">$name</code></td>
+      <td>String</td>
+      <td>The <strong>unique name</strong> of the module you want published.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Use the <code class="highlighter-rouge">publish</code> mixin when you have completed building your module/pack. This effectively blocks all rendering of CSS for the exported <code class="highlighter-rouge">$name</code> passed the point of publishing.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>_rex.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Dependencies
+</span><span class="k">@import</span> <span class="s2">"pack/seed-publish/_index"</span><span class="p">;</span>
+
+<span class="k">@import</span> <span class="s2">"./rex"</span><span class="p">;</span>
+
+<span class="c1">// Publish
+</span><span class="k">@include</span> <span class="nd">publish</span><span class="p">(</span><span class="n">rex</span><span class="p">);</span>
+</code></pre>
+</div></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight-header"><pre>rex.css</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nc">.rex</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.rex-battery</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<p>Regardless of how many times the files are imported (regardless of where they come from), they will not compile after the <code class="highlighter-rouge">publish</code> mixin has been used.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>_rex.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Dependencies
+</span><span class="k">@import</span> <span class="s2">"pack/seed-publish/_index"</span><span class="p">;</span>
+
+<span class="k">@import</span> <span class="s2">"./rex"</span><span class="p">;</span>
+
+<span class="c1">// Publish
+</span><span class="k">@include</span> <span class="nd">publish</span><span class="p">(</span><span class="n">rex</span><span class="p">);</span>
+<span class="c1">// The following @import will not render because the content
+// has already been published.
+</span><span class="k">@import</span> <span class="s2">"./rex"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"./rex"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"./rex"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"./rex"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"./rex"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"./rex"</span><span class="p">;</span>
+</code></pre>
+</div></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight-header"><pre>rex.css</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nc">.rex</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.rex-battery</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<hr />
+
+<h3 id="unload">unload</h3>
+
+<p><strong>unload($names…)</strong> (Mixin)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Argument</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">$names…</code></td>
+      <td>String / List</td>
+      <td>The <strong>unique name</strong> of the module(s) you want ignored by <code class="highlighter-rouge">publish()</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Modules matching the name of the arguments passed into <code class="highlighter-rouge">unload()</code> will <strong>not</strong> render when CSS is compiled.</p>
+
+<p><strong>Use case</strong></p>
+
+<p>You want to use this brand new <code class="highlighter-rouge">rex-pack</code> in your Sass project (<code class="highlighter-rouge">rex-pack</code> doesn’t really exist, but it would be cool if it did). <code class="highlighter-rouge">rex-pack</code> requires a handful of dependencies:</p>
+
+<div class="highlighter-rouge "><div class="highlight highlight--none"><pre><code>rex-pack
+├── rex-figure-pack
+│   ├── rex-head-pack
+│   ├── rex-arms-pack
+│   ├── rex-body-pack
+│   ├── rex-leg-pack
+│   └── rex-tail-pack
+├── accessories-pack
+└── battery-pack
+</code></pre></div></div>
+
+<p>For your setup, you want to use <code class="highlighter-rouge">rex-pack</code> <strong>except</strong> for <code class="highlighter-rouge">battery-pack</code>. At this point, you have two options:</p>
+
+<ol>
+  <li>Manually include all the individual packs that make up <code class="highlighter-rouge">rex-pack</code>.</li>
+  <li>Include <code class="highlighter-rouge">rex-pack</code>, and simply exclude <code class="highlighter-rouge">battery-pack</code>.</li>
+</ol>
+
+<p>The #2 solution is what the <code class="highlighter-rouge">unload()</code> mixin was designed to accomplish!</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>_toys.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Dependencies
+</span><span class="k">@import</span> <span class="s2">"pack/seed-publish/_index"</span><span class="p">;</span>
+
+<span class="c1">// Step 1: Exclude packs
+</span><span class="k">@include</span> <span class="nd">unload</span><span class="p">(</span><span class="n">battery</span><span class="p">);</span>
+
+<span class="c1">// Step 2: @import the pack containing the excluded packs
+</span><span class="k">@import</span> <span class="s2">"pack/rex/_index"</span><span class="p">;</span>
+
+<span class="c1">// styles within battery-pack will not be generated
+</span></code></pre>
+</div></div></div>
+
+<p>The <code class="highlighter-rouge">unload</code> mixin accepts lists as well as nested lists:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>_toys.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Dependencies
+</span><span class="k">@import</span> <span class="s2">"pack/seed-publish/_index"</span><span class="p">;</span>
+
+<span class="c1">// Step 1: Exclude packs
+</span><span class="k">@include</span> <span class="nd">unload</span><span class="p">(</span>
+  <span class="n">accessories</span><span class="o">,</span>
+  <span class="n">battery</span><span class="o">,</span>
+  <span class="p">(</span>
+    <span class="n">arms</span><span class="o">,</span>
+    <span class="n">tail</span><span class="o">,</span>
+  <span class="p">)</span>
+<span class="p">);</span>
+
+<span class="c1">// Step 2: @import the pack containing the excluded packs
+</span><span class="k">@import</span> <span class="s2">"pack/rex/_index"</span><span class="p">;</span>
+
+<span class="c1">// styles within accessories, battery, arm, and tail packs will not be generated
+</span></code></pre>
+</div></div></div>
+
+<hr />
+
+<h3 id="reload">reload</h3>
+
+<p><strong>reload($names…)</strong> (Mixin)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Argument</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">$names…</code></td>
+      <td>String / List</td>
+      <td>The <strong>unique name</strong> of the module(s), that have been <code class="highlighter-rouge">unload()</code>, you want to re-enable for <code class="highlighter-rouge">publish()</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="highlighter-rouge">reload()</code> exists as a way to provide finer grain control to when/where packs can be loaded.</p>
+
+<p>In the <a href="/seed/packs/seed-publish/#unload"><code class="highlighter-rouge">unload()</code></a> example with the <code class="highlighter-rouge">battery</code> pack:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>_toys.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Dependencies
+</span><span class="k">@import</span> <span class="s2">"pack/seed-publish/_index"</span><span class="p">;</span>
+
+<span class="c1">// Step 1: Exclude packs
+</span><span class="k">@include</span> <span class="nd">unload</span><span class="p">(</span><span class="n">battery</span><span class="p">);</span>
+
+<span class="c1">// Step 2: @import the pack containing the excluded packs
+</span><span class="k">@import</span> <span class="s2">"pack/rex/_index"</span><span class="p">;</span>
+
+<span class="c1">// styles within battery-pack will not be generated
+</span></code></pre>
+</div></div></div>
+
+<p>Let’s say that we actually <strong>do</strong> want sides to load, but we want it to load somewhere else in our Sass code. By using the <code class="highlighter-rouge">reload()</code> mixin, we can re-enable <code class="highlighter-rouge">publish()</code> to generate CSS for the specified pack.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>_toys.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Dependencies
+</span><span class="k">@import</span> <span class="s2">"pack/seed-publish/_index"</span><span class="p">;</span>
+
+<span class="c1">// Previously excluded (unloaded) battery
+</span><span class="k">@include</span> <span class="nd">unload</span><span class="p">(</span><span class="n">battery</span><span class="p">);</span>
+
+<span class="err">...
+
+// </span><span class="na">Step</span><span class="err"> </span><span class="na">1</span><span class="p">:</span> <span class="n">Re-include</span> <span class="n">packs</span>
+<span class="o">@</span><span class="n">include</span> <span class="nf">reload</span><span class="p">(</span><span class="n">battery</span><span class="p">);</span>
+
+<span class="c1">// Step 2: @import the pack containing the previously excluded packs
+</span><span class="k">@import</span> <span class="s2">"pack/rex/_index"</span><span class="p">;</span>
+
+<span class="c1">// styles within battery-pack will be generated,
+// even though they have been previously excluded.
+</span></code></pre>
+</div></div></div>
+
+<hr />
+
+<h2 id="related">Related</h2>
+
+<ul>
+  <li><a href="/seed/packs/seed-dash">seed-dash</a></li>
+  <li><a href="/seed/packs/seed-props">seed-props</a></li>
+</ul>
+
+
+</div>
+
+  </div>
+  <div class="o-col-3@xl js-spy-sidebar ">
+    
+
+    
+<div id="table-of-contents" class="o-sticky u-mrg-b-10 u-pad-l-7@lg c-floating-sidebar-nav-container" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+  
+
+  <p id="toc-header" class="tx-xs tx-uppercase tx-600 t-tx-grey-800 u-mrg-v-1 is-hidden">
+    Contents
+  </p>
+  <ul id="toc" class="nav c-floating-sidebar-nav rx-sidebar-nav-width"></ul>
+</div>
+
+  </div>
+</div>
+
+              </section>
+              <div class="u-pad-t-10 u-mrg-t-10 u-mrg-b-0">
+  <span class="u-mrg-r-2 t-tx-charcoal-200">↑</span><a href="#" class="t-tx-charcoal-200 tx-sm">Back to top</a>
+</div>
+
+              <hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    
+
+<script type="text/javascript">
+var SEEDDATA = {  packs: [      ]};
+</script>
+
+    <!-- beacon embed -->
+<script type="text/javascript">!function(e,n){window.Beacon=n=function(e,n,d){window.Beacon.readyQueue.push({method:e,options:n,data:d})},n.readyQueue=[];var t=e.getElementsByTagName("script")[0],o=e.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://beacon-v2.helpscout.net",t.parentNode.insertBefore(o,t)}(document,window.Beacon||function(){})</script>
+<script>window.Beacon('init', 'aa90d610-923a-4528-95cc-934136cc7712')</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5226593-6', 'helpscout.net');
+ga('send', 'pageview');
+</script>
+
+
+
+
+  </body>
+</html>

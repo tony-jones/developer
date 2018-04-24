@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>
+    
+      
+        Secure Mode
+      
+      | Help Scout Developers
+    
+  </title>
+  
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="/css/main.css?v=ea5867fac17b3f4987c91eb4ee321d26">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+  <script src="/js/developer.js?v=a54341c3d77422d5da2660668d9f0b8d" async defer></script>
+  <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async defer></script>
+</head>
+
+  <body class="tx-smooth">
+    <div class="s-docs-layout">
+      <aside class="s-docs-layout__sidebar t-bg-grey-200">
+        <div class="c-nav-sidebar">
+  <div class="o-scrolly">
+    <div class="o-scrolly__item">
+      <div class="c-nav-sidebar__header u-centralize t-bg-blue-500 t-tx-white">
+        <button class="c-button c-button--link c-nav-sidebar__toggle t-tx-white" id="js-nav-sidebar-toggle">
+          <i class="icon icon-menu c-icon c-icon--32"></i>
+        </button>
+        <div class="c-nav-sidebar__header-content">
+          <div class="c-logo u-pad-v-2">
+  <a href="/" class="u-d-block" title="Help Scout Developers">
+    <img
+      src="/images/hs-developer-logo-wh.svg"
+      width="174"
+      height="32"
+      title="Help Scout Developers"
+      alt="Help Scout Developers"
+      class="c-logo__image"
+    />
+    <span class="u-sr-only">
+      <h1>Help Scout Developers</h1>
+    </span>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="o-scrolly__block">
+      <div class="js-SidebarNav c-nav-sidebar__menu u-mrg-b-10@md u-pad-b-5@md" id="js-nav-sidebar-menu"> <div class="c-nav-header"> <div class="o-flexy o-flexy--just-left o-flexy--gap-md"> <div class="o-flexy__item"> <a href="/" class="c-nav-header__back" title="Back"> <i class="icon icon-caret-left c-icon c-icon--12 u-d-block"></i> </a> </div> <div class="o-flexy__block tx-center u-mrg-l-0"> <strong class="t-tx-charcoal-500"> Beacon 2.0 <span class="c-badge u-mrg-l-2">PRIVATE BETA</span> </strong> </div> </div> </div> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--level-1 " role="navigation" aria-label="Sidebar nav level 1"> <li class=" c-nav__item "> <a href="/beacon-2/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/beacon-2/web/javascript-api/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Beacon for Web </div> <div class="o-flexy__item"> <i class="icon icon-caret-right tx-12 c-icon c-icon--12 js-nav-arrow c-nav__arrow"></i> </div> </div> </a> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--sub-nav c-nav--level-2 " role="navigation" aria-label="Sidebar nav level 2"> <li class=" c-nav__item "> <a href="/beacon-2/web/javascript-api/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Javascript API </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/beacon-2/web/secure-mode/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Secure Mode </div> </div> </a> </li> </ul> </li> <li class=" c-nav__item "> <a href="/beacon-2/android/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Beacon for Android </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/beacon-2/ios/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Beacon for iOS </div> </div> </a> </li> </ul> </div>
+    </div>
+  </div>
+</div>
+
+      </aside>
+      <main class="s-docs-layout__main">
+        <div class="o-container o-container--site u-mrg-t-8 u-pad-h-5@sm u-pad-h-10@lg">
+          <div class="o-row">
+            <div class="o-col-12">
+              <section class="s-main-content" id="content">
+                
+
+<div class="o-row">
+  <div class="o-col-9@xl s-docs">
+    
+      
+<header class="">
+  <!-- 
+
+
+ -->
+  
+    <div class="o-flexy o-flexy--gap-md">
+    </div>
+  
+
+  <h1 class="">
+    Secure Mode
+  </h1>
+
+  
+
+  
+
+</header>
+
+
+    
+    
+
+
+<div id="s-docs" class="s-docs s-hs-docs s-hs-docs--secure-mode s-hs-docs--beacons">
+  <div class="s-docs__top" id="hs-content-top"></div>
+  
+
+<p>Secure mode enables identity verification to protect your user’s information and conversations.
+It provides an additional layer of security to Beacon’s live chat by preventing malicious agents
+from impersonating legitimate users.</p>
+
+<h3 id="usage">Usage</h3>
+
+<p>To enable Secure Mode you’ll first need to generate a SHA-256 <a href="https://en.wikipedia.org/wiki/Hash-based_message_authentication_code">HMAC</a> code on your server. 
+Examples for generating an HMAC signature for your application are:</p>
+<h2 id="ruby">Ruby</h2>
+<div class="language-ruby highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="n">window</span><span class="o">.</span><span class="no">Beacon</span><span class="p">(</span><span class="s1">'identify'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">name: </span><span class="s2">"&lt;%= user.name %&gt;"</span><span class="p">,</span>
+  <span class="ss">email: </span><span class="s2">"&lt;%= user.email %&gt;"</span><span class="p">,</span>
+  <span class="ss">signature: </span><span class="s2">"&lt;%=
+    OpenSSL::HMAC.hexdigest(
+      'sha256',
+      'JNbSzXIEonCFiiOepXyMtcXlTMVjtWX7wFZbiME4',
+      user.email
+    )
+  %&gt;"</span>
+<span class="p">})</span>
+</code></pre>
+</div></div></div>
+
+<h2 id="pythondjango">Python/Django</h2>
+<div class="language-python highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="n">window</span><span class="o">.</span><span class="n">Beacon</span><span class="p">(</span><span class="s">'identify'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="n">name</span><span class="p">:</span> <span class="s">"{{ request.user.name|escapejs }}"</span><span class="p">,</span>
+  <span class="n">email</span><span class="p">:</span> <span class="s">"{{ request.user.email|escapejs }}"</span><span class="p">,</span>
+  <span class="n">signature</span><span class="p">:</span> <span class="s">"{{</span><span class="err">
+</span><span class="s">    hmac.new(</span><span class="err">
+</span><span class="s">      'JNbSzXIEonCFiiOepXyMtcXlTMVjtWX7wFZbiME4',</span><span class="err">
+</span><span class="s">      request.user.email,</span><span class="err">
+</span><span class="s">      digestmod=hashlib.sha256</span><span class="err">
+</span><span class="s">    ).hexdigest()</span><span class="err">
+</span><span class="s">  }}"</span>
+<span class="p">})</span>
+</code></pre>
+</div></div></div>
+
+<h2 id="php">PHP</h2>
+<div class="language-php highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code>window.Beacon('identify', {
+  name: <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">);</span> <span class="cp">?&gt;</span>,
+  email: <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$user</span><span class="o">-&gt;</span><span class="na">email</span><span class="p">);</span> <span class="cp">?&gt;</span>,
+  signature: "<span class="cp">&lt;?php</span>
+    <span class="k">echo</span> <span class="nb">hash_hmac</span><span class="p">(</span>
+      <span class="s1">'sha256'</span><span class="p">,</span>
+      <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">email</span><span class="p">,</span>
+      <span class="s1">'JNbSzXIEonCFiiOepXyMtcXlTMVjtWX7wFZbiME4'</span>
+    <span class="p">);</span>
+  <span class="cp">?&gt;</span>"
+})
+</code></pre>
+</div></div></div>
+
+<h2 id="nodejs">NodeJS</h2>
+<div class="language-python highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">crypto</span> <span class="nn">from</span> <span class="s">'crypto'</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="n">Generate</span> <span class="n">the</span> <span class="n">signature</span>
+<span class="n">const</span> <span class="n">signature</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">createHmac</span><span class="p">(</span><span class="s">'sha256'</span><span class="p">,</span> <span class="n">secretKey</span><span class="p">)</span>
+  <span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">email</span><span class="p">)</span>
+  <span class="o">.</span><span class="n">digest</span><span class="p">(</span><span class="s">'hex'</span><span class="p">);</span>
+</code></pre>
+</div></div></div>
+
+<p>Once the signature is generated on your server, it then needs to be passed to Beacon via your webpage content. Use the identify method from our Javascript API to provide a <code class="highlighter-rouge">signature</code> attribute.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nx">Beacon</span><span class="p">(</span><span class="s1">'identify'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'Steve Aoki'</span><span class="p">,</span>
+  <span class="na">email</span><span class="p">:</span> <span class="s1">'steve@aoki.com'</span><span class="p">,</span>
+  <span class="na">signature</span><span class="p">:</span> <span class="s1">'2fe4d4a5963f28b77737c091c436096beee0b74fabb9fcdcd2a4d8859d2099a3'</span>
+<span class="p">})</span>
+</code></pre>
+</div></div></div>
+
+
+</div>
+
+  </div>
+  <div class="o-col-3@xl js-spy-sidebar ">
+    
+
+    
+<div id="table-of-contents" class="o-sticky u-mrg-b-10 u-pad-l-7@lg c-floating-sidebar-nav-container" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+  
+
+  <p id="toc-header" class="tx-xs tx-uppercase tx-600 t-tx-grey-800 u-mrg-v-1 is-hidden">
+    Contents
+  </p>
+  <ul id="toc" class="nav c-floating-sidebar-nav rx-sidebar-nav-width"></ul>
+</div>
+
+  </div>
+</div>
+
+              </section>
+              <div class="u-pad-t-10 u-mrg-t-10 u-mrg-b-0">
+  <span class="u-mrg-r-2 t-tx-charcoal-200">↑</span><a href="#" class="t-tx-charcoal-200 tx-sm">Back to top</a>
+</div>
+
+              <hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    
+
+<script type="text/javascript">
+var SEEDDATA = {  packs: [      ]};
+</script>
+
+    <!-- beacon embed -->
+<script type="text/javascript">!function(e,n){window.Beacon=n=function(e,n,d){window.Beacon.readyQueue.push({method:e,options:n,data:d})},n.readyQueue=[];var t=e.getElementsByTagName("script")[0],o=e.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://beacon-v2.helpscout.net",t.parentNode.insertBefore(o,t)}(document,window.Beacon||function(){})</script>
+<script>window.Beacon('init', 'aa90d610-923a-4528-95cc-934136cc7712')</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5226593-6', 'helpscout.net');
+ga('send', 'pageview');
+</script>
+
+
+
+
+  </body>
+</html>

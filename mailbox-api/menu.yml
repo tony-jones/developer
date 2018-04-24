@@ -1,0 +1,27 @@
+# Allows re-ordering of entries if the default alphabetical is not enough
+- path: overview
+  linkTo: /mailbox-api/
+  order: 0
+- path: endpoints
+  linkTo: endpoints/conversations/list
+  order: 1
+- path: migration
+  order: 2
+- path: changelog
+  order: 3
+- path: endpoints/conversations
+  linkTo: endpoints/conversations/list
+- path: endpoints/customers
+  linkTo: endpoints/customers/list
+- path: endpoints/mailboxes
+  linkTo: endpoints/mailboxes/list
+- path: endpoints/users
+  linkTo: endpoints/users/list
+- path: endpoints/reports/company/reports-company-overall
+  order: 0
+- path: endpoints/reports/conversations/reports-conversations-overall
+  order: 0
+- path: endpoints/reports/productivity/reports-productivity-overall
+  order: 0
+- path: endpoints/reports/user/reports-user
+  order: 0

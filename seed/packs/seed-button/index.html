@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>
+    
+      
+        Button
+      
+      | Help Scout Developers
+    
+  </title>
+  
+  <meta name="description" content="Component for user-actions. Includes support for a variation of sizes, styles, and states.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="/css/main.css?v=bcf4c478a88968f1873aa3822cbe2ebc">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+  <script src="/js/developer.js?v=4c29c6e17639aeacd57c56cc2d763f95" async defer></script>
+  <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async defer></script>
+</head>
+
+  <body class="tx-smooth">
+    <div class="s-docs-layout">
+      <aside class="s-docs-layout__sidebar t-bg-grey-200">
+        <div class="c-nav-sidebar">
+  <div class="o-scrolly">
+    <div class="o-scrolly__item">
+      <div class="c-nav-sidebar__header u-centralize t-bg-blue-500 t-tx-white">
+        <button class="c-button c-button--link c-nav-sidebar__toggle t-tx-white" id="js-nav-sidebar-toggle">
+          <i class="icon icon-menu c-icon c-icon--32"></i>
+        </button>
+        <div class="c-nav-sidebar__header-content">
+          <div class="c-logo u-pad-v-2">
+  <a href="/" class="u-d-block" title="Help Scout Developers">
+    <img
+      src="/images/hs-developer-logo-wh.svg"
+      width="174"
+      height="32"
+      title="Help Scout Developers"
+      alt="Help Scout Developers"
+      class="c-logo__image"
+    />
+    <span class="u-sr-only">
+      <h1>Help Scout Developers</h1>
+    </span>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="o-scrolly__block">
+      <div class="js-SidebarNav c-nav-sidebar__menu u-mrg-b-10@md u-pad-b-5@md" id="js-nav-sidebar-menu"> <div class="c-nav-header"> <div class="o-flexy o-flexy--just-left o-flexy--gap-md"> <div class="o-flexy__item"> <a href="/" class="c-nav-header__back" title="Back"> <i class="icon icon-caret-left c-icon c-icon--12 u-d-block"></i> </a> </div> <div class="o-flexy__block tx-center u-mrg-l-0"> <strong class="t-tx-charcoal-500"> Seed </strong> </div> </div> </div> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--level-1 " role="navigation" aria-label="Sidebar nav level 1"> <li class=" c-nav__item "> <a href="/seed/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/packs/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Seed Packs </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/examples/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Examples </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/css-unit-testing/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Unit Testing </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/glossary/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Glossary </div> </div> </a> </li> </ul> </div>
+    </div>
+  </div>
+</div>
+
+      </aside>
+      <main class="s-docs-layout__main">
+        <div class="o-container o-container--site u-mrg-t-8 u-pad-h-5@sm u-pad-h-10@lg">
+          <div class="o-row">
+            <div class="o-col-12">
+              <section class="s-main-content" id="content">
+                
+
+<div class="o-row">
+  <div class="o-col-9@xl s-docs">
+    
+      
+<header class="">
+  <!-- 
+
+
+ -->
+  
+    <div class="o-flexy o-flexy--gap-md">
+    </div>
+  
+
+  <h1 class="">
+    Button
+  </h1>
+
+  
+    <div class="tx-700">
+      <p class="u-mrg-t-0 u-mrg-b-2"><a href="https://github.com/helpscout/seed-button" target="_blank" class="c-link--view-source tx-sm">View Source</a></p>
+    </div>
+  
+
+  
+      <div class="o-flexy__item u-d-none u-d-block@sm">
+        <a href="https://travis-ci.org/helpscout/seed-button" target="_blank" class="tx-no-underline">
+          <img src="https://travis-ci.org/helpscout/seed-button.svg?branch=master">
+        </a>
+        <a href="https://www.npmjs.com/package/seed-button" target="_blank" class="tx-no-underline">
+          <img src="https://badge.fury.io/js/seed-button.svg">
+        </a>
+      </div>
+  
+
+</header>
+
+
+    
+    
+
+
+<div id="s-docs" class="s-docs s-hs-docs s-hs-docs--button s-hs-docs--component">
+  <div class="s-docs__top" id="hs-content-top"></div>
+  
+
+<p>Button component pack for Seed</p>
+
+<p>Use Seed’s custom button styles for actions in forms, dialogs, and more. Includes support for a handful of contextual variations, sizes, states, and more.</p>
+
+<h2 id="install">Install</h2>
+
+<div class="highlighter-rouge "><div class="highlight highlight--none"><pre><code>npm install seed-button --save
+</code></pre></div></div>
+
+<h3 id="dependencies">Dependencies</h3>
+
+<ul>
+  <li><a href="/seed/packs/seed-border">seed-border</a></li>
+  <li><a href="/seed/packs/seed-control">seed-control</a></li>
+  <li><a href="/seed/packs/seed-dash">seed-dash</a></li>
+  <li><a href="/seed/packs/seed-publish">seed-publish</a></li>
+  <li><a href="/seed/packs/seed-states">seed-states</a></li>
+</ul>
+
+<hr />
+
+<h2 id="example">Example</h2>
+
+<p>There are 3 button styles in Seed. Add <code class="highlighter-rouge">.c-button</code> to any selector to create a button!</p>
+
+<div class="c-card hs-code u-mrg-t-4 u-mrg-b-7" data-js="html"><div class="u-pad-5 hs-code__example" data-example-id="">
+<button class="c-button">Regular</button>
+<button class="c-button c-button--primary">Primary</button>
+<button class="c-button c-button--link">Link</button>
+</div><div class="c-clipboard-copy-container js-code-snippet t-bdr-top"><div class="u-pad-5 hs-code__highlight highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button"</span><span class="nt">&gt;</span>Regular<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></div></div></div>
+
+<h3 id="primary-buttons">Primary buttons</h3>
+
+<p>Just a heads up regarding primary buttons - Try to have only 1 primary button per view.
+Remember.. When every button is primary, <strong>no button will be</strong>.</p>
+
+<div class="c-card hs-code u-mrg-t-4 u-mrg-b-7" data-js="html"><div class="u-pad-5 hs-code__example" data-example-id="">
+<button class="c-button c-button--primary">OMG</button>
+<button class="c-button c-button--primary">Too many</button>
+<button class="c-button c-button--primary">Primary buttons!</button>
+</div><div class="c-clipboard-copy-container js-code-snippet t-bdr-top"><div class="u-pad-5 hs-code__highlight highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--primary"</span><span class="nt">&gt;</span>OMG<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--primary"</span><span class="nt">&gt;</span>Too many<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--primary"</span><span class="nt">&gt;</span>Primary buttons!<span class="nt">&lt;/button&gt;</span></code></pre></div></div></div>
+
+<h3 id="styling-non-button-elements">Styling non-button elements</h3>
+
+<p>As long as you attach the <code class="highlighter-rouge">.c-button</code> class, the button style can be applied to any selector. Just a heads up, for accessbility purposes, be sure to add <code class="highlighter-rouge">role="button"</code> to non-buttons if you choose to “buttonize” them.</p>
+
+<div class="c-card hs-code u-mrg-t-4 u-mrg-b-7" data-js="html"><div class="u-pad-5 hs-code__example" data-example-id="">
+<a href="#" role="button" class="c-button">Link disguised as Button</a>
+</div><div class="c-clipboard-copy-container js-code-snippet t-bdr-top"><div class="u-pad-5 hs-code__highlight highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"c-button"</span><span class="nt">&gt;</span>Link disguised as Button<span class="nt">&lt;/a&gt;</span></code></pre></div></div></div>
+
+<hr />
+
+<h2 id="sizes">Sizes</h2>
+
+<p>Alternate button sizes are available but should be used sparringly. Avoid using large/small buttons next to standard sized buttons or form elements.</p>
+
+<h3 id="large-buttons">Large buttons</h3>
+
+<div class="c-card hs-code u-mrg-t-4 u-mrg-b-7" data-js="html"><div class="u-pad-5 hs-code__example" data-example-id="">
+<button class="c-button c-button--lg">Regular</button>
+<button class="c-button c-button--primary c-button--lg">Primary</button>
+<button class="c-button c-button--link c-button--lg">Link</button>
+</div><div class="c-clipboard-copy-container js-code-snippet t-bdr-top"><div class="u-pad-5 hs-code__highlight highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--lg"</span><span class="nt">&gt;</span>Regular<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--primary c-button--lg"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--link c-button--lg"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></div></div></div>
+
+<h3 id="medium-buttons">Medium buttons</h3>
+
+<div class="c-card hs-code u-mrg-t-4 u-mrg-b-7" data-js="html"><div class="u-pad-5 hs-code__example" data-example-id="">
+<button class="c-button c-button--md">Regular</button>
+<button class="c-button c-button--primary c-button--md">Primary</button>
+<button class="c-button c-button--link c-button--md">Link</button>
+</div><div class="c-clipboard-copy-container js-code-snippet t-bdr-top"><div class="u-pad-5 hs-code__highlight highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--md"</span><span class="nt">&gt;</span>Regular<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--primary c-button--md"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--link c-button--md"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></div></div></div>
+
+<h3 id="small-buttons">Small buttons</h3>
+
+<div class="c-card hs-code u-mrg-t-4 u-mrg-b-7" data-js="html"><div class="u-pad-5 hs-code__example" data-example-id="">
+<button class="c-button c-button--sm">Regular</button>
+<button class="c-button c-button--primary c-button--sm">Primary</button>
+<button class="c-button c-button--link c-button--sm">Link</button>
+</div><div class="c-clipboard-copy-container js-code-snippet t-bdr-top"><div class="u-pad-5 hs-code__highlight highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--sm"</span><span class="nt">&gt;</span>Regular<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--primary c-button--sm"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--link c-button--sm"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></div></div></div>
+
+<hr />
+
+<h2 id="states">States</h2>
+
+<p>Below are state styles that can be applied to <code class="highlighter-rouge">.c-button</code> elements.</p>
+
+<div class="c-card hs-code u-mrg-t-4 u-mrg-b-7" data-js="html"><div class="u-pad-5 hs-code__example" data-example-id="">
+<button class="c-button is-success">Success</button>
+<button class="c-button is-error">Error</button>
+<button class="c-button is-warning">Warning</button>
+</div><div class="c-clipboard-copy-container js-code-snippet t-bdr-top"><div class="u-pad-5 hs-code__highlight highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button is-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button is-error"</span><span class="nt">&gt;</span>Error<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button is-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span></code></pre></div></div></div>
+
+<h3 id="disabled">Disabled</h3>
+
+<div class="c-card hs-code u-mrg-t-4 u-mrg-b-7" data-js="html"><div class="u-pad-5 hs-code__example" data-example-id="">
+<button class="c-button" disabled="">Regular</button>
+<button class="c-button c-button--primary" disabled="">Primary</button>
+<button class="c-button c-button--link" disabled="">Link</button>
+</div><div class="c-clipboard-copy-container js-code-snippet t-bdr-top"><div class="u-pad-5 hs-code__highlight highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Regular<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--primary"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--link"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></div></div></div>
+
+<hr />
+
+<h2 id="button-groups">Button groups</h2>
+
+<div class="c-card hs-code u-mrg-t-4 u-mrg-b-7" data-js="html"><div class="u-pad-5 hs-code__example" data-example-id="">
+<div class="o-control-group" role="group">
+  <button class="c-button c-button--sm">Button</button>
+  <button class="c-button c-button--sm">Button</button>
+  <button class="c-button c-button--sm">Button</button>
+</div>
+</div><div class="c-clipboard-copy-container js-code-snippet t-bdr-top"><div class="u-pad-5 hs-code__highlight highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"o-control-group"</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--sm"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--sm"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"c-button c-button--sm"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div></div></div>
+
+<hr />
+
+<h2 id="configurations">Configurations</h2>
+
+<p>Below are the default Sass configuration variables for seed-button. The variables can be found in the pack’s <code class="highlighter-rouge">_config.scss</code> file.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>seed-button/_config.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Namespace
+</span><span class="nv">$seed-button-namespace</span><span class="p">:</span> <span class="s2">"c-button"</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$seed-button-primary-namespace</span><span class="p">:</span> <span class="s2">"primary"</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$seed-button-link-namespace</span><span class="p">:</span> <span class="s2">"link"</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$seed-button-error-namespace</span><span class="p">:</span> <span class="s2">"is-</span><span class="si">#{</span><span class="nv">$seed-states-error-namespace</span><span class="si">}</span><span class="s2">"</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$seed-button-success-namespace</span><span class="p">:</span> <span class="s2">"is-</span><span class="si">#{</span><span class="nv">$seed-states-success-namespace</span><span class="si">}</span><span class="s2">"</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$seed-button-warning-namespace</span><span class="p">:</span> <span class="s2">"is-</span><span class="si">#{</span><span class="nv">$seed-states-warning-namespace</span><span class="si">}</span><span class="s2">"</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+<span class="c1">// Animation
+</span><span class="nv">$seed-button-transition</span><span class="p">:</span> <span class="n">all</span> <span class="m">0</span><span class="mi">.1s</span> <span class="n">ease</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+<span class="c1">// Border
+</span><span class="nv">$seed-button-border-radius</span><span class="p">:</span> <span class="nv">$seed-border-radius</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$seed-button-border-size</span><span class="p">:</span> <span class="nv">$seed-border-size</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$seed-button-border-style</span><span class="p">:</span> <span class="nv">$seed-border-style</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+<span class="c1">// Font
+</span><span class="nv">$seed-button-font-size</span><span class="p">:</span> <span class="m">1rem</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$seed-button-font-weight</span><span class="p">:</span> <span class="nb">normal</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+<span class="c1">// Height
+</span><span class="nv">$seed-button-height</span><span class="p">:</span> <span class="nv">$seed-control-size-default</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$seed-button-line-height</span><span class="p">:</span> <span class="nv">$seed-button-height</span> <span class="o">-</span> <span class="nf">ceil</span><span class="p">(</span><span class="nv">$seed-button-border-size</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+<span class="c1">// Padding
+</span><span class="nv">$seed-button-padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">1em</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+<span class="c1">// Sizes
+</span><span class="nv">$seed-button-sizes</span><span class="p">:</span> <span class="p">(</span>
+  <span class="n">sm</span><span class="o">:</span> <span class="p">(</span>
+    <span class="n">font-size</span><span class="o">:</span> <span class="m">0</span><span class="mi">.875rem</span><span class="o">,</span>
+    <span class="n">height</span><span class="o">:</span> <span class="nf">_get</span><span class="p">(</span><span class="nv">$seed-control-sizes</span><span class="o">,</span> <span class="n">sm</span><span class="p">)</span><span class="o">,</span>
+    <span class="n">line-height</span><span class="o">:</span> <span class="nf">_get</span><span class="p">(</span><span class="nv">$seed-control-sizes</span><span class="o">,</span> <span class="n">sm</span><span class="p">)</span> <span class="o">-</span> <span class="nf">ceil</span><span class="p">(</span><span class="nv">$seed-button-border-size</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
+    <span class="n">padding</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span><span class="mi">.5em</span>
+  <span class="p">)</span><span class="o">,</span>
+  <span class="n">md</span><span class="o">:</span> <span class="p">(</span>
+    <span class="n">font-size</span><span class="o">:</span> <span class="m">1rem</span><span class="o">,</span>
+    <span class="n">height</span><span class="o">:</span> <span class="nf">_get</span><span class="p">(</span><span class="nv">$seed-control-sizes</span><span class="o">,</span> <span class="n">md</span><span class="p">)</span><span class="o">,</span>
+    <span class="n">line-height</span><span class="o">:</span> <span class="nf">_get</span><span class="p">(</span><span class="nv">$seed-control-sizes</span><span class="o">,</span> <span class="n">md</span><span class="p">)</span> <span class="o">-</span> <span class="nf">ceil</span><span class="p">(</span><span class="nv">$seed-button-border-size</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
+    <span class="n">padding</span><span class="o">:</span> <span class="m">0</span> <span class="m">1em</span>
+  <span class="p">)</span><span class="o">,</span>
+  <span class="n">lg</span><span class="o">:</span> <span class="p">(</span>
+    <span class="n">font-size</span><span class="o">:</span> <span class="m">1</span><span class="mi">.25rem</span><span class="o">,</span>
+    <span class="n">height</span><span class="o">:</span> <span class="nf">_get</span><span class="p">(</span><span class="nv">$seed-control-sizes</span><span class="o">,</span> <span class="n">lg</span><span class="p">)</span><span class="o">,</span>
+    <span class="n">line-height</span><span class="o">:</span> <span class="nf">_get</span><span class="p">(</span><span class="nv">$seed-control-sizes</span><span class="o">,</span> <span class="n">lg</span><span class="p">)</span> <span class="o">-</span> <span class="nf">ceil</span><span class="p">(</span><span class="nv">$seed-button-border-size</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
+    <span class="n">padding</span><span class="o">:</span> <span class="m">0</span> <span class="m">1</span><span class="mi">.5em</span>
+  <span class="p">)</span>
+<span class="p">)</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+<span class="c1">// Colors
+</span><span class="nv">$seed-button-color</span><span class="p">:</span> <span class="p">(</span>
+  <span class="n">background</span><span class="o">:</span> <span class="p">(</span>
+    <span class="nb">default</span><span class="o">:</span> <span class="mh">#fff</span><span class="o">,</span>
+    <span class="n">hover</span><span class="o">:</span> <span class="mh">#f9f9f9</span><span class="o">,</span>
+    <span class="n">active</span><span class="o">:</span> <span class="mh">#f4f4f4</span>
+  <span class="p">)</span><span class="o">,</span>
+  <span class="n">border</span><span class="o">:</span> <span class="p">(</span>
+    <span class="nb">default</span><span class="o">:</span> <span class="mh">#ddd</span><span class="o">,</span>
+    <span class="n">hover</span><span class="o">:</span> <span class="mh">#ddd</span><span class="o">,</span>
+    <span class="n">active</span><span class="o">:</span> <span class="mh">#ddd</span><span class="o">,</span>
+    <span class="n">focus</span><span class="o">:</span> <span class="mh">#3197D6</span>
+  <span class="p">)</span><span class="o">,</span>
+  <span class="n">box-shadow</span><span class="o">:</span> <span class="p">(</span>
+    <span class="nb">default</span><span class="o">:</span> <span class="nb">none</span><span class="o">,</span>
+    <span class="n">active</span><span class="o">:</span> <span class="m">0</span> <span class="m">1px</span> <span class="m">2px</span> <span class="nf">rgba</span><span class="p">(</span><span class="no">black</span><span class="o">,</span> <span class="m">0</span><span class="mi">.2</span><span class="p">)</span> <span class="nb">inset</span><span class="o">,</span>
+    <span class="n">focus</span><span class="o">:</span> <span class="nb">none</span>
+  <span class="p">)</span><span class="o">,</span>
+  <span class="nb">text</span><span class="o">:</span> <span class="mh">#2b2b2b</span><span class="o">,</span>
+<span class="p">)</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+<span class="nv">$seed-button-styles</span><span class="p">:</span> <span class="p">(</span>
+  <span class="n">primary</span><span class="o">:</span> <span class="p">(</span>
+    <span class="n">_generate-states</span><span class="o">:</span> <span class="bp">false</span><span class="o">,</span>
+    <span class="n">background</span><span class="o">:</span> <span class="p">(</span>
+      <span class="nb">default</span><span class="o">:</span> <span class="mh">#3197D6</span><span class="o">,</span>
+      <span class="n">hover</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="mh">#3197D6</span><span class="o">,</span> <span class="m">4</span><span class="p">)</span><span class="o">,</span>
+      <span class="n">active</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="mh">#3197D6</span><span class="o">,</span> <span class="m">8</span><span class="p">)</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="n">border</span><span class="o">:</span> <span class="p">(</span>
+      <span class="nb">default</span><span class="o">:</span> <span class="mh">#237AB3</span><span class="o">,</span>
+      <span class="n">hover</span><span class="o">:</span> <span class="mh">#237AB3</span><span class="o">,</span>
+      <span class="n">active</span><span class="o">:</span> <span class="mh">#237AB3</span><span class="o">,</span>
+      <span class="n">focus</span><span class="o">:</span> <span class="mh">#237AB3</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="n">box-shadow</span><span class="o">:</span> <span class="p">(</span>
+      <span class="n">focus</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1px</span> <span class="nf">rgba</span><span class="p">(</span><span class="no">white</span><span class="o">,</span> <span class="m">0</span><span class="mi">.4</span><span class="p">)</span> <span class="nb">inset</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="nb">text</span><span class="o">:</span> <span class="p">(</span>
+      <span class="nb">default</span><span class="o">:</span> <span class="mh">#fff</span><span class="o">,</span>
+      <span class="n">hover</span><span class="o">:</span> <span class="mh">#fff</span><span class="o">,</span>
+      <span class="n">active</span><span class="o">:</span> <span class="mh">#fff</span><span class="o">,</span>
+      <span class="n">focus</span><span class="o">:</span> <span class="mh">#fff</span><span class="o">,</span>
+    <span class="p">)</span><span class="o">,</span>
+  <span class="p">)</span><span class="o">,</span>
+
+  <span class="n">link</span><span class="o">:</span> <span class="p">(</span>
+    <span class="n">_generate-states</span><span class="o">:</span> <span class="bp">true</span><span class="o">,</span>
+    <span class="n">background</span><span class="o">:</span> <span class="p">(</span>
+      <span class="nb">default</span><span class="o">:</span> <span class="nb">transparent</span><span class="o">,</span>
+      <span class="n">hover</span><span class="o">:</span> <span class="nb">transparent</span><span class="o">,</span>
+      <span class="n">active</span><span class="o">:</span> <span class="nb">transparent</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="n">border</span><span class="o">:</span> <span class="p">(</span>
+      <span class="nb">default</span><span class="o">:</span> <span class="nb">transparent</span><span class="o">,</span>
+      <span class="n">hover</span><span class="o">:</span> <span class="nb">transparent</span><span class="o">,</span>
+      <span class="n">active</span><span class="o">:</span> <span class="nb">transparent</span><span class="o">,</span>
+      <span class="n">focus</span><span class="o">:</span> <span class="mh">#237AB3</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="n">box-shadow</span><span class="o">:</span> <span class="p">(</span>
+      <span class="nb">default</span><span class="o">:</span> <span class="nb">none</span><span class="o">,</span>
+      <span class="n">hover</span><span class="o">:</span> <span class="nb">none</span><span class="o">,</span>
+      <span class="n">active</span><span class="o">:</span> <span class="nb">none</span><span class="o">,</span>
+      <span class="n">focus</span><span class="o">:</span> <span class="nb">none</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="nb">text</span><span class="o">:</span> <span class="mh">#3197D6</span>
+  <span class="p">)</span><span class="o">,</span>
+<span class="p">)</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+
+<span class="nv">$seed-button-color-states</span><span class="p">:</span> <span class="p">(</span>
+  <span class="si">#{</span><span class="nv">$seed-button-error-namespace</span><span class="si">}</span><span class="o">:</span> <span class="p">(</span>
+    <span class="n">background</span><span class="o">:</span> <span class="p">(</span>
+      <span class="nb">default</span><span class="o">:</span> <span class="nf">_state</span><span class="p">(</span><span class="n">error</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span>
+      <span class="n">hover</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nf">_state</span><span class="p">(</span><span class="n">error</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span> <span class="m">4</span><span class="p">)</span><span class="o">,</span>
+      <span class="n">active</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nf">_state</span><span class="p">(</span><span class="n">error</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span> <span class="m">8</span><span class="p">)</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="n">border</span><span class="o">:</span> <span class="p">(</span>
+      <span class="nb">default</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nf">_state</span><span class="p">(</span><span class="n">error</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span> <span class="m">8</span><span class="p">)</span><span class="o">,</span>
+      <span class="n">hover</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nf">_state</span><span class="p">(</span><span class="n">error</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span> <span class="m">8</span><span class="p">)</span><span class="o">,</span>
+      <span class="n">active</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nf">_state</span><span class="p">(</span><span class="n">error</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span> <span class="m">8</span><span class="p">)</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="n">box-shadow</span><span class="o">:</span> <span class="p">(</span>
+      <span class="n">focus</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1px</span> <span class="nf">rgba</span><span class="p">(</span><span class="no">white</span><span class="o">,</span> <span class="m">0</span><span class="mi">.4</span><span class="p">)</span> <span class="nb">inset</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="nb">text</span><span class="o">:</span> <span class="mh">#fff</span>
+  <span class="p">)</span><span class="o">,</span>
+  <span class="si">#{</span><span class="nv">$seed-button-success-namespace</span><span class="si">}</span><span class="o">:</span> <span class="p">(</span>
+    <span class="n">background</span><span class="o">:</span> <span class="p">(</span>
+      <span class="nb">default</span><span class="o">:</span> <span class="nf">_state</span><span class="p">(</span><span class="n">success</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span>
+      <span class="n">hover</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nf">_state</span><span class="p">(</span><span class="n">success</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span> <span class="m">4</span><span class="p">)</span><span class="o">,</span>
+      <span class="n">active</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nf">_state</span><span class="p">(</span><span class="n">success</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span> <span class="m">8</span><span class="p">)</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="n">border</span><span class="o">:</span> <span class="p">(</span>
+      <span class="nb">default</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nf">_state</span><span class="p">(</span><span class="n">success</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span> <span class="m">8</span><span class="p">)</span><span class="o">,</span>
+      <span class="n">hover</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nf">_state</span><span class="p">(</span><span class="n">success</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span> <span class="m">8</span><span class="p">)</span><span class="o">,</span>
+      <span class="n">active</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nf">_state</span><span class="p">(</span><span class="n">success</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span> <span class="m">8</span><span class="p">)</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="n">box-shadow</span><span class="o">:</span> <span class="p">(</span>
+      <span class="n">focus</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1px</span> <span class="nf">rgba</span><span class="p">(</span><span class="no">white</span><span class="o">,</span> <span class="m">0</span><span class="mi">.4</span><span class="p">)</span> <span class="nb">inset</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="nb">text</span><span class="o">:</span> <span class="mh">#fff</span>
+  <span class="p">)</span><span class="o">,</span>
+  <span class="si">#{</span><span class="nv">$seed-button-warning-namespace</span><span class="si">}</span><span class="o">:</span> <span class="p">(</span>
+    <span class="n">background</span><span class="o">:</span> <span class="p">(</span>
+      <span class="nb">default</span><span class="o">:</span> <span class="nf">_state</span><span class="p">(</span><span class="n">warning</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span>
+      <span class="n">hover</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nf">_state</span><span class="p">(</span><span class="n">warning</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span> <span class="m">4</span><span class="p">)</span><span class="o">,</span>
+      <span class="n">active</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nf">_state</span><span class="p">(</span><span class="n">warning</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span> <span class="m">8</span><span class="p">)</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="n">border</span><span class="o">:</span> <span class="p">(</span>
+      <span class="nb">default</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nf">_state</span><span class="p">(</span><span class="n">warning</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span> <span class="m">8</span><span class="p">)</span><span class="o">,</span>
+      <span class="n">hover</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nf">_state</span><span class="p">(</span><span class="n">warning</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span> <span class="m">8</span><span class="p">)</span><span class="o">,</span>
+      <span class="n">active</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nf">_state</span><span class="p">(</span><span class="n">warning</span><span class="o">,</span> <span class="n">border-color</span><span class="p">)</span><span class="o">,</span> <span class="m">8</span><span class="p">)</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="n">box-shadow</span><span class="o">:</span> <span class="p">(</span>
+      <span class="n">focus</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1px</span> <span class="nf">rgba</span><span class="p">(</span><span class="no">white</span><span class="o">,</span> <span class="m">0</span><span class="mi">.4</span><span class="p">)</span> <span class="nb">inset</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="nb">text</span><span class="o">:</span> <span class="mh">#fff</span>
+  <span class="p">)</span>
+<span class="p">)</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+</code></pre>
+</div></div></div>
+
+<hr />
+
+<h2 id="related">Related</h2>
+
+<ul>
+  <li><a href="/seed/packs/seed-control-group">seed-control-group</a></li>
+  <li><a href="/seed/packs/seed-dropdown">seed-dropdown</a></li>
+</ul>
+
+
+</div>
+
+  </div>
+  <div class="o-col-3@xl js-spy-sidebar ">
+    
+
+    
+<div id="table-of-contents" class="o-sticky u-mrg-b-10 u-pad-l-7@lg c-floating-sidebar-nav-container" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+  
+
+  <p id="toc-header" class="tx-xs tx-uppercase tx-600 t-tx-grey-800 u-mrg-v-1 is-hidden">
+    Contents
+  </p>
+  <ul id="toc" class="nav c-floating-sidebar-nav rx-sidebar-nav-width"></ul>
+</div>
+
+  </div>
+</div>
+
+              </section>
+              <div class="u-pad-t-10 u-mrg-t-10 u-mrg-b-0">
+  <span class="u-mrg-r-2 t-tx-charcoal-200">↑</span><a href="#" class="t-tx-charcoal-200 tx-sm">Back to top</a>
+</div>
+
+              <hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    
+
+<script type="text/javascript">
+var SEEDDATA = {  packs: [      ]};
+</script>
+
+    <!-- beacon embed -->
+<script type="text/javascript">!function(e,n){window.Beacon=n=function(e,n,d){window.Beacon.readyQueue.push({method:e,options:n,data:d})},n.readyQueue=[];var t=e.getElementsByTagName("script")[0],o=e.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://beacon-v2.helpscout.net",t.parentNode.insertBefore(o,t)}(document,window.Beacon||function(){})</script>
+<script>window.Beacon('init', 'aa90d610-923a-4528-95cc-934136cc7712')</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5226593-6', 'helpscout.net');
+ga('send', 'pageview');
+</script>
+
+
+
+
+  </body>
+</html>

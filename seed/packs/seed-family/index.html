@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>
+    
+      
+        Family
+      
+      | Help Scout Developers
+    
+  </title>
+  
+  <meta name="description" content="Mixins that enable manipulation of parent or sibling selectors.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="/css/main.css?v=f947c22f82cfabc1d47c154646adbfaa">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+  <script src="/js/developer.js?v=a72f32a69981c7c17bac8df25c4e147e" async defer></script>
+  <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async defer></script>
+</head>
+
+  <body class="tx-smooth">
+    <div class="s-docs-layout">
+      <aside class="s-docs-layout__sidebar t-bg-grey-200">
+        <div class="c-nav-sidebar">
+  <div class="o-scrolly">
+    <div class="o-scrolly__item">
+      <div class="c-nav-sidebar__header u-centralize t-bg-blue-500 t-tx-white">
+        <button class="c-button c-button--link c-nav-sidebar__toggle t-tx-white" id="js-nav-sidebar-toggle">
+          <i class="icon icon-menu c-icon c-icon--32"></i>
+        </button>
+        <div class="c-nav-sidebar__header-content">
+          <div class="c-logo u-pad-v-2">
+  <a href="/" class="u-d-block" title="Help Scout Developers">
+    <img
+      src="/images/hs-developer-logo-wh.svg"
+      width="174"
+      height="32"
+      title="Help Scout Developers"
+      alt="Help Scout Developers"
+      class="c-logo__image"
+    />
+    <span class="u-sr-only">
+      <h1>Help Scout Developers</h1>
+    </span>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="o-scrolly__block">
+      <div class="js-SidebarNav c-nav-sidebar__menu u-mrg-b-10@md u-pad-b-5@md" id="js-nav-sidebar-menu"> <div class="c-nav-header"> <div class="o-flexy o-flexy--just-left o-flexy--gap-md"> <div class="o-flexy__item"> <a href="/" class="c-nav-header__back" title="Back"> <i class="icon icon-caret-left c-icon c-icon--12 u-d-block"></i> </a> </div> <div class="o-flexy__block tx-center u-mrg-l-0"> <strong class="t-tx-charcoal-500"> Seed </strong> </div> </div> </div> <ul class=" c-nav c-nav--stacked c-nav--md c-nav--level-1 " role="navigation" aria-label="Sidebar nav level 1"> <li class=" c-nav__item "> <a href="/seed/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/packs/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Seed Packs </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/examples/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Examples </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/css-unit-testing/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Unit Testing </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/glossary/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Glossary </div> </div> </a> </li> </ul> </div>
+    </div>
+  </div>
+</div>
+
+      </aside>
+      <main class="s-docs-layout__main">
+        <div class="o-container o-container--site u-mrg-t-8 u-pad-h-5@sm u-pad-h-10@lg">
+          <div class="o-row">
+            <div class="o-col-12">
+              <section class="s-main-content" id="content">
+                
+
+<div class="o-row">
+  <div class="o-col-9@xl s-docs">
+    
+      
+<header class="">
+  <!-- 
+
+
+ -->
+  
+    <div class="o-flexy o-flexy--gap-md">
+    </div>
+  
+
+  <h1 class="">
+    Family
+  </h1>
+
+  
+    <div class="tx-700">
+      <p class="u-mrg-t-0 u-mrg-b-2"><a href="https://github.com/helpscout/seed-family" target="_blank" class="c-link--view-source tx-sm">View Source</a></p>
+    </div>
+  
+
+  
+      <div class="o-flexy__item u-d-none u-d-block@sm">
+        <a href="https://travis-ci.org/helpscout/seed-family" target="_blank" class="tx-no-underline">
+          <img src="https://travis-ci.org/helpscout/seed-family.svg?branch=master">
+        </a>
+        <a href="https://www.npmjs.com/package/seed-family" target="_blank" class="tx-no-underline">
+          <img src="https://badge.fury.io/js/seed-family.svg">
+        </a>
+      </div>
+  
+
+</header>
+
+
+    
+    
+
+
+<div id="s-docs" class="s-docs s-hs-docs s-hs-docs--family s-hs-docs--mixin">
+  <div class="s-docs__top" id="hs-content-top"></div>
+  
+
+<p>A library of mixins that enable manipulation of a selector based on it’s relationship with parent or sibling selectors.</p>
+
+<h2 id="install">Install</h2>
+
+<div class="highlighter-rouge "><div class="highlight highlight--none"><pre><code>npm install seed-family --save
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="about">About</h2>
+
+<p>Because of how CSS works, it’s (currently) not possible to create rules based on the target’s parent selectors or previous sibling classes in any way. This pack aims to help resolve these issues.</p>
+
+<p>This use-case doesn’t occur very often, but it’s not too uncommon either.</p>
+
+<h3 id="problem">Problem</h3>
+
+<p>Take the following CSS for a menu component (structured with the BEM convention).</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>_menu.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nc">.menu</span> <span class="p">{</span>
+  <span class="k">&amp;</span><span class="nt">__item</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<h3 id="workarounds">Workarounds</h3>
+
+<p>The <code class="highlighter-rouge">.menu__item</code> is hidden with <code class="highlighter-rouge">display: none</code> by default. We want it to be <code class="highlighter-rouge">display: block</code> when the <code class="highlighter-rouge">.menu.is-active</code>.</p>
+
+<p>We currently have to write it like this:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>_menu.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nc">.menu</span> <span class="p">{</span>
+  <span class="k">&amp;</span><span class="nt">__item</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nc">.is-active</span> <span class="p">{</span>
+    <span class="nc">.menu__item</span> <span class="p">{</span>
+      <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<p>The class of <code class="highlighter-rouge">.menu__item</code> is repeated. Not to mention that <code class="highlighter-rouge">.menu__item</code> no longer manages its own styles, but instead, they are abstracted and dicated by <code class="highlighter-rouge">.menu</code>. What’s worse is that <code class="highlighter-rouge">&amp;</code> no longer references <code class="highlighter-rouge">.menu</code> in the context of <code class="highlighter-rouge">&amp;.is-active</code> (but that’s a separate issue).</p>
+
+<h3 id="ideal">Ideal</h3>
+
+<p>Wouldn’t it be nice if we could write something like this?</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>_menu.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nc">.menu</span> <span class="p">{</span>
+  <span class="k">&amp;</span><span class="nt">__item</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+
+    <span class="nd">:parent</span><span class="nc">.is-active</span> <span class="p">{</span>
+      <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<p>When the parent, in this case <code class="highlighter-rouge">.menu</code>, has the <code class="highlighter-rouge">.is-active</code> class, change the display of <code class="highlighter-rouge">.menu__item</code>.</p>
+
+<hr />
+
+<h2 id="mixins">Mixins</h2>
+
+<h3 id="parent">parent</h3>
+
+<p><strong>parent($selector)</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Argument</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">$selector</code></td>
+      <td>String</td>
+      <td>The desired parent selector to target.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We can write our menu styles similarly to our <a href="#ideal">“ideal”</a> example.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>_menu.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nc">.menu</span> <span class="p">{</span>
+  <span class="k">&amp;</span><span class="nt">__item</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+
+    <span class="k">@include</span> <span class="nd">parent</span><span class="p">(</span><span class="s2">"</span><span class="si">#{</span><span class="o">&amp;</span><span class="si">}</span><span class="s2">.is-active"</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight-header"><pre>menu.css</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nc">.menu__item</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.menu.is-active</span> <span class="nc">.menu__item</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<p>The <code class="highlighter-rouge">parent</code> mixin intelligently injects the provided <code class="highlighter-rouge">$selector</code> directly before the current selector.</p>
+
+<p>The magic happens with this line:</p>
+
+<div class="language-scss highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="k">@include</span> <span class="nd">parent</span><span class="p">(</span><span class="s2">"{&amp;}.is-active"</span><span class="p">)</span> <span class="p">{</span>
+</code></pre>
+</div></div></div>
+
+<p>Let’s break it down:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">@include parent</code> - Activating the <code class="highlighter-rouge">parent</code> mixin.</li>
+  <li><code class="highlighter-rouge">"{&amp;}.is-active"</code> - The parent selector + the <code class="highlighter-rouge">.is-active</code> class.</li>
+</ul>
+
+<p>In this example, <code class="highlighter-rouge">&amp;</code> still references <code class="highlighter-rouge">.menu</code>. That is because it’s direct parent selector is <code class="highlighter-rouge">.menu</code>, unlike our <a href="/#workarounds">workaround</a> example.</p>
+
+<div class="language-scss highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nc">.menu</span> <span class="p">{</span>
+  <span class="c1">// &amp; = .menu
+</span><span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<div class="language-scss highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nc">.menu</span> <span class="p">{</span>
+  <span class="k">&amp;</span><span class="nc">.is-active</span> <span class="p">{</span>
+    <span class="c1">// &amp; = .menu.is-active
+</span>  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<h3 id="sibling">sibling</h3>
+
+<p><strong>sibling($selector)</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Argument</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">$selector</code></td>
+      <td>String</td>
+      <td>The desired sibling selector to target.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In CSS, we can target the sibling selector that comes <strong>after</strong>, but <strong>not before</strong>. The <code class="highlighter-rouge">sibling</code> mixin allows you to reference the sibling selector the comes before your current selector.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight-header"><pre>_menu.scss</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nc">.menu</span> <span class="p">{</span>
+  <span class="k">&amp;</span><span class="nt">__item</span> <span class="p">{</span>
+    <span class="nl">margin-top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+
+    <span class="k">@include</span> <span class="nd">sibling</span><span class="p">(</span><span class="s2">"</span><span class="si">#{</span><span class="o">&amp;</span><span class="si">}</span><span class="s2">__sub-menu"</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nl">margin-top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight-header"><pre>menu.css</pre></div><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="nc">.menu__item</span> <span class="p">{</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.menu__sub-menu</span> <span class="o">+</span> <span class="nc">.menu__item</span> <span class="p">{</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div></div></div>
+
+<hr />
+
+<h2 id="related">Related</h2>
+
+<ul>
+  <li><a href="/seed/packs/seed-this">seed-this</a></li>
+</ul>
+
+
+</div>
+
+  </div>
+  <div class="o-col-3@xl js-spy-sidebar ">
+    
+
+    
+<div id="table-of-contents" class="o-sticky u-mrg-b-10 u-pad-l-7@lg c-floating-sidebar-nav-container" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+  
+
+  <p id="toc-header" class="tx-xs tx-uppercase tx-600 t-tx-grey-800 u-mrg-v-1 is-hidden">
+    Contents
+  </p>
+  <ul id="toc" class="nav c-floating-sidebar-nav rx-sidebar-nav-width"></ul>
+</div>
+
+  </div>
+</div>
+
+              </section>
+              <div class="u-pad-t-10 u-mrg-t-10 u-mrg-b-0">
+  <span class="u-mrg-r-2 t-tx-charcoal-200">↑</span><a href="#" class="t-tx-charcoal-200 tx-sm">Back to top</a>
+</div>
+
+              <hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    
+
+<script type="text/javascript">
+var SEEDDATA = {  packs: [      ]};
+</script>
+
+    <!-- beacon embed -->
+<script type="text/javascript">!function(e,n){window.Beacon=n=function(e,n,d){window.Beacon.readyQueue.push({method:e,options:n,data:d})},n.readyQueue=[];var t=e.getElementsByTagName("script")[0],o=e.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://beacon-v2.helpscout.net",t.parentNode.insertBefore(o,t)}(document,window.Beacon||function(){})</script>
+<script>window.Beacon('init', 'aa90d610-923a-4528-95cc-934136cc7712')</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5226593-6', 'helpscout.net');
+ga('send', 'pageview');
+</script>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Barista: CSS Unit Testing | Seed</title>
+  
+  <meta name="description" content="Barista: A Javascript utility for CSS unit testing.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="/css/main.css?v=ad4117d9b973a3531f5eaa00ddef19de">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+  <script src="/js/developer.js?v=dadbbd344be4ed6b4e97f05a921e71fa" async defer></script>
+  <script src="/js/fontfaceobserver.js"></script>
+<script>
+(function() {
+  var font400 = new FontFaceObserver('Aktiv Grotesk', { weight: 400 });
+  var font500 = new FontFaceObserver('Aktiv Grotesk', { weight: 500 });
+  var font700 = new FontFaceObserver('Aktiv Grotesk', { weight: 700 });
+
+  Promise.all([
+    font400.load(),
+    font500.load(),
+    font700.load(),
+  ]).then(function() {
+      document.documentElement.className += ' fonts-loaded';
+    })
+    .catch(function() {
+      console.log('Aktiv Grotesk failed to load');
+    });
+})();
+</script>
+
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async defer></script>
+</head>
+
+  <body class="tx-smooth">
+    <div class="s-docs-layout">
+      <aside class="s-docs-layout__sidebar t-bg-grey-200">
+        <div class="c-nav-sidebar">
+  <div class="o-scrolly">
+    <div class="o-scrolly__item">
+      <div class="c-nav-sidebar__header u-centralize t-bg-blue-500 t-tx-white">
+        <button class="c-button c-button--link c-nav-sidebar__toggle t-tx-white" id="js-nav-sidebar-toggle">
+          <i class="icon icon-menu c-icon c-icon--32"></i>
+        </button>
+        <div class="c-nav-sidebar__header-content">
+          <div class="c-logo u-pad-v-2">
+  <a href="/" class="u-d-block" title="Help Scout Developers">
+    <img
+      src="/images/hs-developer-logo-wh.svg"
+      width="174"
+      height="32"
+      title="Help Scout Developers"
+      alt="Help Scout Developers"
+      class="c-logo__image"
+    />
+    <span class="u-sr-only">
+      <h1>Help Scout Developers</h1>
+    </span>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="o-scrolly__block">
+      <div class="js-SidebarNav c-nav-sidebar__menu u-mrg-b-10@md u-pad-b-5@md" id="js-nav-sidebar-menu"> <div class="c-nav-header"> <div class="o-flexy o-flexy--just-left o-flexy--gap-md"> <div class="o-flexy__item"> <a href="/" class="c-nav-header__back" title="Back"> <i class="icon icon-caret-left c-icon c-icon--12 u-d-block"></i> </a> </div> <div class="o-flexy__block tx-center u-mrg-l-0"> <strong class="t-tx-charcoal-500"> Seed </strong> </div> </div> </div> <ul class=" c-nav c-nav--stacked c-nav--md is-active c-nav--level-1 " role="navigation" aria-label="Sidebar nav level 1"> <li class=" c-nav__item "> <a href="/seed/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Overview </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/packs/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Seed Packs </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/examples/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Examples </div> </div> </a> </li> <li class=" c-nav__item is-active "> <a href="/seed/css-unit-testing/" class=" c-nav__link js-SidebarNav__link is-active "> <div class="o-flexy"> <div class="o-flexy__item">Unit Testing </div> </div> </a> </li> <li class=" c-nav__item "> <a href="/seed/glossary/" class=" c-nav__link js-SidebarNav__link "> <div class="o-flexy"> <div class="o-flexy__item">Glossary </div> </div> </a> </li> </ul> </div>
+    </div>
+  </div>
+</div>
+
+      </aside>
+      <main class="s-docs-layout__main">
+        <div class="o-container o-container--site u-mrg-t-8 u-pad-h-5@sm u-pad-h-10@lg">
+          <div class="o-row">
+            <div class="o-col-12">
+              <section class="s-main-content" id="content">
+                
+
+<div class="o-row">
+  <div class="o-col-9@xl s-docs">
+    
+    <div class="s-docs">
+  <div class="o-row">
+    <div class="u-pad-r-10 u-pad-r-0@md o-col-8@md">
+      <h1 class="t-bdr-none u-mrg-b-10 u-pad-b-0">Barista: <br /><span class="tx-headline-5 tx-300 t-tx-charcoal-300 u-d-block u-mrg-t-2">CSS Unit Testing.</span></h1>
+      <p class="tx-lead t-tx-charcoal-300">
+        Compatible with most major test runners and assertion libraries.
+      </p>
+      <p>
+        <a href="#install-barista" class="c-button c-button--lg c-button--primary">Get Started</a>
+      </p>
+      <p>
+        <a href="https://github.com/helpscout/seed-barista">View Source on Github</a>
+      </p>
+    </div>
+    <div class="o-col-4@md o-col-4@md tx-center tx-left@md">
+      <img src="/images/barista.png" title="Seed Barista" alt="Seed Barista" width="300" class="t-bdr-none u-mrg-t-0 u-width-6 u-width-12@md" />
+    </div>
+  </div>
+</div>
+
+<p><a href="https://travis-ci.org/helpscout/seed-barista"><img src="https://travis-ci.org/helpscout/seed-barista.svg?branch=master" alt="Build Status" /></a> <a href="https://coveralls.io/github/helpscout/seed-barista?branch=master"><img src="https://coveralls.io/repos/github/helpscout/seed-barista/badge.svg?branch=master" alt="Coverage Status" /></a> <a href="https://badge.fury.io/js/seed-barista"><img src="https://badge.fury.io/js/seed-barista.svg" alt="npm version" /></a> <a href="https://david-dm.org/helpscout/seed-barista"><img src="https://david-dm.org/helpscout/seed-barista/status.svg" alt="dependencies Status" /></a> <a href="https://gitter.im/seed-css/barista"><img src="https://badges.gitter.im/join_chat.svg" alt="Gitter" /></a></p>
+
+<hr />
+
+<h2 id="install-barista">Install Barista</h2>
+
+<p>Run the following command to add Barista to your project:</p>
+
+<div class="highlighter-rouge "><div class="highlight highlight--none"><pre><code>npm install seed-barista --save-dev
+</code></pre></div></div>
+
+<p>Although Barista is compatible with most major test runners, the Barista’s documentation uses <strong><a href="https://mochajs.org/">Mocha</a></strong> and <strong><a href="http://chaijs.com/">Chai</a></strong></p>
+
+<p>These can be added with the following command:</p>
+
+<div class="highlighter-rouge "><div class="highlight highlight--none"><pre><code>npm install mocha chai --save-dev
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="basic-usage">Basic Usage</h2>
+
+<h3 id="static"><a href="https://github.com/helpscout/seed-barista/blob/master/docs/api/static.md">Static</a></h3>
+
+<p>Below is an example of how you can setup a <a href="https://mochajs.org/">Mocha</a> test with Barista. A fast and simple way to test <code class="highlighter-rouge">.scss</code> output is to verify the rendered output matches against expected strings.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">expect</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'chai'</span><span class="p">).</span><span class="nx">expect</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">barista</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'seed-barista'</span><span class="p">);</span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="s1">'harry component styles'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">it</span><span class="p">(</span><span class="s1">'should render a class of wizard + harry'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">output</span> <span class="o">=</span> <span class="nx">barista</span><span class="p">({</span> <span class="na">file</span><span class="p">:</span> <span class="s1">'_wizard.scss'</span> <span class="p">});</span>
+    <span class="kd">var</span> <span class="nx">rule</span> <span class="o">=</span> <span class="nx">output</span><span class="p">.</span><span class="nx">rule</span><span class="p">(</span><span class="s1">'.your-a-wizard.harry'</span><span class="p">);</span>
+
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">rule</span><span class="p">.</span><span class="nx">exists</span><span class="p">()).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="kc">true</span><span class="p">;</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">rule</span><span class="p">.</span><span class="nx">prop</span><span class="p">(</span><span class="s1">'background'</span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="s1">'red'</span><span class="p">);</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">rule</span><span class="p">.</span><span class="nx">prop</span><span class="p">(</span><span class="s1">'color'</span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="s1">'yellow'</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre>
+</div></div></div>
+
+<p>Check out the full <a href="https://github.com/helpscout/seed-barista/blob/master/docs/api/static.md">API documentation</a>.</p>
+
+<h3 id="mounted"><a href="https://github.com/helpscout/seed-barista/blob/master/docs/api/mounted.md">Mounted</a></h3>
+
+<p>Mounted based testing creates a <a href="https://github.com/tmpvar/jsdom">virtual DOM</a>, allowing you to write assertions against DOM elements. Barista’s Mounted API uses jQuery to retrieve computed CSS styles.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">expect</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'chai'</span><span class="p">).</span><span class="nx">expect</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">barista</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'seed-barista'</span><span class="p">);</span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="s1">'harry component styles'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">it</span><span class="p">(</span><span class="s1">'should render a class of wizard + harry'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">output</span> <span class="o">=</span> <span class="nx">barista</span><span class="p">({</span> <span class="na">file</span><span class="p">:</span> <span class="s1">'_wizard.scss'</span> <span class="p">}).</span><span class="nx">mount</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">rule</span> <span class="o">=</span> <span class="nx">output</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'.your-a-wizard.harry'</span><span class="p">);</span>
+
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">rule</span><span class="p">.</span><span class="nx">prop</span><span class="p">(</span><span class="s1">'background'</span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="s1">'red'</span><span class="p">);</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">rule</span><span class="p">.</span><span class="nx">prop</span><span class="p">(</span><span class="s1">'color'</span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="s1">'yellow'</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre>
+</div></div></div>
+
+<p>Check out the full <a href="https://github.com/helpscout/seed-barista/blob/master/docs/api/mounted.md">API documentation</a>.</p>
+
+<hr />
+
+<h2 id="example">Example</h2>
+
+<p>Below is a sample test for a Button component with the styles written inline.</p>
+
+<div class="language-js highlighter-rouge"><div class="c-clipboard-copy-container js-code-snippet"><div class="highlighter-rouge__wrapper"><pre class="highlight"><code><span class="c1">// Test :: Examples :: Button</span>
+<span class="s1">'use strict'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">barista</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'seed-barista'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">expect</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'chai'</span><span class="p">).</span><span class="nx">expect</span><span class="p">;</span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="s1">'example: test: button'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">styles</span> <span class="o">=</span> <span class="err">`</span>
+    <span class="p">.</span><span class="nx">btn</span> <span class="p">{</span>
+      <span class="nl">background</span><span class="p">:</span> <span class="nx">blue</span><span class="p">;</span>
+      <span class="nl">border</span><span class="p">:</span> <span class="mi">1</span><span class="nx">px</span> <span class="nx">solid</span><span class="p">;</span>
+      <span class="nx">border</span><span class="o">-</span><span class="nx">color</span><span class="err">:</span> <span class="nx">blue</span><span class="p">;</span>
+      <span class="o">&amp;</span><span class="err">:</span><span class="nx">hover</span> <span class="p">{</span>
+        <span class="nl">background</span><span class="p">:</span> <span class="nx">red</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="o">&amp;</span><span class="err">:</span><span class="nx">active</span> <span class="p">{</span>
+        <span class="nl">background</span><span class="p">:</span> <span class="nx">purple</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="o">&amp;</span><span class="err">:</span><span class="nx">focus</span> <span class="p">{</span>
+        <span class="nx">border</span><span class="o">-</span><span class="nx">color</span><span class="err">:</span> <span class="nx">red</span><span class="p">;</span>
+        <span class="o">&amp;</span><span class="err">:</span><span class="nx">active</span> <span class="p">{</span>
+          <span class="nx">border</span><span class="o">-</span><span class="nx">color</span><span class="err">:</span> <span class="nx">purple</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">};</span>
+  <span class="err">`</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">output</span> <span class="o">=</span> <span class="nx">barista</span><span class="p">({</span>
+    <span class="na">content</span><span class="p">:</span> <span class="nx">styles</span><span class="p">,</span>
+  <span class="p">});</span>
+
+  <span class="nx">it</span><span class="p">(</span><span class="s1">'should have an active state + style'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">rule</span> <span class="o">=</span> <span class="nx">output</span><span class="p">.</span><span class="nx">rule</span><span class="p">(</span><span class="s1">'.btn:active'</span><span class="p">);</span>
+
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">rule</span><span class="p">.</span><span class="nx">prop</span><span class="p">(</span><span class="s1">'background'</span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="s1">'purple'</span><span class="p">);</span>
+  <span class="p">});</span>
+
+  <span class="nx">it</span><span class="p">(</span><span class="s1">'should have a focus state + style'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">rule</span> <span class="o">=</span> <span class="nx">output</span><span class="p">.</span><span class="nx">rule</span><span class="p">(</span><span class="s1">'.btn:focus'</span><span class="p">);</span>
+
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">rule</span><span class="p">.</span><span class="nx">prop</span><span class="p">(</span><span class="s1">'border-color'</span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="s1">'red'</span><span class="p">);</span>
+  <span class="p">});</span>
+
+  <span class="nx">it</span><span class="p">(</span><span class="s1">'should have a focus:active state + style'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">rule</span> <span class="o">=</span> <span class="nx">output</span><span class="p">.</span><span class="nx">rule</span><span class="p">(</span><span class="s1">'.btn:focus:active'</span><span class="p">);</span>
+
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">rule</span><span class="p">.</span><span class="nx">exists</span><span class="p">()).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="kc">true</span><span class="p">;</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">rule</span><span class="p">.</span><span class="nx">prop</span><span class="p">(</span><span class="s1">'border-color'</span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="s1">'purple'</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre>
+</div></div></div>
+
+<hr />
+
+<h2 id="in-the-wild">In the wild</h2>
+
+<p>Barista has been used extensively in Seed Packs. (We’re working towards 100% coverage!).</p>
+
+<p>Below are a couple of packs already using Barista for testing:</p>
+
+<ul>
+  <li><a href="https://github.com/helpscout/seed-button/tree/master/test">seed-button</a></li>
+  <li><a href="https://github.com/helpscout/seed-color-scheme/tree/master/test">seed-color-scheme</a></li>
+  <li><a href="https://github.com/helpscout/seed-dash/tree/master/test">seed-dash</a></li>
+  <li><a href="https://github.com/helpscout/seed-dot-nav/tree/master/test">seed-dot-nav</a></li>
+  <li><a href="https://github.com/helpscout/seed-input/tree/master/test">seed-input</a></li>
+  <li><a href="https://github.com/helpscout/seed-navbar/tree/master/test">seed-navbar</a></li>
+  <li><a href="https://github.com/helpscout/seed-publish/tree/master/test">seed-publish</a></li>
+</ul>
+
+  </div>
+  <div class="o-col-3@xl js-spy-sidebar ">
+    
+
+    
+
+  </div>
+</div>
+
+              </section>
+              <div class="u-pad-t-10 u-mrg-t-10 u-mrg-b-0">
+  <span class="u-mrg-r-2 t-tx-charcoal-200">↑</span><a href="#" class="t-tx-charcoal-200 tx-sm">Back to top</a>
+</div>
+
+              <hr class="u-mrg-t-10 u-mrg-b-2">
+<div class="u-pad-b-10">
+  <div class="o-flexy@md u-pad-b-8">
+    <div class="o-flexy__item">
+      <ul class="c-list c-list--inline">
+        
+        <li class="u-mrg-r-6">
+          <a href="https://secure.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Customer Login</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="https://www.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Visit Help Scout</a>
+        </li>
+        
+        <li class="u-mrg-r-6">
+          <a href="http://status.helpscout.net" class="tx-sm c-link c-link--plain t-tx-charcoal-200">Status</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="o-flexy__item">
+      <div class="u-mrg-v-5 t-tx-charcoal-200 tx-sm">
+        &copy; <a href="http://helpscout.net" class="c-link c-link--plain t-tx-charcoal-200 tx-sm">Help Scout</a>
+        2018
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="c-overlay" class="c-overlay">
+  <div class="c-overlay__content"></div>
+  <div class="c-overlay__background"></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    
+
+<script type="text/javascript">
+var SEEDDATA = {  packs: [      ]};
+</script>
+
+    <!-- beacon embed -->
+<script type="text/javascript">!function(e,n){window.Beacon=n=function(e,n,d){window.Beacon.readyQueue.push({method:e,options:n,data:d})},n.readyQueue=[];var t=e.getElementsByTagName("script")[0],o=e.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://beacon-v2.helpscout.net",t.parentNode.insertBefore(o,t)}(document,window.Beacon||function(){})</script>
+<script>window.Beacon('init', 'aa90d610-923a-4528-95cc-934136cc7712')</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5226593-6', 'helpscout.net');
+ga('send', 'pageview');
+</script>
+
+
+
+
+  </body>
+</html>
